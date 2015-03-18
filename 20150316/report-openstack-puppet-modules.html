@@ -1,0 +1,714 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<html>
+<head>
+<title>
+RDO Bugs on 2015-03-16
+</title>
+  <style>
+
+html {
+  background-color: #c0c0c0;
+}
+
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px;
+  width:960px;
+  margin: auto;
+}
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4;
+text-decoration: none;
+}
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url("../../images/modules/styleguide/para.png") no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url("../../images/modules/pulls/dirty-shade.png") repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0; }
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+ul :last-child, ol :last-child {
+  margin-bottom: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+  </style>
+</head>
+
+<body>
+<h1>
+RDO Bugs on 2015-03-16
+</h1>
+
+
+<h2>Summary</h2>
+<ul>
+<li><a href="#open">Open</a> (NEW, ASSIGNED, ON_DEV): 15</li>
+<li><a href="#fixed">Fixed</a> (MODIFIED, POST, ON_QA): 13</li>
+</ul>
+
+
+<h2 id="open">Open bugs</h2>
+
+<p>This is a list of "open" bugs in the "openstack-puppet-modules"
+component.
+An "open" bug is in state
+NEW, ASSIGNED, ON_DEV and has not yet been fixed.</p>
+
+
+(15 bugs)
+
+<table style="max-width: 960px">
+  <tr>
+    <th>ID</th><th>Status</th><th>Component</th><th>Last activitity</th>
+  </tr>
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1023399">1023399</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-10-03</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">default_floating_pool not configured</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1029579">1029579</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-12-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Update puppet modules for SSL support</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1038729">1038729</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-02-05</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Installing packstack-modules-puppet and running puppet results in Error</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1055661">1055661</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-08-15</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">ceilometer install failes with usermod: group 'nova' does not exist</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1064400">1064400</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-12-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[RFE] Please add vpnaas service support to the puppet modules for Foreman use</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1082188">1082188</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-07-26</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">The firewall module used with Nova (Neutron) `will error after instance creation because of openvswitch interface</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1086185">1086185</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-12-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Failed to install  controller (neutron) on cfn_admin_address</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1092118">1092118</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-12-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">puppet-pacemaker needs update for openstack-foreman-installer-2.0.0.0</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1107907">1107907</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2015-02-01</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Offset Swift ports to 6200</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1150902">1150902</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2015-02-15</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">selinux prevents httpd to write to /var/log/horizon/horizon.log</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1155663">1155663</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-10-22</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Increase the rpc_thread_pool_size</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1157500">1157500</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2015-03-13</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">ERROR: Network commands are not supported when using the Neutron API.</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1174454">1174454</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2015-02-13</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Add puppet-openstack_extras to opm</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1185960">1185960</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2015-02-20</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">problems with puppet-keystone LDAP support</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1192539">1192539</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2015-02-13</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Add puppet-tripleo and puppet-gnocchi to opm</td>
+</tr>
+
+
+</table>
+
+
+<h2 id="fixed">Fixed bugs</h2>
+
+<p>This is a list of "fixed" bugs in the "openstack-puppet-modules"
+component.
+A "fixed" bug is fixed state
+MODIFIED, POST, ON_QA and has been fixed.  You can help
+out by testing the fix to make sure it works as intended.</p>
+
+
+(13 bugs)
+
+<table style="max-width: 960px">
+  <tr>
+    <th>ID</th><th>Status</th><th>Component</th><th>Last activitity</th>
+  </tr>
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1006401">1006401</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-02-05</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">explicit check for pymongo is incorrect</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1006816">1006816</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-02-05</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">cinder modules require glance installed</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1021183">1021183</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2015-02-15</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">horizon log errors</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1022580">1022580</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-02-05</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">netns.py syntax error</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1037635">1037635</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-06-16</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">prescript.pp fails with '/sbin/service iptables start' returning 6</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1038255">1038255</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-04-08</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">prescript.pp does not ensure iptables-services package installation</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1049537">1049537</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2015-03-12</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Horizon help url in RDO points to the RHOS documentation</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1085452">1085452</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-04-24</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">prescript puppet - missing dependency package iptables-services</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1115398">1115398</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-10-01</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">swift.pp:  Could not find command 'restorecon'</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1122968">1122968</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-08-01</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron/manifests/agents/ovs.pp creates /etc/sysconfig/network-scripts/ifcfg-br-{int,tun}</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1133345">1133345</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-09-05</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Packstack execution fails with "Could not set 'present' on ensure"</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1171352">1171352</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2015-02-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">add aviator</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1182837">1182837</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2015-01-21</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">packstack chokes on ironic - centos7 + juno</td>
+</tr>
+
+
+</table>
+
+
+</body>
+</html>

@@ -1,0 +1,688 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<html>
+<head>
+<title>
+RDO Bugs on 2015-03-18
+</title>
+  <style>
+
+html {
+  background-color: #c0c0c0;
+}
+
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px;
+  width:960px;
+  margin: auto;
+}
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4;
+text-decoration: none;
+}
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url("../../images/modules/styleguide/para.png") no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url("../../images/modules/pulls/dirty-shade.png") repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0; }
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+ul :last-child, ol :last-child {
+  margin-bottom: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+  </style>
+</head>
+
+<body>
+<h1>
+RDO Bugs on 2015-03-18
+</h1>
+
+
+<h2>Summary</h2>
+<ul>
+<li><a href="#open">Open</a> (NEW, ASSIGNED, ON_DEV): 13</li>
+<li><a href="#fixed">Fixed</a> (MODIFIED, POST, ON_QA): 13</li>
+</ul>
+
+
+<h2 id="open">Open bugs</h2>
+
+<p>This is a list of "open" bugs in the "openstack-neutron"
+component.
+An "open" bug is in state
+NEW, ASSIGNED, ON_DEV and has not yet been fixed.</p>
+
+
+(13 bugs)
+
+<table style="max-width: 960px">
+  <tr>
+    <th>ID</th><th>Status</th><th>Component</th><th>Last activitity</th>
+  </tr>
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/980292">980292</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2015-01-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">preunsintall script of openstack-quantum-openvswitch.noarch needs to disable/stop  quantum-ovs-cleanup.service</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/986507">986507</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-12-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">RFE: IPv6 Feature Parity</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1006342">1006342</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-06-24</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Remove runtime dependency on python-pbr</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1081011">1081011</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-06-20</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">L2 agent fails to start with VXLAN configuration</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1093357">1093357</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2015-03-02</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron agent-list report different status each click</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1147152">1147152</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-09-27</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Use neutron-sanity-check in CI checks</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1148760">1148760</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-10-02</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">rootwrap errors in DHCP/L3 log files</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1149504">1149504</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-10-12</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Instances won't obtain IPv6 address and gateway when using SLAAC provided by OpenStack</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1149505">1149505</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-10-12</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Instances won't obtain IPv6 address and gateway when using Stateful DHCPv6 provided by OpenStack</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1149897">1149897</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-12-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron-openvswitch-agent service creates high polkitd usage</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1159733">1159733</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-11-03</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">no ports available when associating floating ips to new instance</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1164230">1164230</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-12-16</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">In openstack-neutron-sriov-nic-agent package is missing the /etc/neutron/plugins/ml2/ml2_conf_sriov.ini config files</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1180201">1180201</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2015-01-08</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron-netns-cleanup.service needs RemainAfterExit=yes and PrivateTmp=false</td>
+</tr>
+
+
+</table>
+
+
+<h2 id="fixed">Fixed bugs</h2>
+
+<p>This is a list of "fixed" bugs in the "openstack-neutron"
+component.
+A "fixed" bug is fixed state
+MODIFIED, POST, ON_QA and has been fixed.  You can help
+out by testing the fix to make sure it works as intended.</p>
+
+
+(13 bugs)
+
+<table style="max-width: 960px">
+  <tr>
+    <th>ID</th><th>Status</th><th>Component</th><th>Last activitity</th>
+  </tr>
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/999660">999660</a></td>
+<td>POST</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2015-02-01</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">splitting the  sos report to modules - Neutron</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1019487">1019487</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-07-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron-dhcp-agent fails to start without openstack-neutron-openvswitch installed</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1049807">1049807</a></td>
+<td>POST</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-01-13</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron-dhcp-agent fails to start with plenty of SELinux AVC denials</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1050842">1050842</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-06-11</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron should not specify signing_dir in neutron-dist.conf</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1057822">1057822</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-04-16</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron-ml2 package requires python-pyudev</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1058995">1058995</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-04-08</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron-plugin-nicira should be renamed to neutron-plugin-vmware</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1061349">1061349</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-02-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron-dhcp-agent won't start due to a missing import of module named stevedore</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1081203">1081203</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-04-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">No DHCP agents are associated with network</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1088537">1088537</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-06-11</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">rhel 6.5 icehouse stage.. neutron-db-manage trying to import systemd</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1098601">1098601</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-05-16</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron-vpn-agent does not use the /etc/neutron/fwaas_driver.ini</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1100136">1100136</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-07-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Missing configuration file for ML2 Mellanox Mechanism Driver ml2_conf_mlnx.ini</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1109824">1109824</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-09-27</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Embrane plugin should be split from python-neutron</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1157599">1157599</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-11-25</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">fresh neutron install fails due unknown database column 'id'</td>
+</tr>
+
+
+</table>
+
+
+</body>
+</html>

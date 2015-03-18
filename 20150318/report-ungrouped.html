@@ -1,0 +1,4937 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<html>
+<head>
+<title>
+RDO Bugs on 2015-03-18
+</title>
+  <style>
+
+html {
+  background-color: #c0c0c0;
+}
+
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px;
+  width:960px;
+  margin: auto;
+}
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4;
+text-decoration: none;
+}
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url("../../images/modules/styleguide/para.png") no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url("../../images/modules/pulls/dirty-shade.png") repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0; }
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+ul :last-child, ol :last-child {
+  margin-bottom: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+  </style>
+</head>
+
+<body>
+<h1>
+RDO Bugs on 2015-03-18
+</h1>
+
+
+<h2>Summary</h2>
+<ul>
+<li><a href="#open">Open</a> (NEW, ASSIGNED, ON_DEV): 220</li>
+<li><a href="#fixed">Fixed</a> (MODIFIED, POST, ON_QA): 133</li>
+</ul>
+
+
+<h2 id="open">Open bugs</h2>
+
+<p>This is a list of "open" bugs by component.
+An "open" bug is in state
+NEW, ASSIGNED, ON_DEV and has not yet been fixed.</p>
+
+
+(220 bugs)
+
+<table style="max-width: 960px">
+  <tr>
+    <th>ID</th><th>Status</th><th>Component</th><th>Last activitity</th>
+  </tr>
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/952811">952811</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-01-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">nova-manage reports two different versions</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/953586">953586</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-foreman-installer.html">openstack-foreman-installer</a></td>
+<td>2015-01-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[RFE] Openstack Installer: packstack should install and configure SPICE to work with Nova and Horizon</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/956078">956078</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2015-01-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Running packstack twice results in incorrect admin password in keystonerc_admin</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/957408">957408</a></td>
+<td>NEW</td>
+<td><a href="report-novnc.html">novnc</a></td>
+<td>2015-01-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">console page says "Failed to connect to server (code: 1006)" but "Click here to show only console" works</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/958083">958083</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-01-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Nova: Instance Action Tracking "nova backup" and "nova create-Image" cannot be seen using <nova  instance-action-list> .</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/958911">958911</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2015-01-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">packstack sets wrong permission bits on log dirs for cinder, nova, keystone, quantum</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/960024">960024</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-01-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Nova: nova reset-state returns :code": 500, "details": "No valid host was found.</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/980292">980292</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2015-01-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">preunsintall script of openstack-quantum-openvswitch.noarch needs to disable/stop  quantum-ovs-cleanup.service</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/982035">982035</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2015-01-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Include Fedora cloud images in some nice way</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/984815">984815</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-keystone.html">openstack-keystone</a></td>
+<td>2014-06-27</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">keystone : there is no indication if keystone user-role-add succeeded or not .</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/986507">986507</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-12-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">RFE: IPv6 Feature Parity</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/996725">996725</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-03-19</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Packstack should not require ALL parameters be specified in an answer file</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/999587">999587</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-distribution.html">distribution</a></td>
+<td>2015-01-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">sos report tracker bug</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1006342">1006342</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-06-24</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Remove runtime dependency on python-pbr</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1006544">1006544</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-03-19</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Packstack configured neutron-openvswitch-agent on pure controller node</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1023399">1023399</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-10-03</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">default_floating_pool not configured</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1023533">1023533</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2015-03-02</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">API services has all admin permission instead of service</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1025157">1025157</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2014-06-16</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron dhcp agent: dnsmasq cannot satisfy tap interface dhcp requests unless selinux is permissive</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1025872">1025872</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-utils.html">openstack-utils</a></td>
+<td>2014-06-23</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">openstack-db --init --service keystone --password somepass fails with CRITICAL error - access denied</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1028688">1028688</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2014-01-13</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">should use new names in cinder-dist.conf</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1029579">1029579</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-12-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Update puppet modules for SSL support</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1034395">1034395</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-02-05</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">make packstack use --small files for mongodb or ask the user</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1034476">1034476</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2015-03-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Quickstart documentation updates for Neutron with a single network interface</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1036440">1036440</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-utils.html">openstack-utils</a></td>
+<td>2014-11-09</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">openstack-status show nova instances as blank when an instance is provisioned via gui</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1038729">1038729</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-02-05</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Installing packstack-modules-puppet and running puppet results in Error</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1038752">1038752</a></td>
+<td>NEW</td>
+<td><a href="report-distribution.html">distribution</a></td>
+<td>2015-01-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Update manual uninstallation wiki page instructions.</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1041311">1041311</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2014-01-13</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Cinder is writing volume data into /etc/cinder, should probably use /var/lib/cinder</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1043725">1043725</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-02-19</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Fedora 19 puppet/glance failure due to warnings in output</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1049380">1049380</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2015-03-02</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">openstack-cinder: cinder fails to copy an image a volume with GlusterFS backend</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1049382">1049382</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2014-02-19</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">EMC: fails to create volume from Glance image</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1049511">1049511</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2014-01-13</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">EMC: fails to boot instances from volumes with "TypeError: Unsupported parameter type"</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1049535">1049535</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2014-12-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">cinder: cannot create a volume when root squash is set to on for gluster storage</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1049785">1049785</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2014-12-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">A redundant image copy is created when creating a volume from a glance image. (All-in-One)</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1049864">1049864</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2014-06-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Creating a 99G volume on 100G cinder-volume succeeded, but deleting it failed (no space left)</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1049877">1049877</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2014-02-11</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">cinder: data is not saved on a volume created from an image after instance termination</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1049985">1049985</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-02-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">RDO: Instance hangs in 'Deleting' state ... multi node (using GRE tenant networks)</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1049995">1049995</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2014-12-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">cinder: two volumes are created instead of one when we try to boot an instance with create new volume option</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1050158">1050158</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2014-02-25</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">cinder: volume is not deleted on instance destroy when we we fail to boot an instance using a create volume + delete on terminate</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1055661">1055661</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-08-15</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">ceilometer install failes with usermod: group 'nova' does not exist</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1055788">1055788</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2014-09-02</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Missing baremetal-deploy-helper service</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1056106">1056106</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-01-08</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[RFE][ironic]: Integration of Ironic in to TripleO</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1056109">1056109</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-01-08</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[RFE][tripleo]: Making the overcloud deployment fully HA</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1056110">1056110</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-01-08</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[RFE][tripleo]: Scaling work to do during icehouse</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1056112">1056112</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-01-08</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[RFE][tripleo]: Deploying different architecture topologies with Tuskar</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1056114">1056114</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-01-08</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[RFE][tripleo]: Implement a complete overcloud installation story in the UI</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1060220">1060220</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-foreman-installer.html">openstack-foreman-installer</a></td>
+<td>2014-12-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[RFE] allow for the deployment of memcached to be used for keystone tokens caching</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1061152">1061152</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-foreman-installer.html">openstack-foreman-installer</a></td>
+<td>2014-12-12</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[RDO][openstack-foreman-installer]: When attempting to deploy foreman-client on Fedora20 - It seems  puppet fails to connect the mariadb.</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1061574">1061574</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-foreman-installer.html">openstack-foreman-installer</a></td>
+<td>2014-12-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">foreman server installer script should be in PATH and have options</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1061710">1061710</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-03-06</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">openstack-cinder-backup service not enabled on boot</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1061753">1061753</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-12-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Create an option in packstack to increase verbosity level of libvirt</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1061760">1061760</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-foreman-installer.html">openstack-foreman-installer</a></td>
+<td>2014-04-14</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">openstack-cinder-backup service is not enabled on boot</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1062279">1062279</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2014-11-28</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">instance doesn't work after a failed migration</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1063474">1063474</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-distribution.html">distribution</a></td>
+<td>2015-03-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">python-backports:  /usr/lib/python2.6/site-packages/babel/__init__.py:33: UserWarning: Module backports was already imported from /usr/lib64/python2.6/site-packages/backports/__init__.pyc, but /usr/lib/python2.6/site-packages is being added to sys.path</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1064400">1064400</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-12-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[RFE] Please add vpnaas service support to the puppet modules for Foreman use</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1065285">1065285</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2014-08-31</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">AttributeError: 'module' object has no attribute 'HAVE_DECL_MPZ_POWM_SEC'</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1066958">1066958</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-05-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">RFE: Please install and start the openstack-neutron-metering-agent</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1066961">1066961</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-utils.html">openstack-utils</a></td>
+<td>2014-02-19</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">RFE: Add the status of neutron-metering-agent to the output of the openstack-status</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1069200">1069200</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-distribution.html">distribution</a></td>
+<td>2015-03-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">support rdo-release and puppetlabs-release being installed on the same system</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1073480">1073480</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2014-03-11</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">tempest volume metadata test failing against the XML interface</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1079544">1079544</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-03-24</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">openstack-packstack-puppet-2014.1.1-0.2 error: KeyError: 'CONFIG_QPID_HOST'</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1079736">1079736</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2014-03-23</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">backup driver should get swift url from keystone catalog</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1080343">1080343</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-04-26</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Fedora20: Traceback while doing packstack --allinone —quantum-l3-ext-bridge=eth0</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1080496">1080496</a></td>
+<td>NEW</td>
+<td><a href="report-python-keystoneclient.html">python-keystoneclient</a></td>
+<td>2014-12-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Unhelpful error message when keystone uses self-signed SSL certificates</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1080543">1080543</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2014-03-31</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">volume migration from netapp back end to LVM back end failed</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1081011">1081011</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-06-20</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">L2 agent fails to start with VXLAN configuration</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1082188">1082188</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-07-26</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">The firewall module used with Nova (Neutron) `will error after instance creation because of openvswitch interface</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1082728">1082728</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-foreman-installer.html">openstack-foreman-installer</a></td>
+<td>2015-02-20</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[RFE] allow for Keystone/LDAP configuration at deployment time</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1084038">1084038</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-python-cinderclient.html">python-cinderclient</a></td>
+<td>2014-06-30</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">cinder: please mark a volume as read-only</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1086185">1086185</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-12-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Failed to install  controller (neutron) on cfn_admin_address</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1086204">1086204</a></td>
+<td>NEW</td>
+<td><a href="report-rdopkg.html">rdopkg</a></td>
+<td>2014-04-10</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">fix: release bump wipes milestone</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1086247">1086247</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2014-09-02</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Ensure translations are installed correctly and picked up at runtime</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1087795">1087795</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2014-12-12</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">glance: Cannot configure gluser backend for glance on RDO and rhel7 (selinux)</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1088037">1088037</a></td>
+<td>NEW</td>
+<td><a href="report-rdopkg.html">rdopkg</a></td>
+<td>2014-04-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Use ~/.ssh/config instead of supplying -u with every coprbuild</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1090062">1090062</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-04-24</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Packstack installer causes configuration error, Create project button on Horizon fails.</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1090169">1090169</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-python-keystoneclient.html">python-keystoneclient</a></td>
+<td>2014-04-29</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">python-keystoneclient-0.7.1-1 /usr/bin/keystone does not execute properly</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1090381">1090381</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-12-08</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Failed to create Cinder volume on Gluster backend configured by answer file</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1091564">1091564</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-foreman-installer.html">openstack-foreman-installer</a></td>
+<td>2014-12-12</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">openstack-foreman-installer fails to install on CentOS 6.5 or RHEL 6.5 due to ruby193-ruby dependencies</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1092118">1092118</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-12-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">puppet-pacemaker needs update for openstack-foreman-installer-2.0.0.0</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1092443">1092443</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-foreman-installer.html">openstack-foreman-installer</a></td>
+<td>2014-12-12</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">foreman_server.sh fails with "undefined method `[]' for nil:NilClass" on RHEL / CentOS 6.5 and rdo-release-havana-7</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1093357">1093357</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2015-03-02</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron agent-list report different status each click</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1094045">1094045</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-09-15</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">packstack should configure nova to have conductor.workers=at least equal to the number of cores on the controller box</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1094444">1094444</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-foreman-installer.html">openstack-foreman-installer</a></td>
+<td>2014-06-24</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Instances failed to spawn due to: VirtualInterfaceCreateException: Virtual Interface creation failed</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1095319">1095319</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-09-15</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Packstack parameter CONFIG_AMQP_SERVER lacking usage examples in documentation</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1095401">1095401</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-09-15</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Packstack failed to configure ML2 to work with OVS and VLAN</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1097291">1097291</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-06-11</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[RFE] SPICE support in packstack</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1098821">1098821</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2015-01-26</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Packstack allinone installation fails due to failure to start rabbitmq-server during amqp.pp on CentOS 6.5</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1100142">1100142</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-12-08</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Packstack missing ML2 Mellanox Mechanism Driver</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1100405">1100405</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-rdopkg.html">rdopkg</a></td>
+<td>2014-05-22</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[RFE] Add option to force overwrite build files on update download</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1104236">1104236</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-keystone.html">openstack-keystone</a></td>
+<td>2014-06-24</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Exception while running keystone on httpd</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1107907">1107907</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2015-02-01</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Offset Swift ports to 6200</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1107908">1107908</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-12-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Offset Swift ports to 6200</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1116972">1116972</a></td>
+<td>NEW</td>
+<td><a href="report-distribution.html">distribution</a></td>
+<td>2014-07-16</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">RDO website: libffi-devel is required to run Tempest (at least on CentOS 6.5)</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1116974">1116974</a></td>
+<td>NEW</td>
+<td><a href="report-distribution.html">distribution</a></td>
+<td>2014-07-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Running Tempest according to the instructions @ RDO website fails with missing tox.ini error</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1116975">1116975</a></td>
+<td>NEW</td>
+<td><a href="report-distribution.html">distribution</a></td>
+<td>2014-07-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">RDO website: configuring TestR according to website, breaks Tox completely</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1117007">1117007</a></td>
+<td>NEW</td>
+<td><a href="report-distribution.html">distribution</a></td>
+<td>2015-03-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">RDO website: newer python-nose is required to run Tempest (at least on CentOS 6.5) [update to http://openstack.redhat.com/Testing_IceHouse_using_Tempest]</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1117012">1117012</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-swift.html">openstack-swift</a></td>
+<td>2014-12-12</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">openstack-swift-proxy depends on openstack-swift-plugin-swift3</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1119016">1119016</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-07-13</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Packstack: after a packstack based installation, some RPMs are not the latest</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1119443">1119443</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-09-12</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Packstack is 'hard-coded' on eth1 (fails on a CentOs7 vanilla installation</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1121256">1121256</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2014-07-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Configuration file in share forces ignore of auth_uri</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1123298">1123298</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-02-23</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">logrotate should copytruncate to avoid oepnstack logging to deleted files</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1123451">1123451</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-python-novaclient.html">python-novaclient</a></td>
+<td>2014-12-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Missing versioned dependency on python-novaclient</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1123542">1123542</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-keystone.html">openstack-keystone</a></td>
+<td>2014-07-26</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">file templated catalogs do not work in protocol v3</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1128233">1128233</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2014-12-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">RFE: allow admin to upload SSH keypair for specific user</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1128342">1128342</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2014-08-09</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Confusing error message when spawning VM</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1128521">1128521</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-08-11</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Icehouse yum mongodb-server not found</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1128896">1128896</a></td>
+<td>NEW</td>
+<td><a href="report-python-cinderclient.html">python-cinderclient</a></td>
+<td>2014-08-12</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Havana package is placing bash completion file in wrong location</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1128898">1128898</a></td>
+<td>NEW</td>
+<td><a href="report-python-neutronclient.html">python-neutronclient</a></td>
+<td>2014-08-11</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Havana and Icehouse python-neutronclient packages placing bash completion file in wrong directory</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1131587">1131587</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-08-19</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Error: /Stage[main]/Keystone::Roles::Admin/Keystone_role[_member_]: Could not evaluate: Expected 2 columns for role row, found 0. Line</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1132059">1132059</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-08-20</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Could not set groups on user[ceilometer], nova user does not exists</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1132541">1132541</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-python-neutronclient.html">python-neutronclient</a></td>
+<td>2014-08-21</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron security-group-rule-list fails with URI too long</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1134073">1134073</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2014-12-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Nova default quotas insufficient to deploy baremetal overcloud</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1135508">1135508</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-12-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Fedora 20 RDO install w/ nova flatdhcp network fails w/ unable to find device em1</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1135510">1135510</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2014-09-11</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">RHEL7 icehouse cluster with ceph/ssl SELinux errors</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1135529">1135529</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-09-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Race condition in packstack (neutron-ovs-cleanup)</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1141608">1141608</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-09-15</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">PackStack sets unrecognized "net.bridge.bridge-nf-call*" keys on up to date CentOS 6</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1143970">1143970</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-09-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Packstack is not idempotent (because of networking)</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1144182">1144182</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2014-10-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Post installation, nova-api and glance-api cause AVC denied errors.</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1145519">1145519</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2014-12-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[RHEL 7.0] not able to install openstack-selinux</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1146963">1146963</a></td>
+<td>NEW</td>
+<td><a href="report-distribution.html">distribution</a></td>
+<td>2015-03-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Using packstack --allinone searches for mariadb-galera-server should be MariaDB-Galera-server ?</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1147152">1147152</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-09-27</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Use neutron-sanity-check in CI checks</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1148468">1148468</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-10-02</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">proposal to use the Red Hat tempest rpm to configure a demo environment and configure tempest</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1148526">1148526</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2014-10-01</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">nova: fail to edit project quota with DataError from nova</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1148605">1148605</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2014-10-02</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Nova: old cheetah style interfaces.template packaged</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1148760">1148760</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-10-02</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">rootwrap errors in DHCP/L3 log files</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1148988">1148988</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2014-10-13</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">nova-api fails to start after reboot</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1149064">1149064</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2014-12-12</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Fail to delete cinder volume on Centos7, using RDO juno</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1149504">1149504</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-10-12</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Instances won't obtain IPv6 address and gateway when using SLAAC provided by OpenStack</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1149505">1149505</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-10-12</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Instances won't obtain IPv6 address and gateway when using Stateful DHCPv6 provided by OpenStack</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1149682">1149682</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2014-10-06</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">nova object store allow get object after date exires</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1149897">1149897</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-12-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron-openvswitch-agent service creates high polkitd usage</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1150678">1150678</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-horizon.html">openstack-horizon</a></td>
+<td>2014-10-24</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Permissions issue prevents CSS from rendering</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1150902">1150902</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2015-02-15</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">selinux prevents httpd to write to /var/log/horizon/horizon.log</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1151589">1151589</a></td>
+<td>NEW</td>
+<td><a href="report-distribution.html">distribution</a></td>
+<td>2015-03-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">trove does not install dependency python-pbr</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1152350">1152350</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2014-10-14</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Missing dependency for python-oslo-db package</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1153128">1153128</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-11-21</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Cannot start nova-network on juno - Centos7</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1154152">1154152</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2014-12-15</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[nova] hw:numa_nodes=0 causes divide by zero</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1154201">1154201</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2014-10-20</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[nova][PCI-Passthrough] TypeError: pop() takes at most 1 argument (2 given)</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1154633">1154633</a></td>
+<td>NEW</td>
+<td><a href="report-tempest.html">tempest</a></td>
+<td>2014-10-20</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Tempest_config failure (RDO, Juno, CentOS 7 - heat related?)</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1154721">1154721</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2014-10-20</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[Delorean] :Api/Exec[nova-db-sync]/returns: ImportError: No module named middleware</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1155663">1155663</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-10-22</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Increase the rpc_thread_pool_size</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1155722">1155722</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-11-21</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[delorean]  ArgumentError: Invalid resource type database_user at /var/tmp/packstack/<snip>/manifests/172.16.32.71_mariadb.pp:28 on node</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1157216">1157216</a></td>
+<td>NEW</td>
+<td><a href="report-distribution.html">distribution</a></td>
+<td>2015-01-30</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">galera is not supplied in the zstream repo or in the Juno repo</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1157500">1157500</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2015-03-13</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">ERROR: Network commands are not supported when using the Neutron API.</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1157690">1157690</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2014-10-27</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">v4-fixed-ip= not working with juno nova networking</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1157939">1157939</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2014-10-28</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Default binary for iscsi_helper (lioadm) does not exist in the repos</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1158015">1158015</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2014-10-28</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Post installation, Cinder fails with an error: Volume group "cinder-volumes" not found</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1158394">1158394</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2014-11-23</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">keystone-all proccess raised avc denied</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1158517">1158517</a></td>
+<td>NEW</td>
+<td><a href="report-RFEs.html">RFEs</a></td>
+<td>2014-10-29</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Provide easy to use upgrade tool</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1159008">1159008</a></td>
+<td>NEW</td>
+<td><a href="report-distribution.html">distribution</a></td>
+<td>2014-10-31</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">juno qpid:  install qpid-cpp-server' returned 1: Error: Package: qpid-cpp-client-0.30-3.fc21.x86_64</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1159733">1159733</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-11-03</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">no ports available when associating floating ips to new instance</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1160885">1160885</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2015-01-25</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">rabbitmq wont start if ssl is required</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1161501">1161501</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-utils.html">openstack-utils</a></td>
+<td>2014-11-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Can't enable OpenStack service after openstack-service disable</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1161915">1161915</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-03-15</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">horizon console uses http when horizon is set to use ssl</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1161920">1161920</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2014-11-09</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">novnc init script doesnt write to log</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1162333">1162333</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-01-08</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Instack fails to complete instack-virt-setup with syntax error near unexpected token `newline'</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1164230">1164230</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-12-16</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">In openstack-neutron-sriov-nic-agent package is missing the /etc/neutron/plugins/ml2/ml2_conf_sriov.ini config files</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1164349">1164349</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-python-glanceclient.html">python-glanceclient</a></td>
+<td>2014-11-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">rdo juno glance client needs python-requests >= 2.2.0</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1164770">1164770</a></td>
+<td>NEW</td>
+<td><a href="report-dnsmasq.html">dnsmasq</a></td>
+<td>2014-12-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">On a 3 node setup (controller, network and compute), instance is not getting dhcp ip (while using flat network)</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1165115">1165115</a></td>
+<td>NEW</td>
+<td><a href="report-distribution.html">distribution</a></td>
+<td>2014-11-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Wrong bootup order for openstack services</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1167121">1167121</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-12-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">centos7 fails to install glance</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1167156">1167156</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2014-11-24</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">cinder-api[14407]: segfault at 7fc84636f7e0 ip 00007fc84636f7e0 sp 00007fff3110a468 error 15 in multiarray.so[7fc846369000+d000]</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1167528">1167528</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-keystone.html">openstack-keystone</a></td>
+<td>2014-11-26</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">assignment table migration fails for keystone-manage db_sync if duplicate entry exists</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1167945">1167945</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2014-11-25</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Random characters in instacne name break volume attaching</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1169215">1169215</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-swift.html">openstack-swift</a></td>
+<td>2014-12-12</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">swift-init does not interoperate with systemd swift service files</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1169742">1169742</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2015-01-03</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Error: service-update is not currently supported by the keystone sql driver</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1170238">1170238</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2014-12-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Keepalived fail to start for HA router because of SELinux issues</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1170724">1170724</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2014-12-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">openstack-cinder should pull in python-oslo-db</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1171811">1171811</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-12-08</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">misleading exit message on fail</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1173435">1173435</a></td>
+<td>NEW</td>
+<td><a href="report-iproute.html">iproute</a></td>
+<td>2015-02-23</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">deleting netns ends in  Device or resource busy and blocks further namespace usage</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1174454">1174454</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2015-02-13</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Add puppet-openstack_extras to opm</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1174749">1174749</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-12-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Failed to start httpd service on Fedora 20 (with packstack utility)</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1174776">1174776</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-01-08</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">User can not login into the overcloud horizon using the proper credentials</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1174795">1174795</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2015-02-24</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">keystone fails to start: raise exception.ConfigFileNotFound(config_file=paste_config_value)</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1175687">1175687</a></td>
+<td>NEW</td>
+<td><a href="report-instack-undercloud.html">instack-undercloud</a></td>
+<td>2015-01-08</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">instack is not configued properly to log all Horizon/Tuskar messages in the undercloud deployment</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1176269">1176269</a></td>
+<td>NEW</td>
+<td><a href="report-diskimage-builder.html">diskimage-builder</a></td>
+<td>2015-01-08</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">rhel-common element attempts to install rhel-7-server on RHEL 6 image</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1176433">1176433</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-12-21</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">packstack fails to configure horizon - juno/rhel7 (vm)</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1176506">1176506</a></td>
+<td>NEW</td>
+<td><a href="report-distribution.html">distribution</a></td>
+<td>2014-12-22</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[TripleO] Provisioning Images filter doesn't work</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1176509">1176509</a></td>
+<td>NEW</td>
+<td><a href="report-distribution.html">distribution</a></td>
+<td>2014-12-22</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[TripleO] text of uninitialized deployment needs rewording</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1176569">1176569</a></td>
+<td>NEW</td>
+<td><a href="report-distribution.html">distribution</a></td>
+<td>2015-01-26</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">404 not found when instack-virt-setup tries to download the rhel-6.5 guest image</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1176596">1176596</a></td>
+<td>NEW</td>
+<td><a href="report-distribution.html">distribution</a></td>
+<td>2015-02-12</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">The displayed horizon url after deployment has a redundant colon in it and a wrong path</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1176797">1176797</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-12-23</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">packstack --allinone on CentOS 7 VM fails at cinder puppet manifest</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1176833">1176833</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-12-23</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">packstack --allinone fails when starting neutron server</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1178131">1178131</a></td>
+<td>NEW</td>
+<td><a href="report-distribution.html">distribution</a></td>
+<td>2015-01-02</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">SSL supports only broken crypto</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1178648">1178648</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2015-01-05</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">vmware: "Not authenticated error occurred " on delete volume</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1179931">1179931</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-swift.html">openstack-swift</a></td>
+<td>2015-01-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Variable of init script gets overwritten preventing the startup of swift services when using multiple server configurations</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1180129">1180129</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-01-08</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Installation of openstack-nova-compute fails on PowerKVM</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1180201">1180201</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2015-01-08</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron-netns-cleanup.service needs RemainAfterExit=yes and PrivateTmp=false</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1184522">1184522</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-sahara.html">openstack-sahara</a></td>
+<td>2015-02-26</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">launch_command.py missing</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1185627">1185627</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2015-01-25</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">glance provision disregards keystone region setting</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1185921">1185921</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2015-01-30</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">RabbitMQ fails to start if configured with ssl</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1185960">1185960</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2015-02-20</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">problems with puppet-keystone LDAP support</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1187309">1187309</a></td>
+<td>NEW</td>
+<td><a href="report-distribution.html">distribution</a></td>
+<td>2015-03-02</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">New package - python-cliff-tablib</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1187310">1187310</a></td>
+<td>NEW</td>
+<td><a href="report-python-openstackclient.html">python-openstackclient</a></td>
+<td>2015-03-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Add --user to project list command to filter projects by user</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1187352">1187352</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-01-31</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">/usr/bin/instack-prepare-for-overcloud glance using incorrect parameter</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1187354">1187354</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo-image-elements.html">openstack-tripleo-image-elements</a></td>
+<td>2015-01-29</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">possible incorrect selinux check in 97-mysql-selinux</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1187572">1187572</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2015-01-30</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">RFE: allow to set certfile for /etc/rabbitmq/rabbitmq.config</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1187609">1187609</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2015-02-13</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">CONFIG_AMQP_ENABLE_SSL=y does not really set ssl on</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1187965">1187965</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo-image-elements.html">openstack-tripleo-image-elements</a></td>
+<td>2015-02-28</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">mariadb my.cnf socket path does not exist</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1187966">1187966</a></td>
+<td>NEW</td>
+<td><a href="report-instack-undercloud.html">instack-undercloud</a></td>
+<td>2015-03-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">missing dependency on which</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1188423">1188423</a></td>
+<td>NEW</td>
+<td><a href="report-dnsmasq.html">dnsmasq</a></td>
+<td>2015-02-02</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">RHEL / Centos 7-based instances lose their default IPv4 gateway</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1189347">1189347</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-02-05</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">openstack-nova-* systemd unit files need NotifyAccess=all</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1189929">1189929</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2015-02-06</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Glance AVC messages</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1189931">1189931</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-02-05</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Nova AVC messages</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1190815">1190815</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-02-09</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Nova - db connection string present on compute nodes</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1192539">1192539</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2015-02-13</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Add puppet-tripleo and puppet-gnocchi to opm</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1192622">1192622</a></td>
+<td>NEW</td>
+<td><a href="report-instack.html">instack</a></td>
+<td>2015-03-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">RDO Instack FAQ has serious doc bug</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1193429">1193429</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openvswitch.html">openvswitch</a></td>
+<td>2015-03-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">failed to flow_del</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1193886">1193886</a></td>
+<td>NEW</td>
+<td><a href="report-RFEs.html">RFEs</a></td>
+<td>2015-02-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">RFE: wait for DB after boot</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1194230">1194230</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-ceilometer.html">openstack-ceilometer</a></td>
+<td>2015-02-26</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">The /etc/sudoers.d/ceilometer have incorrect permissions</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1194561">1194561</a></td>
+<td>NEW</td>
+<td><a href="report-distribution.html">distribution</a></td>
+<td>2015-02-20</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">openstack-juno/20 repo consists of packages for the fedora 21 distribution</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1195977">1195977</a></td>
+<td>NEW</td>
+<td><a href="report-python-keystonemiddleware.html">python-keystonemiddleware</a></td>
+<td>2015-03-02</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Rebase python-keystonemiddleware to version 1.3</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1200701">1200701</a></td>
+<td>NEW</td>
+<td><a href="report-distribution.html">distribution</a></td>
+<td>2015-03-11</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">openstack-nova-novncproxy.service in failed state -  need upgraded websockify version</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1200789">1200789</a></td>
+<td>NEW</td>
+<td><a href="report-python-glanceclient.html">python-glanceclient</a></td>
+<td>2015-03-11</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">DeprecationWarning in Glance commands for Juno/EL6</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1201340">1201340</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-utils.html">openstack-utils</a></td>
+<td>2015-03-12</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">openstack-service tries to restart neutron-ovs-cleanup.service</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1201372">1201372</a></td>
+<td>NEW</td>
+<td><a href="report-instack.html">instack</a></td>
+<td>2015-03-12</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">instack-update-overcloud fails because it tries to access non-existing files</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1202941">1202941</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-glance.html">openstack-glance</a></td>
+<td>2015-03-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Glance fails to start on CentOS 7 because of selinux AVC</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1202944">1202944</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2015-03-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">"glance image-list" fails on F21, causing packstack install to fail</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1202958">1202958</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2015-03-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Packstack generates invalid /etc/sysconfig/network-scripts/ifcfg-br-ex</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1202961">1202961</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2015-03-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Packstack --allinone should configure NAT for floating ip network</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1203131">1203131</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2015-03-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Using packstack deploy openstack,when CONFIG_NEUTRON_OVS_BRIDGE_IFACES=br-eno50:eno50,encounters an error“ERROR : Error appeared during Puppet run: 10.43.241.186_neutron.pp ”.</td>
+</tr>
+
+
+</table>
+
+
+<h2 id="fixed">Fixed bugs</h2>
+
+<p>This is a list of "fixed" bugs by component.
+A "fixed" bug is fixed state
+MODIFIED, POST, ON_QA and has been fixed.  You can help
+out by testing the fix to make sure it works as intended.</p>
+
+
+(133 bugs)
+
+<table style="max-width: 960px">
+  <tr>
+    <th>ID</th><th>Status</th><th>Component</th><th>Last activitity</th>
+  </tr>
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/947535">947535</a></td>
+<td>MODIFIED</td>
+<td><a href="report-python-novaclient.html">python-novaclient</a></td>
+<td>2015-01-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">nova commands fail with gnomekeyring IOError</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/956939">956939</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2015-01-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">packstack install fails if ntp server does not respond</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/957006">957006</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2015-01-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">packstack reinstall fails trying to start nagios</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/958411">958411</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-01-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Nova: 'nova instance-action-list' table is not sorted by the order of action occurrence.</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/958587">958587</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2015-01-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">packstack install succeeds even when puppet completely fails</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/964005">964005</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2015-02-01</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">keystonerc_admin stored in /root requiring running OpenStack software as root user</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/971746">971746</a></td>
+<td>MODIFIED</td>
+<td><a href="report-python-keystoneclient.html">python-keystoneclient</a></td>
+<td>2015-01-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">CVE-2013-2013 OpenStack keystone: password disclosure on command line [RDO]</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/973263">973263</a></td>
+<td>POST</td>
+<td><a href="report-python-keystoneclient.html">python-keystoneclient</a></td>
+<td>2015-01-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">user-get fails when using IDs which are not UUIDs</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/974971">974971</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2015-01-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">please give greater control over use of EPEL</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/976394">976394</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2015-01-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[RFE] Put the keystonerc_admin file in the current working directory for --all-in-one installs (or where client machine is same as local)</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/979041">979041</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2015-01-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Fedora19 no longer has /etc/sysconfig/modules/kvm.modules</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/985570">985570</a></td>
+<td>ON_QA</td>
+<td><a href="report-python-django-openstack-auth.html">python-django-openstack-auth</a></td>
+<td>2013-07-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Please upgrade to 1.0.9 or better</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/989789">989789</a></td>
+<td>MODIFIED</td>
+<td><a href="report-python-quantumclient.html">python-quantumclient</a></td>
+<td>2013-07-30</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">warnings about missing  editors</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/990642">990642</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-02-05</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">rdo release RPM not installed on all fedora hosts</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/991801">991801</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-02-05</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Warning message for installing RDO kernel needs to be adjusted</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/994370">994370</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2014-06-24</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">CVE-2013-4183 openstack-cinder: OpenStack: Cinder LVM volume driver does not support secure deletion [openstack-rdo]</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/995570">995570</a></td>
+<td>POST</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-10-28</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">RFE: support setting up apache to serve keystone requests</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/997983">997983</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-swift.html">openstack-swift</a></td>
+<td>2015-01-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">swift in RDO logs container, object and account to LOCAL2 log facility which floods /var/log/messages</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/999651">999651</a></td>
+<td>POST</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2014-03-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">splitting the  sos report to modules - Cinder</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/999653">999653</a></td>
+<td>POST</td>
+<td><a href="report-openstack-glance.html">openstack-glance</a></td>
+<td>2015-01-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">splitting the  sos report to modules - Glance</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/999660">999660</a></td>
+<td>POST</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2015-02-01</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">splitting the  sos report to modules - Neutron</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/999662">999662</a></td>
+<td>POST</td>
+<td><a href="report-openstack-swift.html">openstack-swift</a></td>
+<td>2015-01-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">splitting the  sos report to modules - Swift</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1001107">1001107</a></td>
+<td>MODIFIED</td>
+<td><a href="report-python-novaclient.html">python-novaclient</a></td>
+<td>2013-09-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Please upgrade to 2.14.1</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1001470">1001470</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-04-21</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">openstack-dashboard django dependency conflict stops packstack execution</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1001832">1001832</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-ceilometer.html">openstack-ceilometer</a></td>
+<td>2014-01-13</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">sos report tracker bug - Ceilometer</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1003959">1003959</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-02-05</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Make "Nothing to do" error from yum in Puppet installs a little easier to decipher</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1006353">1006353</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-04-29</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Packstack w/ CONFIG_CEILOMETER_INSTALL=y has an error</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1006401">1006401</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-02-05</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">explicit check for pymongo is incorrect</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1006476">1006476</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-02-05</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">ERROR : Error during puppet run : Error: /Stage[main]/Nova::Network/Sysctl::Value[net.ipv4.ip_forward]/Sysctl[net.ipv4.ip_forward]: Could not evaluate: Field 'val' is required</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1006534">1006534</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-04-08</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Packstack ignores neutron physical network configuration if CONFIG_NEUTRON_OVS_TENANT_NETWORK_TYPE=gre</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1006816">1006816</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-02-05</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">cinder modules require glance installed</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1007497">1007497</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2015-02-01</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Openstack Installer: packstack does not create tables in Heat db.</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1007515">1007515</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2013-11-27</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">cinder [Havana]: we try to create a backup although cinder-backup service is down</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1008818">1008818</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-glance.html">openstack-glance</a></td>
+<td>2015-01-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">glance api hangs with low (1) workers on multiple parallel image creation requests</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1008863">1008863</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2013-10-23</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Allow overlapping ips by default</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1010039">1010039</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2013-11-27</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Grizzly -> Havana upgrade fails during db_sync</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1011628">1011628</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-04-29</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">packstack reports installation completed successfully but nothing installed</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1014774">1014774</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-04-23</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">packstack configures br-ex to use gateway ip</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1018900">1018900</a></td>
+<td>POST</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-02-05</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Packstack fails with "The iptables provider can not handle attribute outiface"</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1018911">1018911</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2015-02-20</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Packstack creates duplicate cirros images in glance</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1018922">1018922</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-02-05</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Packstack configures nova/neutron for qpid username/password when none is required</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1019487">1019487</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-07-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron-dhcp-agent fails to start without openstack-neutron-openvswitch installed</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1020048">1020048</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-10-02</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Packstack neutron plugin does not check if Nova is disabled</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1021183">1021183</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2015-02-15</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">horizon log errors</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1021989">1021989</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-heat.html">openstack-heat</a></td>
+<td>2015-02-01</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">heat sometimes keeps listenings stacks with status DELETE_COMPLETE</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1022312">1022312</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-02-05</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">qpid should enable SSL</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1022421">1022421</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-08-19</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Error appeared during Puppet run: IPADDRESS_keystone.pp</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1022580">1022580</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-02-05</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">netns.py syntax error</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1023614">1023614</a></td>
+<td>POST</td>
+<td><a href="report-openstack-glance.html">openstack-glance</a></td>
+<td>2014-04-25</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">No logging to files</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1024330">1024330</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2014-04-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Wrong SELinux policies set for neutron-dhcp-agent</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1024581">1024581</a></td>
+<td>MODIFIED</td>
+<td><a href="report-python-keystoneclient.html">python-keystoneclient</a></td>
+<td>2014-01-13</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">keystone missing tab completion</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1025509">1025509</a></td>
+<td>MODIFIED</td>
+<td><a href="report-python-neutronclient.html">python-neutronclient</a></td>
+<td>2014-06-24</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Neutronclient should not obsolete quantumclient</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1028591">1028591</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-02-05</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">packstack generates invalid configuration when using GRE tunnels</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1028690">1028690</a></td>
+<td>POST</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-11-26</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">packstack requires 2 runs to install ceilometer</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1028726">1028726</a></td>
+<td>MODIFIED</td>
+<td><a href="report-python-heatclient.html">python-heatclient</a></td>
+<td>2015-02-01</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">python-heatclient needs a dependency on python-pbr</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1036192">1036192</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-12-01</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">rerunning packstack with the generated allione answerfile will fail with qpidd user  logged in</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1037635">1037635</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-06-16</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">prescript.pp fails with '/sbin/service iptables start' returning 6</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1038162">1038162</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-ceilometer.html">openstack-ceilometer</a></td>
+<td>2014-02-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">openstack-ceilometer-common missing python-babel dependency</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1038255">1038255</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-04-08</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">prescript.pp does not ensure iptables-services package installation</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1039694">1039694</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-10-02</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">packstack fails if iptables.service is not available</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1045084">1045084</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2014-06-03</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Trying to boot an instance with a flavor that has nonzero ephemeral disk will fail</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1048326">1048326</a></td>
+<td>MODIFIED</td>
+<td><a href="report-python-cinderclient.html">python-cinderclient</a></td>
+<td>2014-01-13</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">the command cinder type-key lvm set volume_backend_name=LVM_iSCSI fails to run</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1049091">1049091</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2014-06-24</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">openstack-selinux blocks communication from dashboard to identity service</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1049503">1049503</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2015-03-10</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">rdo-icehouse selinux issues with rootwrap "sudo: unknown uid 162: who are you?"</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1049537">1049537</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2015-03-12</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Horizon help url in RDO points to the RHOS documentation</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1049807">1049807</a></td>
+<td>POST</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-01-13</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron-dhcp-agent fails to start with plenty of SELinux AVC denials</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1049861">1049861</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-06-02</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">fail to create snapshot on an "in-use" GlusterFS volume using --force true (el7)</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1050205">1050205</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-10-02</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Dashboard port firewall rule is not permanent</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1050842">1050842</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-06-11</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron should not specify signing_dir in neutron-dist.conf</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1052311">1052311</a></td>
+<td>MODIFIED</td>
+<td><a href="report-python-neutronclient.html">python-neutronclient</a></td>
+<td>2014-02-12</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[RFE] python-neutronclient new version request</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1052948">1052948</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-04-14</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Could not start Service[libvirt]: Execution of '/etc/init.d/libvirtd start' returned 1</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1054826">1054826</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-keystone.html">openstack-keystone</a></td>
+<td>2014-02-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Keystone init.d relies on the use of keystone discover command</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1057822">1057822</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-04-16</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron-ml2 package requires python-pyudev</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1057938">1057938</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-06-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Errors when setting CONFIG_NEUTRON_OVS_TUNNEL_IF to a VLAN interface</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1058995">1058995</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-04-08</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron-plugin-nicira should be renamed to neutron-plugin-vmware</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1061349">1061349</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-02-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron-dhcp-agent won't start due to a missing import of module named stevedore</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1061689">1061689</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2015-03-13</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Horizon SSL is disabled by Nagios configuration via packstack</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1063980">1063980</a></td>
+<td>POST</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-03-06</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Change packstack to use openstack-puppet-modules</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1067237">1067237</a></td>
+<td>ON_QA</td>
+<td><a href="report-python-neutronclient.html">python-neutronclient</a></td>
+<td>2014-03-26</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutronclient with pre-determined auth token fails when doing Client.get_auth_info()</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1074724">1074724</a></td>
+<td>POST</td>
+<td><a href="report-openstack-glance.html">openstack-glance</a></td>
+<td>2014-06-24</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Glance api ssl issue</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1080348">1080348</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-04-14</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Fedora20: packstack gives traceback when SElinux permissive</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1080369">1080369</a></td>
+<td>POST</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-03-25</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">packstack fails with KeyError :CONFIG_PROVISION_DEMO_FLOATRANGE if more compute-hosts are added</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1080514">1080514</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-keystone.html">openstack-keystone</a></td>
+<td>2014-04-09</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">missing python-oauthlib dependency</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1080972">1080972</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-keystone.html">openstack-keystone</a></td>
+<td>2014-03-28</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">'RevokeTree' object has no attribute 'remove'</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1081022">1081022</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2014-05-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Non-admin user can not attach cinder volume to their instance (LIO)</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1081203">1081203</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-04-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">No DHCP agents are associated with network</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1082729">1082729</a></td>
+<td>POST</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2015-02-27</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[RFE] allow for Keystone/LDAP configuration at deployment time</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1083566">1083566</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2014-06-24</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Selinux blocks Nova services on RHEL7, can't boot or delete instances,</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1084046">1084046</a></td>
+<td>POST</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2014-09-26</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">cinder: can't delete a volume (raise exception.ISCSITargetNotFoundForVolume)</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1085452">1085452</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-04-24</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">prescript puppet - missing dependency package iptables-services</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1087089">1087089</a></td>
+<td>POST</td>
+<td><a href="report-python-heatclient.html">python-heatclient</a></td>
+<td>2015-02-01</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">python-heatclient 0.2.9 requires packaging in RDO</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1087529">1087529</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-05-13</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Configure neutron correctly to be able to notify nova about port changes</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1088537">1088537</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-06-11</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">rhel 6.5 icehouse stage.. neutron-db-manage trying to import systemd</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1088964">1088964</a></td>
+<td>POST</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-06-23</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Havana Fedora 19, packstack fails w/ mysql error</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1090648">1090648</a></td>
+<td>POST</td>
+<td><a href="report-openstack-utils.html">openstack-utils</a></td>
+<td>2014-05-21</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">glance-manage db_sync silently fails to prepare the database</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1093297">1093297</a></td>
+<td>POST</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2014-05-15</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">selinux AVC RHEL7 and RDO - Neutron</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1093385">1093385</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2014-05-15</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron  L3 agent RPC errors</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1093828">1093828</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-12-19</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">packstack package should depend on yum-utils</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1098601">1098601</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-05-16</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron-vpn-agent does not use the /etc/neutron/fwaas_driver.ini</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1099042">1099042</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2014-06-27</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Neutron is unable to create directory in /tmp</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1100136">1100136</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-07-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Missing configuration file for ML2 Mellanox Mechanism Driver ml2_conf_mlnx.ini</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1101665">1101665</a></td>
+<td>POST</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-06-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">el7 Icehouse: Nagios installation fails</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1105357">1105357</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2015-01-22</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Keystone cannot send notifications</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1108188">1108188</a></td>
+<td>MODIFIED</td>
+<td><a href="report-distribution.html">distribution</a></td>
+<td>2014-09-19</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">update el6 icehouse kombu packages for improved performance</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1108742">1108742</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2015-03-13</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Allow specifying of a global --password option in packstack to set all keys/secrets/passwords to that value</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1109824">1109824</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-09-27</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Embrane plugin should be split from python-neutron</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1110164">1110164</a></td>
+<td>ON_QA</td>
+<td><a href="report-python-oslo-config.html">python-oslo-config</a></td>
+<td>2014-06-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">oslo.config >=1.2.1 is required for trove-manage</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1111318">1111318</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-08-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">pakcstack: mysql fails to restart on CentOS6.5</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1115398">1115398</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-10-01</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">swift.pp:  Could not find command 'restorecon'</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1116403">1116403</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-11-25</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">packstack prescript fails if NetworkManager is disabled, but still installed</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1119920">1119920</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2015-03-13</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">http://ip/dashboard 404  from all-in-one rdo install on rhel7</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1122968">1122968</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-08-01</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron/manifests/agents/ovs.pp creates /etc/sysconfig/network-scripts/ifcfg-br-{int,tun}</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1126942">1126942</a></td>
+<td>MODIFIED</td>
+<td><a href="report-python-swiftclient.html">python-swiftclient</a></td>
+<td>2014-09-16</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Swift pseudo-folder cannot be interacted with after creation</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1127309">1127309</a></td>
+<td>POST</td>
+<td><a href="report-rdopkg.html">rdopkg</a></td>
+<td>2014-09-01</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">rdopkg version 0.18 fails to find rdoupdate.bsources.koji_</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1133345">1133345</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2014-09-05</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Packstack execution fails with "Could not set 'present' on ensure"</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1134121">1134121</a></td>
+<td>POST</td>
+<td><a href="report-distribution.html">distribution</a></td>
+<td>2014-10-16</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Tuskar Fails After Remove/Reinstall Of RDO</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1134617">1134617</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2014-10-08</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">nova-api service denied tmpfs access</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1139246">1139246</a></td>
+<td>POST</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-09-12</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Refactor cinder plugin to support multiple cinder backends</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1140842">1140842</a></td>
+<td>MODIFIED</td>
+<td><a href="report-python-heatclient.html">python-heatclient</a></td>
+<td>2015-02-01</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">heat.bash_completion not installed</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1144539">1144539</a></td>
+<td>POST</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2014-10-29</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">selinux preventing Horizon access (IceHouse, CentOS 7)</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1148949">1148949</a></td>
+<td>POST</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-10-27</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">openstack-packstack: installed  "packstack --allinone"  on Centos7.0 and configured private networking. The booted VMs are not able to communicate with each other, nor ping the gateway.</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1151892">1151892</a></td>
+<td>POST</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-10-31</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">packstack icehouse doesn't install anything because of repo</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1153131">1153131</a></td>
+<td>POST</td>
+<td><a href="report-openstack-keystone.html">openstack-keystone</a></td>
+<td>2014-11-06</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">LDAP paged searches don't work with python-ldap 2.4</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1154866">1154866</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2015-01-11</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">latest yum update for RHEL6.5   installs selinux-policy package which conflicts openstack-selinux installed later</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1157599">1157599</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-11-25</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">fresh neutron install fails due unknown database column 'id'</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1171191">1171191</a></td>
+<td>POST</td>
+<td><a href="report-python-openstackclient.html">python-openstackclient</a></td>
+<td>2015-03-02</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Rebase python-openstackclient to version 1.0.0</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1171352">1171352</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2015-02-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">add aviator</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1172876">1172876</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2015-03-11</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">packstack fails on centos6 with missing systemctl</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1175121">1175121</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-tuskar-ui.html">openstack-tuskar-ui</a></td>
+<td>2015-02-09</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Registering nodes with the IPMI driver always fails</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1175428">1175428</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2015-02-24</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">packstack doesn't configure rabbitmq to allow non-localhost connections to 'guest' user</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1175450">1175450</a></td>
+<td>POST</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2015-02-24</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">packstack fails to start Nova on Rawhide: Error: comparison of String with 18 failed at [...]ceilometer/manifests/params.pp:32</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1175726">1175726</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-packstack.html">openstack-packstack</a></td>
+<td>2014-12-19</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Disabling glance deployment does not work if you don't disable demo provisioning</td>
+</tr>
+
+
+
+<tr>
+<td><a href="http://bugzilla.redhat.com/1182837">1182837</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-puppet-modules.html">openstack-puppet-modules</a></td>
+<td>2015-01-21</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">packstack chokes on ironic - centos7 + juno</td>
+</tr>
+
+
+</table>
+
+
+</body>
+</html>
