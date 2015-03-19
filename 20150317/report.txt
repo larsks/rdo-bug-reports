@@ -234,7 +234,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1187309 ] http://bugzilla.redhat.com/1187309 (NEW)  
            Component: distribution  
-           Last change: 2015-03-02 (14 days ago)
+           Last change: 2015-03-02 (16 days ago)
            Summary: New package - python-cliff-tablib  
 
 [1192622 ] http://bugzilla.redhat.com/1192622 (NEW)  
@@ -250,7 +250,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1200701 ] http://bugzilla.redhat.com/1200701 (NEW)  
            Component: distribution  
-           Last change: 2015-03-11 (6 days ago)
+           Last change: 2015-03-11 (8 days ago)
            Summary: openstack-nova-novncproxy.service in failed state -
                     need upgraded websockify version  
 
@@ -275,7 +275,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1201372 ] http://bugzilla.redhat.com/1201372 (NEW)  
            Component: instack  
-           Last change: 2015-03-12 (5 days ago)
+           Last change: 2015-03-12 (6 days ago)
            Summary: instack-update-overcloud fails because it tries to
                     access non-existing files  
 
@@ -290,7 +290,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1187966 ] http://bugzilla.redhat.com/1187966 (NEW)  
            Component: instack-undercloud  
-           Last change: 2015-01-31 (a month ago)
+           Last change: 2015-01-31 (2 months ago)
            Summary: missing dependency on which  
 
 ### iproute (1 bug)
@@ -298,7 +298,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1173435 ] http://bugzilla.redhat.com/1173435 (NEW)  
            Component: iproute  
-           Last change: 2015-02-23 (22 days ago)
+           Last change: 2015-02-23 (23 days ago)
            Summary: deleting netns ends in  Device or resource busy and
                     blocks further namespace usage  
 
@@ -316,7 +316,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1194230 ] http://bugzilla.redhat.com/1194230 (ASSIGNED)  
            Component: openstack-ceilometer  
-           Last change: 2015-02-26 (19 days ago)
+           Last change: 2015-02-26 (21 days ago)
            Summary: The /etc/sudoers.d/ceilometer have incorrect
                     permissions  
 
@@ -336,7 +336,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1049380 ] http://bugzilla.redhat.com/1049380 (NEW)  
            Component: openstack-cinder  
-           Last change: 2015-03-02 (15 days ago)
+           Last change: 2015-03-02 (16 days ago)
            Summary: openstack-cinder: cinder fails to copy an image a
                     volume with GlusterFS backend  
 
@@ -582,7 +582,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1093357 ] http://bugzilla.redhat.com/1093357 (NEW)  
            Component: openstack-neutron  
-           Last change: 2015-03-02 (15 days ago)
+           Last change: 2015-03-02 (17 days ago)
            Summary: neutron agent-list report different status each click  
 
 [1147152 ] http://bugzilla.redhat.com/1147152 (NEW)  
@@ -677,7 +677,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1123298 ] http://bugzilla.redhat.com/1123298 (NEW)  
            Component: openstack-nova  
-           Last change: 2015-02-23 (22 days ago)
+           Last change: 2015-02-23 (24 days ago)
            Summary: logrotate should copytruncate to avoid oepnstack
                     logging to deleted files  
 
@@ -743,7 +743,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1161915 ] http://bugzilla.redhat.com/1161915 (NEW)  
            Component: openstack-nova  
-           Last change: 2015-03-15 (2 days ago)
+           Last change: 2015-03-15 (3 days ago)
            Summary: horizon console uses http when horizon is set to use
                     ssl  
 
@@ -808,7 +808,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1023533 ] http://bugzilla.redhat.com/1023533 (ASSIGNED)  
            Component: openstack-packstack  
-           Last change: 2015-03-02 (15 days ago)
+           Last change: 2015-03-02 (17 days ago)
            Summary: API services has all admin permission instead of
                     service  
 
@@ -1091,7 +1091,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1107907 ] http://bugzilla.redhat.com/1107907 (NEW)  
            Component: openstack-puppet-modules  
-           Last change: 2015-02-01 (a month ago)
+           Last change: 2015-02-01 (1 months ago)
            Summary: Offset Swift ports to 6200  
 
 [1150902 ] http://bugzilla.redhat.com/1150902 (ASSIGNED)  
@@ -1107,7 +1107,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1157500 ] http://bugzilla.redhat.com/1157500 (NEW)  
            Component: openstack-puppet-modules  
-           Last change: 2015-03-13 (4 days ago)
+           Last change: 2015-03-13 (5 days ago)
            Summary: ERROR: Network commands are not supported when using
                     the Neutron API.  
 
@@ -1131,7 +1131,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1184522 ] http://bugzilla.redhat.com/1184522 (NEW)  
            Component: openstack-sahara  
-           Last change: 2015-02-26 (19 days ago)
+           Last change: 2015-02-26 (20 days ago)
            Summary: launch_command.py missing  
 
 ### openstack-selinux (9 bugs)
@@ -1178,7 +1178,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1174795 ] http://bugzilla.redhat.com/1174795 (NEW)  
            Component: openstack-selinux  
-           Last change: 2015-02-24 (21 days ago)
+           Last change: 2015-02-24 (22 days ago)
            Summary: keystone fails to start: raise exception.ConfigFileNotF
                     ound(config_file=paste_config_value)  
 
@@ -1254,7 +1254,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1187352 ] http://bugzilla.redhat.com/1187352 (NEW)  
            Component: openstack-tripleo  
-           Last change: 2015-01-31 (a month ago)
+           Last change: 2015-01-31 (2 months ago)
            Summary: /usr/bin/instack-prepare-for-overcloud glance using
                     incorrect parameter  
 
@@ -1268,7 +1268,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1187965 ] http://bugzilla.redhat.com/1187965 (NEW)  
            Component: openstack-tripleo-image-elements  
-           Last change: 2015-02-28 (17 days ago)
+           Last change: 2015-02-28 (18 days ago)
            Summary: mariadb my.cnf socket path does not exist  
 
 ### openstack-utils (5 bugs)
@@ -1300,7 +1300,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1201340 ] http://bugzilla.redhat.com/1201340 (NEW)  
            Component: openstack-utils  
-           Last change: 2015-03-12 (5 days ago)
+           Last change: 2015-03-12 (6 days ago)
            Summary: openstack-service tries to restart neutron-ovs-
                     cleanup.service  
 
@@ -1309,7 +1309,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1193429 ] http://bugzilla.redhat.com/1193429 (ASSIGNED)  
            Component: openvswitch  
-           Last change: 2015-03-13 (4 days ago)
+           Last change: 2015-03-13 (6 days ago)
            Summary: failed to flow_del  
 
 ### python-cinderclient (2 bugs)
@@ -1336,7 +1336,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1200789 ] http://bugzilla.redhat.com/1200789 (NEW)  
            Component: python-glanceclient  
-           Last change: 2015-03-11 (6 days ago)
+           Last change: 2015-03-11 (8 days ago)
            Summary: DeprecationWarning in Glance commands for Juno/EL6  
 
 ### python-keystoneclient (2 bugs)
@@ -1359,7 +1359,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1195977 ] http://bugzilla.redhat.com/1195977 (NEW)  
            Component: python-keystonemiddleware  
-           Last change: 2015-03-02 (15 days ago)
+           Last change: 2015-03-02 (17 days ago)
            Summary: Rebase python-keystonemiddleware to version 1.3  
 
 ### python-neutronclient (2 bugs)
@@ -1390,7 +1390,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1187310 ] http://bugzilla.redhat.com/1187310 (NEW)  
            Component: python-openstackclient  
-           Last change: 2015-03-04 (12 days ago)
+           Last change: 2015-03-04 (14 days ago)
            Summary: Add --user to project list command to filter projects
                     by user  
 
@@ -1541,7 +1541,7 @@ out by testing the fix to make sure it works as intended.
 
 [1021989 ] http://bugzilla.redhat.com/1021989 (MODIFIED)  
            Component: openstack-heat  
-           Last change: 2015-02-01 (a month ago)
+           Last change: 2015-02-01 (1 months ago)
            Summary: heat sometimes keeps listenings stacks with status
                     DELETE_COMPLETE  
 
@@ -1574,7 +1574,7 @@ out by testing the fix to make sure it works as intended.
 
 [999660  ] http://bugzilla.redhat.com/999660 (POST)  
            Component: openstack-neutron  
-           Last change: 2015-02-01 (a month ago)
+           Last change: 2015-02-01 (1 months ago)
            Summary: splitting the  sos report to modules - Neutron  
 
 [1019487 ] http://bugzilla.redhat.com/1019487 (MODIFIED)  
@@ -1682,7 +1682,7 @@ out by testing the fix to make sure it works as intended.
 
 [964005  ] http://bugzilla.redhat.com/964005 (MODIFIED)  
            Component: openstack-packstack  
-           Last change: 2015-02-01 (a month ago)
+           Last change: 2015-02-01 (1 months ago)
            Summary: keystonerc_admin stored in /root requiring running
                     OpenStack software as root user  
 
@@ -1755,7 +1755,7 @@ out by testing the fix to make sure it works as intended.
 
 [1007497 ] http://bugzilla.redhat.com/1007497 (MODIFIED)  
            Component: openstack-packstack  
-           Last change: 2015-02-01 (a month ago)
+           Last change: 2015-02-01 (1 months ago)
            Summary: Openstack Installer: packstack does not create tables
                     in Heat db.  
 
@@ -1783,7 +1783,7 @@ out by testing the fix to make sure it works as intended.
 
 [1018911 ] http://bugzilla.redhat.com/1018911 (MODIFIED)  
            Component: openstack-packstack  
-           Last change: 2015-02-20 (24 days ago)
+           Last change: 2015-02-20 (a month ago)
            Summary: Packstack creates duplicate cirros images in glance  
 
 [1018922 ] http://bugzilla.redhat.com/1018922 (MODIFIED)  
@@ -1855,7 +1855,7 @@ out by testing the fix to make sure it works as intended.
 
 [1061689 ] http://bugzilla.redhat.com/1061689 (MODIFIED)  
            Component: openstack-packstack  
-           Last change: 2015-03-13 (4 days ago)
+           Last change: 2015-03-13 (6 days ago)
            Summary: Horizon SSL is disabled by Nagios configuration via
                     packstack  
 
@@ -1879,7 +1879,7 @@ out by testing the fix to make sure it works as intended.
 
 [1082729 ] http://bugzilla.redhat.com/1082729 (POST)  
            Component: openstack-packstack  
-           Last change: 2015-02-27 (18 days ago)
+           Last change: 2015-02-27 (19 days ago)
            Summary: [RFE] allow for Keystone/LDAP configuration at
                     deployment time  
 
@@ -1906,7 +1906,7 @@ out by testing the fix to make sure it works as intended.
 
 [1108742 ] http://bugzilla.redhat.com/1108742 (MODIFIED)  
            Component: openstack-packstack  
-           Last change: 2015-03-13 (4 days ago)
+           Last change: 2015-03-13 (6 days ago)
            Summary: Allow specifying of a global --password option in
                     packstack to set all keys/secrets/passwords to that
                     value  
@@ -1924,7 +1924,7 @@ out by testing the fix to make sure it works as intended.
 
 [1119920 ] http://bugzilla.redhat.com/1119920 (MODIFIED)  
            Component: openstack-packstack  
-           Last change: 2015-03-13 (4 days ago)
+           Last change: 2015-03-13 (6 days ago)
            Summary: http://ip/dashboard 404  from all-in-one rdo install on
                     rhel7  
 
@@ -1950,18 +1950,18 @@ out by testing the fix to make sure it works as intended.
 
 [1172876 ] http://bugzilla.redhat.com/1172876 (MODIFIED)  
            Component: openstack-packstack  
-           Last change: 2015-03-11 (5 days ago)
+           Last change: 2015-03-11 (7 days ago)
            Summary: packstack fails on centos6 with missing systemctl  
 
 [1175428 ] http://bugzilla.redhat.com/1175428 (MODIFIED)  
            Component: openstack-packstack  
-           Last change: 2015-02-24 (21 days ago)
+           Last change: 2015-02-24 (22 days ago)
            Summary: packstack doesn't configure rabbitmq to allow non-
                     localhost connections to 'guest' user  
 
 [1175450 ] http://bugzilla.redhat.com/1175450 (POST)  
            Component: openstack-packstack  
-           Last change: 2015-02-24 (21 days ago)
+           Last change: 2015-02-24 (22 days ago)
            Summary: packstack fails to start Nova on Rawhide: Error:
                     comparison of String with 18 failed at
                     [...]ceilometer/manifests/params.pp:32  
@@ -2009,7 +2009,7 @@ out by testing the fix to make sure it works as intended.
 
 [1049537 ] http://bugzilla.redhat.com/1049537 (MODIFIED)  
            Component: openstack-puppet-modules  
-           Last change: 2015-03-12 (5 days ago)
+           Last change: 2015-03-12 (7 days ago)
            Summary: Horizon help url in RDO points to the RHOS
                     documentation  
 
@@ -2062,7 +2062,7 @@ out by testing the fix to make sure it works as intended.
 
 [1049503 ] http://bugzilla.redhat.com/1049503 (MODIFIED)  
            Component: openstack-selinux  
-           Last change: 2015-03-10 (7 days ago)
+           Last change: 2015-03-10 (9 days ago)
            Summary: rdo-icehouse selinux issues with rootwrap "sudo:
                     unknown uid 162: who are you?"  
 
@@ -2162,17 +2162,17 @@ out by testing the fix to make sure it works as intended.
 
 [1028726 ] http://bugzilla.redhat.com/1028726 (MODIFIED)  
            Component: python-heatclient  
-           Last change: 2015-02-01 (a month ago)
+           Last change: 2015-02-01 (1 months ago)
            Summary: python-heatclient needs a dependency on python-pbr  
 
 [1087089 ] http://bugzilla.redhat.com/1087089 (POST)  
            Component: python-heatclient  
-           Last change: 2015-02-01 (a month ago)
+           Last change: 2015-02-01 (1 months ago)
            Summary: python-heatclient 0.2.9 requires packaging in RDO  
 
 [1140842 ] http://bugzilla.redhat.com/1140842 (MODIFIED)  
            Component: python-heatclient  
-           Last change: 2015-02-01 (a month ago)
+           Last change: 2015-02-01 (1 months ago)
            Summary: heat.bash_completion not installed  
 
 ### python-keystoneclient (3 bugs)
@@ -2231,7 +2231,7 @@ out by testing the fix to make sure it works as intended.
 
 [1171191 ] http://bugzilla.redhat.com/1171191 (POST)  
            Component: python-openstackclient  
-           Last change: 2015-03-02 (14 days ago)
+           Last change: 2015-03-02 (16 days ago)
            Summary: Rebase python-openstackclient to version 1.0.0  
 
 ### python-oslo-config (1 bug)
