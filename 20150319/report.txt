@@ -80,7 +80,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1038752 ] http://bugzilla.redhat.com/1038752 (NEW)  
            Component: distribution  
-           Last change: 2015-03-18 (17 hours ago)
+           Last change: 2015-03-18 (a day ago)
            Summary: Update manual uninstallation wiki page instructions.  
 
 [1063474 ] http://bugzilla.redhat.com/1063474 (ASSIGNED)  
@@ -137,12 +137,12 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1178131 ] http://bugzilla.redhat.com/1178131 (NEW)  
            Component: distribution  
-           Last change: 2015-03-19 (11 hours ago)
+           Last change: 2015-03-19 (16 hours ago)
            Summary: SSL supports only broken crypto  
 
 [1187309 ] http://bugzilla.redhat.com/1187309 (NEW)  
            Component: distribution  
-           Last change: 2015-03-02 (16 days ago)
+           Last change: 2015-03-02 (17 days ago)
            Summary: New package - python-cliff-tablib  
 
 ### dnsmasq (2 bugs)
@@ -171,7 +171,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1201372 ] http://bugzilla.redhat.com/1201372 (NEW)  
            Component: instack  
-           Last change: 2015-03-12 (6 days ago)
+           Last change: 2015-03-12 (7 days ago)
            Summary: instack-update-overcloud fails because it tries to
                     access non-existing files  
 
@@ -186,7 +186,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1176569 ] http://bugzilla.redhat.com/1176569 (NEW)  
            Component: instack-undercloud  
-           Last change: 2015-03-19 (11 hours ago)
+           Last change: 2015-03-19 (16 hours ago)
            Summary: 404 not found when instack-virt-setup tries to download
                     the rhel-6.5 guest image  
 
@@ -200,7 +200,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1173435 ] http://bugzilla.redhat.com/1173435 (NEW)  
            Component: iproute  
-           Last change: 2015-02-23 (23 days ago)
+           Last change: 2015-02-23 (24 days ago)
            Summary: deleting netns ends in  Device or resource busy and
                     blocks further namespace usage  
 
@@ -223,7 +223,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1049380 ] http://bugzilla.redhat.com/1049380 (NEW)  
            Component: openstack-cinder  
-           Last change: 2015-03-02 (16 days ago)
+           Last change: 2015-03-02 (17 days ago)
            Summary: openstack-cinder: cinder fails to copy an image a
                     volume with GlusterFS backend  
 
@@ -425,7 +425,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [986507  ] http://bugzilla.redhat.com/986507 (ASSIGNED)  
            Component: openstack-neutron  
-           Last change: 2015-03-18 (18 hours ago)
+           Last change: 2015-03-18 (a day ago)
            Summary: RFE: IPv6 Feature Parity  
 
 [1081011 ] http://bugzilla.redhat.com/1081011 (ASSIGNED)  
@@ -578,7 +578,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1161915 ] http://bugzilla.redhat.com/1161915 (NEW)  
            Component: openstack-nova  
-           Last change: 2015-03-15 (3 days ago)
+           Last change: 2015-03-15 (4 days ago)
            Summary: horizon console uses http when horizon is set to use
                     ssl  
 
@@ -611,7 +611,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1200701 ] http://bugzilla.redhat.com/1200701 (NEW)  
            Component: openstack-nova  
-           Last change: 2015-03-19 (11 hours ago)
+           Last change: 2015-03-19 (16 hours ago)
            Summary: openstack-nova-novncproxy.service in failed state -
                     need upgraded websockify version  
 
@@ -626,12 +626,12 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [982035  ] http://bugzilla.redhat.com/982035 (NEW)  
            Component: openstack-packstack  
-           Last change: 2015-03-18 (18 hours ago)
+           Last change: 2015-03-18 (a day ago)
            Summary: Include Fedora cloud images in some nice way  
 
 [996725  ] http://bugzilla.redhat.com/996725 (NEW)  
            Component: openstack-packstack  
-           Last change: 2015-03-18 (18 hours ago)
+           Last change: 2015-03-18 (a day ago)
            Summary: Packstack should not require ALL parameters be
                     specified in an answer file  
 
@@ -643,7 +643,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1023533 ] http://bugzilla.redhat.com/1023533 (ASSIGNED)  
            Component: openstack-packstack  
-           Last change: 2015-03-18 (18 hours ago)
+           Last change: 2015-03-18 (a day ago)
            Summary: API services has all admin permission instead of
                     service  
 
@@ -828,7 +828,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1171811 ] http://bugzilla.redhat.com/1171811 (NEW)  
            Component: openstack-packstack  
-           Last change: 2015-03-19 (11 hours ago)
+           Last change: 2015-03-19 (16 hours ago)
            Summary: misleading exit message on fail  
 
 [1174749 ] http://bugzilla.redhat.com/1174749 (NEW)  
@@ -850,7 +850,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1176833 ] http://bugzilla.redhat.com/1176833 (NEW)  
            Component: openstack-packstack  
-           Last change: 2015-03-19 (11 hours ago)
+           Last change: 2015-03-19 (16 hours ago)
            Summary: packstack --allinone fails when starting neutron server  
 
 [1185627 ] http://bugzilla.redhat.com/1185627 (NEW)  
@@ -890,7 +890,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1203444 ] http://bugzilla.redhat.com/1203444 (NEW)  
            Component: openstack-packstack  
-           Last change: 2015-03-18 (17 hours ago)
+           Last change: 2015-03-18 (a day ago)
            Summary: "private" network created by packstack is not owned by
                     any tenant  
 
@@ -904,7 +904,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1038729 ] http://bugzilla.redhat.com/1038729 (NEW)  
            Component: openstack-puppet-modules  
-           Last change: 2015-03-18 (17 hours ago)
+           Last change: 2015-03-18 (a day ago)
            Summary: Installing packstack-modules-puppet and running puppet
                     results in Error  
 
@@ -957,7 +957,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1157500 ] http://bugzilla.redhat.com/1157500 (NEW)  
            Component: openstack-puppet-modules  
-           Last change: 2015-03-13 (5 days ago)
+           Last change: 2015-03-13 (6 days ago)
            Summary: ERROR: Network commands are not supported when using
                     the Neutron API.  
 
@@ -981,7 +981,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1184522 ] http://bugzilla.redhat.com/1184522 (NEW)  
            Component: openstack-sahara  
-           Last change: 2015-02-26 (20 days ago)
+           Last change: 2015-02-26 (21 days ago)
            Summary: launch_command.py missing  
 
 ### openstack-selinux (11 bugs)
@@ -1028,7 +1028,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1174795 ] http://bugzilla.redhat.com/1174795 (NEW)  
            Component: openstack-selinux  
-           Last change: 2015-02-24 (22 days ago)
+           Last change: 2015-02-24 (23 days ago)
            Summary: keystone fails to start: raise exception.ConfigFileNotF
                     ound(config_file=paste_config_value)  
 
@@ -1130,7 +1130,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1187965 ] http://bugzilla.redhat.com/1187965 (NEW)  
            Component: openstack-tripleo-image-elements  
-           Last change: 2015-02-28 (18 days ago)
+           Last change: 2015-02-28 (19 days ago)
            Summary: mariadb my.cnf socket path does not exist  
 
 ### openstack-tuskar-ui (1 bug)
@@ -1138,7 +1138,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1176596 ] http://bugzilla.redhat.com/1176596 (NEW)  
            Component: openstack-tuskar-ui  
-           Last change: 2015-03-19 (11 hours ago)
+           Last change: 2015-03-19 (16 hours ago)
            Summary: The displayed horizon url after deployment has a
                     redundant colon in it and a wrong path  
 
@@ -1159,7 +1159,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1201340 ] http://bugzilla.redhat.com/1201340 (NEW)  
            Component: openstack-utils  
-           Last change: 2015-03-12 (6 days ago)
+           Last change: 2015-03-12 (7 days ago)
            Summary: openstack-service tries to restart neutron-ovs-
                     cleanup.service  
 
@@ -1168,7 +1168,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1193429 ] http://bugzilla.redhat.com/1193429 (ASSIGNED)  
            Component: openvswitch  
-           Last change: 2015-03-18 (a day ago)
+           Last change: 2015-03-18 (2 days ago)
            Summary: failed to flow_del  
 
 ### python-cinderclient (2 bugs)
@@ -1321,7 +1321,7 @@ out by testing the fix to make sure it works as intended.
 
 [1151589 ] http://bugzilla.redhat.com/1151589 (MODIFIED)  
            Component: distribution  
-           Last change: 2015-03-18 (19 hours ago)
+           Last change: 2015-03-18 (a day ago)
            Summary: trove does not install dependency python-pbr  
 
 ### openstack-ceilometer (2 bugs)
@@ -1466,7 +1466,7 @@ out by testing the fix to make sure it works as intended.
 
 [1058995 ] http://bugzilla.redhat.com/1058995 (ON_QA)  
            Component: openstack-neutron  
-           Last change: 2014-04-08 (11 months ago)
+           Last change: 2014-04-08 (a year ago)
            Summary: neutron-plugin-nicira should be renamed to neutron-
                     plugin-vmware  
 
@@ -1612,7 +1612,7 @@ out by testing the fix to make sure it works as intended.
 
 [1006534 ] http://bugzilla.redhat.com/1006534 (MODIFIED)  
            Component: openstack-packstack  
-           Last change: 2014-04-08 (11 months ago)
+           Last change: 2014-04-08 (a year ago)
            Summary: Packstack ignores neutron physical network
                     configuration if
                     CONFIG_NEUTRON_OVS_TENANT_NETWORK_TYPE=gre  
@@ -1743,7 +1743,7 @@ out by testing the fix to make sure it works as intended.
 
 [1082729 ] http://bugzilla.redhat.com/1082729 (POST)  
            Component: openstack-packstack  
-           Last change: 2015-02-27 (19 days ago)
+           Last change: 2015-02-27 (20 days ago)
            Summary: [RFE] allow for Keystone/LDAP configuration at
                     deployment time  
 
@@ -1819,13 +1819,13 @@ out by testing the fix to make sure it works as intended.
 
 [1175428 ] http://bugzilla.redhat.com/1175428 (MODIFIED)  
            Component: openstack-packstack  
-           Last change: 2015-02-24 (22 days ago)
+           Last change: 2015-02-24 (23 days ago)
            Summary: packstack doesn't configure rabbitmq to allow non-
                     localhost connections to 'guest' user  
 
 [1175450 ] http://bugzilla.redhat.com/1175450 (POST)  
            Component: openstack-packstack  
-           Last change: 2015-02-24 (22 days ago)
+           Last change: 2015-02-24 (23 days ago)
            Summary: packstack fails to start Nova on Rawhide: Error:
                     comparison of String with 18 failed at
                     [...]ceilometer/manifests/params.pp:32  
@@ -2095,7 +2095,7 @@ out by testing the fix to make sure it works as intended.
 
 [1171191 ] http://bugzilla.redhat.com/1171191 (POST)  
            Component: python-openstackclient  
-           Last change: 2015-03-02 (16 days ago)
+           Last change: 2015-03-02 (17 days ago)
            Summary: Rebase python-openstackclient to version 1.0.0  
 
 ### python-oslo-config (1 bug)

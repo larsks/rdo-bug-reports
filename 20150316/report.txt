@@ -234,7 +234,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1187309 ] http://bugzilla.redhat.com/1187309 (NEW)  
            Component: distribution  
-           Last change: 2015-03-02 (16 days ago)
+           Last change: 2015-03-02 (17 days ago)
            Summary: New package - python-cliff-tablib  
 
 [1192622 ] http://bugzilla.redhat.com/1192622 (NEW)  
@@ -275,7 +275,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1201372 ] http://bugzilla.redhat.com/1201372 (NEW)  
            Component: instack  
-           Last change: 2015-03-12 (6 days ago)
+           Last change: 2015-03-12 (7 days ago)
            Summary: instack-update-overcloud fails because it tries to
                     access non-existing files  
 
@@ -298,7 +298,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1173435 ] http://bugzilla.redhat.com/1173435 (NEW)  
            Component: iproute  
-           Last change: 2015-02-23 (23 days ago)
+           Last change: 2015-02-23 (24 days ago)
            Summary: deleting netns ends in  Device or resource busy and
                     blocks further namespace usage  
 
@@ -336,7 +336,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1049380 ] http://bugzilla.redhat.com/1049380 (NEW)  
            Component: openstack-cinder  
-           Last change: 2015-03-02 (16 days ago)
+           Last change: 2015-03-02 (17 days ago)
            Summary: openstack-cinder: cinder fails to copy an image a
                     volume with GlusterFS backend  
 
@@ -743,7 +743,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1161915 ] http://bugzilla.redhat.com/1161915 (NEW)  
            Component: openstack-nova  
-           Last change: 2015-03-15 (3 days ago)
+           Last change: 2015-03-15 (4 days ago)
            Summary: horizon console uses http when horizon is set to use
                     ssl  
 
@@ -1107,7 +1107,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1157500 ] http://bugzilla.redhat.com/1157500 (NEW)  
            Component: openstack-puppet-modules  
-           Last change: 2015-03-13 (5 days ago)
+           Last change: 2015-03-13 (6 days ago)
            Summary: ERROR: Network commands are not supported when using
                     the Neutron API.  
 
@@ -1131,7 +1131,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1184522 ] http://bugzilla.redhat.com/1184522 (NEW)  
            Component: openstack-sahara  
-           Last change: 2015-02-26 (20 days ago)
+           Last change: 2015-02-26 (21 days ago)
            Summary: launch_command.py missing  
 
 ### openstack-selinux (9 bugs)
@@ -1178,7 +1178,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1174795 ] http://bugzilla.redhat.com/1174795 (NEW)  
            Component: openstack-selinux  
-           Last change: 2015-02-24 (22 days ago)
+           Last change: 2015-02-24 (23 days ago)
            Summary: keystone fails to start: raise exception.ConfigFileNotF
                     ound(config_file=paste_config_value)  
 
@@ -1268,7 +1268,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1187965 ] http://bugzilla.redhat.com/1187965 (NEW)  
            Component: openstack-tripleo-image-elements  
-           Last change: 2015-02-28 (18 days ago)
+           Last change: 2015-02-28 (19 days ago)
            Summary: mariadb my.cnf socket path does not exist  
 
 ### openstack-utils (5 bugs)
@@ -1300,7 +1300,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1201340 ] http://bugzilla.redhat.com/1201340 (NEW)  
            Component: openstack-utils  
-           Last change: 2015-03-12 (6 days ago)
+           Last change: 2015-03-12 (7 days ago)
            Summary: openstack-service tries to restart neutron-ovs-
                     cleanup.service  
 
@@ -1602,7 +1602,7 @@ out by testing the fix to make sure it works as intended.
 
 [1058995 ] http://bugzilla.redhat.com/1058995 (ON_QA)  
            Component: openstack-neutron  
-           Last change: 2014-04-08 (11 months ago)
+           Last change: 2014-04-08 (a year ago)
            Summary: neutron-plugin-nicira should be renamed to neutron-
                     plugin-vmware  
 
@@ -1748,7 +1748,7 @@ out by testing the fix to make sure it works as intended.
 
 [1006534 ] http://bugzilla.redhat.com/1006534 (MODIFIED)  
            Component: openstack-packstack  
-           Last change: 2014-04-08 (11 months ago)
+           Last change: 2014-04-08 (a year ago)
            Summary: Packstack ignores neutron physical network
                     configuration if
                     CONFIG_NEUTRON_OVS_TENANT_NETWORK_TYPE=gre  
@@ -1879,7 +1879,7 @@ out by testing the fix to make sure it works as intended.
 
 [1082729 ] http://bugzilla.redhat.com/1082729 (POST)  
            Component: openstack-packstack  
-           Last change: 2015-02-27 (19 days ago)
+           Last change: 2015-02-27 (20 days ago)
            Summary: [RFE] allow for Keystone/LDAP configuration at
                     deployment time  
 
@@ -1955,13 +1955,13 @@ out by testing the fix to make sure it works as intended.
 
 [1175428 ] http://bugzilla.redhat.com/1175428 (MODIFIED)  
            Component: openstack-packstack  
-           Last change: 2015-02-24 (22 days ago)
+           Last change: 2015-02-24 (23 days ago)
            Summary: packstack doesn't configure rabbitmq to allow non-
                     localhost connections to 'guest' user  
 
 [1175450 ] http://bugzilla.redhat.com/1175450 (POST)  
            Component: openstack-packstack  
-           Last change: 2015-02-24 (22 days ago)
+           Last change: 2015-02-24 (23 days ago)
            Summary: packstack fails to start Nova on Rawhide: Error:
                     comparison of String with 18 failed at
                     [...]ceilometer/manifests/params.pp:32  
@@ -2231,7 +2231,7 @@ out by testing the fix to make sure it works as intended.
 
 [1171191 ] http://bugzilla.redhat.com/1171191 (POST)  
            Component: python-openstackclient  
-           Last change: 2015-03-02 (16 days ago)
+           Last change: 2015-03-02 (17 days ago)
            Summary: Rebase python-openstackclient to version 1.0.0  
 
 ### python-oslo-config (1 bug)
