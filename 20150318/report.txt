@@ -219,7 +219,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1192622 ] http://bugzilla.redhat.com/1192622 (NEW)  
            Component: instack  
-           Last change: 2015-03-17 (2 days ago)
+           Last change: 2015-03-17 (3 days ago)
            Summary: RDO Instack FAQ has serious doc bug  
 
 [1201372 ] http://bugzilla.redhat.com/1201372 (NEW)  
@@ -2052,7 +2052,7 @@ out by testing the fix to make sure it works as intended.
 
 [1049503 ] http://bugzilla.redhat.com/1049503 (MODIFIED)  
            Component: openstack-selinux  
-           Last change: 2015-03-10 (9 days ago)
+           Last change: 2015-03-10 (10 days ago)
            Summary: rdo-icehouse selinux issues with rootwrap "sudo:
                     unknown uid 162: who are you?"  
 

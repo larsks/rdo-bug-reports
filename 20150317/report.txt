@@ -2062,7 +2062,7 @@ out by testing the fix to make sure it works as intended.
 
 [1049503 ] http://bugzilla.redhat.com/1049503 (MODIFIED)  
            Component: openstack-selinux  
-           Last change: 2015-03-10 (9 days ago)
+           Last change: 2015-03-10 (10 days ago)
            Summary: rdo-icehouse selinux issues with rootwrap "sudo:
                     unknown uid 162: who are you?"  
 
