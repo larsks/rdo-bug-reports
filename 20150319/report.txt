@@ -80,7 +80,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1038752 ] http://bugzilla.redhat.com/1038752 (NEW)  
            Component: distribution  
-           Last change: 2015-03-18 (a day ago)
+           Last change: 2015-03-18 (2 days ago)
            Summary: Update manual uninstallation wiki page instructions.  
 
 [1063474 ] http://bugzilla.redhat.com/1063474 (ASSIGNED)  
@@ -137,7 +137,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1178131 ] http://bugzilla.redhat.com/1178131 (NEW)  
            Component: distribution  
-           Last change: 2015-03-19 (16 hours ago)
+           Last change: 2015-03-19 (a day ago)
            Summary: SSL supports only broken crypto  
 
 [1187309 ] http://bugzilla.redhat.com/1187309 (NEW)  
@@ -157,7 +157,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1188423 ] http://bugzilla.redhat.com/1188423 (NEW)  
            Component: dnsmasq  
-           Last change: 2015-02-02 (a month ago)
+           Last change: 2015-02-02 (1 months ago)
            Summary: RHEL / Centos 7-based instances lose their default IPv4
                     gateway  
 
@@ -186,13 +186,13 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1176569 ] http://bugzilla.redhat.com/1176569 (NEW)  
            Component: instack-undercloud  
-           Last change: 2015-03-19 (16 hours ago)
+           Last change: 2015-03-19 (a day ago)
            Summary: 404 not found when instack-virt-setup tries to download
                     the rhel-6.5 guest image  
 
 [1187966 ] http://bugzilla.redhat.com/1187966 (NEW)  
            Component: instack-undercloud  
-           Last change: 2015-03-17 (2 days ago)
+           Last change: 2015-03-17 (3 days ago)
            Summary: missing dependency on which  
 
 ### iproute (1 bug)
@@ -209,7 +209,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1194230 ] http://bugzilla.redhat.com/1194230 (ASSIGNED)  
            Component: openstack-ceilometer  
-           Last change: 2015-02-26 (21 days ago)
+           Last change: 2015-02-26 (22 days ago)
            Summary: The /etc/sudoers.d/ceilometer have incorrect
                     permissions  
 
@@ -389,7 +389,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1203292 ] http://bugzilla.redhat.com/1203292 (NEW)  
            Component: openstack-foreman-installer  
-           Last change: 2015-03-18 (a day ago)
+           Last change: 2015-03-18 (2 days ago)
            Summary: [RFE] Openstack Installer should install and configure
                     SPICE to work with Nova and Horizon  
 
@@ -425,7 +425,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [986507  ] http://bugzilla.redhat.com/986507 (ASSIGNED)  
            Component: openstack-neutron  
-           Last change: 2015-03-18 (a day ago)
+           Last change: 2015-03-18 (2 days ago)
            Summary: RFE: IPv6 Feature Parity  
 
 [1081011 ] http://bugzilla.redhat.com/1081011 (ASSIGNED)  
@@ -435,7 +435,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1093357 ] http://bugzilla.redhat.com/1093357 (NEW)  
            Component: openstack-neutron  
-           Last change: 2015-03-02 (17 days ago)
+           Last change: 2015-03-02 (18 days ago)
            Summary: neutron agent-list report different status each click  
 
 [1147152 ] http://bugzilla.redhat.com/1147152 (NEW)  
@@ -512,7 +512,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1123298 ] http://bugzilla.redhat.com/1123298 (NEW)  
            Component: openstack-nova  
-           Last change: 2015-02-23 (24 days ago)
+           Last change: 2015-02-23 (a month ago)
            Summary: logrotate should copytruncate to avoid oepnstack
                     logging to deleted files  
 
@@ -611,7 +611,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1200701 ] http://bugzilla.redhat.com/1200701 (NEW)  
            Component: openstack-nova  
-           Last change: 2015-03-19 (16 hours ago)
+           Last change: 2015-03-19 (a day ago)
            Summary: openstack-nova-novncproxy.service in failed state -
                     need upgraded websockify version  
 
@@ -620,18 +620,18 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [953586  ] http://bugzilla.redhat.com/953586 (NEW)  
            Component: openstack-packstack  
-           Last change: 2015-03-18 (a day ago)
+           Last change: 2015-03-18 (2 days ago)
            Summary: [RFE] Openstack Installer: packstack should install and
                     configure SPICE to work with Nova and Horizon  
 
 [982035  ] http://bugzilla.redhat.com/982035 (NEW)  
            Component: openstack-packstack  
-           Last change: 2015-03-18 (a day ago)
+           Last change: 2015-03-18 (2 days ago)
            Summary: Include Fedora cloud images in some nice way  
 
 [996725  ] http://bugzilla.redhat.com/996725 (NEW)  
            Component: openstack-packstack  
-           Last change: 2015-03-18 (a day ago)
+           Last change: 2015-03-18 (2 days ago)
            Summary: Packstack should not require ALL parameters be
                     specified in an answer file  
 
@@ -643,7 +643,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1023533 ] http://bugzilla.redhat.com/1023533 (ASSIGNED)  
            Component: openstack-packstack  
-           Last change: 2015-03-18 (a day ago)
+           Last change: 2015-03-18 (2 days ago)
            Summary: API services has all admin permission instead of
                     service  
 
@@ -788,7 +788,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1146963 ] http://bugzilla.redhat.com/1146963 (NEW)  
            Component: openstack-packstack  
-           Last change: 2015-03-18 (a day ago)
+           Last change: 2015-03-18 (2 days ago)
            Summary: Using packstack --allinone searches for mariadb-galera-
                     server should be MariaDB-Galera-server ?  
 
@@ -828,7 +828,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1171811 ] http://bugzilla.redhat.com/1171811 (NEW)  
            Component: openstack-packstack  
-           Last change: 2015-03-19 (16 hours ago)
+           Last change: 2015-03-19 (a day ago)
            Summary: misleading exit message on fail  
 
 [1174749 ] http://bugzilla.redhat.com/1174749 (NEW)  
@@ -850,7 +850,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1176833 ] http://bugzilla.redhat.com/1176833 (NEW)  
            Component: openstack-packstack  
-           Last change: 2015-03-19 (16 hours ago)
+           Last change: 2015-03-19 (a day ago)
            Summary: packstack --allinone fails when starting neutron server  
 
 [1185627 ] http://bugzilla.redhat.com/1185627 (NEW)  
@@ -882,7 +882,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1203131 ] http://bugzilla.redhat.com/1203131 (NEW)  
            Component: openstack-packstack  
-           Last change: 2015-03-18 (a day ago)
+           Last change: 2015-03-18 (2 days ago)
            Summary: Using packstack deploy openstack,when
                     CONFIG_NEUTRON_OVS_BRIDGE_IFACES=br-
                     eno50:eno50,encounters an error“ERROR : Error appeared
@@ -890,7 +890,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1203444 ] http://bugzilla.redhat.com/1203444 (NEW)  
            Component: openstack-packstack  
-           Last change: 2015-03-18 (a day ago)
+           Last change: 2015-03-18 (2 days ago)
            Summary: "private" network created by packstack is not owned by
                     any tenant  
 
@@ -904,7 +904,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1038729 ] http://bugzilla.redhat.com/1038729 (NEW)  
            Component: openstack-puppet-modules  
-           Last change: 2015-03-18 (a day ago)
+           Last change: 2015-03-18 (2 days ago)
            Summary: Installing packstack-modules-puppet and running puppet
                     results in Error  
 
@@ -1039,13 +1039,13 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1202941 ] http://bugzilla.redhat.com/1202941 (NEW)  
            Component: openstack-selinux  
-           Last change: 2015-03-18 (a day ago)
+           Last change: 2015-03-18 (2 days ago)
            Summary: Glance fails to start on CentOS 7 because of selinux
                     AVC  
 
 [1202944 ] http://bugzilla.redhat.com/1202944 (NEW)  
            Component: openstack-selinux  
-           Last change: 2015-03-18 (a day ago)
+           Last change: 2015-03-18 (2 days ago)
            Summary: "glance image-list" fails on F21, causing packstack
                     install to fail  
 
@@ -1138,7 +1138,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1176596 ] http://bugzilla.redhat.com/1176596 (NEW)  
            Component: openstack-tuskar-ui  
-           Last change: 2015-03-19 (16 hours ago)
+           Last change: 2015-03-19 (a day ago)
            Summary: The displayed horizon url after deployment has a
                     redundant colon in it and a wrong path  
 
@@ -1195,7 +1195,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1200789 ] http://bugzilla.redhat.com/1200789 (NEW)  
            Component: python-glanceclient  
-           Last change: 2015-03-11 (8 days ago)
+           Last change: 2015-03-11 (9 days ago)
            Summary: DeprecationWarning in Glance commands for Juno/EL6  
 
 ### python-keystoneclient (2 bugs)
@@ -1218,7 +1218,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1195977 ] http://bugzilla.redhat.com/1195977 (NEW)  
            Component: python-keystonemiddleware  
-           Last change: 2015-03-02 (17 days ago)
+           Last change: 2015-03-02 (18 days ago)
            Summary: Rebase python-keystonemiddleware to version 1.3  
 
 ### python-neutronclient (2 bugs)
@@ -1249,7 +1249,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1187310 ] http://bugzilla.redhat.com/1187310 (NEW)  
            Component: python-openstackclient  
-           Last change: 2015-03-04 (14 days ago)
+           Last change: 2015-03-04 (15 days ago)
            Summary: Add --user to project list command to filter projects
                     by user  
 
@@ -1321,7 +1321,7 @@ out by testing the fix to make sure it works as intended.
 
 [1151589 ] http://bugzilla.redhat.com/1151589 (MODIFIED)  
            Component: distribution  
-           Last change: 2015-03-18 (a day ago)
+           Last change: 2015-03-18 (2 days ago)
            Summary: trove does not install dependency python-pbr  
 
 ### openstack-ceilometer (2 bugs)
@@ -1719,7 +1719,7 @@ out by testing the fix to make sure it works as intended.
 
 [1061689 ] http://bugzilla.redhat.com/1061689 (MODIFIED)  
            Component: openstack-packstack  
-           Last change: 2015-03-13 (6 days ago)
+           Last change: 2015-03-13 (7 days ago)
            Summary: Horizon SSL is disabled by Nagios configuration via
                     packstack  
 
@@ -1770,7 +1770,7 @@ out by testing the fix to make sure it works as intended.
 
 [1108742 ] http://bugzilla.redhat.com/1108742 (MODIFIED)  
            Component: openstack-packstack  
-           Last change: 2015-03-13 (6 days ago)
+           Last change: 2015-03-13 (7 days ago)
            Summary: Allow specifying of a global --password option in
                     packstack to set all keys/secrets/passwords to that
                     value  
@@ -1788,7 +1788,7 @@ out by testing the fix to make sure it works as intended.
 
 [1119920 ] http://bugzilla.redhat.com/1119920 (MODIFIED)  
            Component: openstack-packstack  
-           Last change: 2015-03-13 (6 days ago)
+           Last change: 2015-03-13 (7 days ago)
            Summary: http://ip/dashboard 404  from all-in-one rdo install on
                     rhel7  
 
@@ -1814,7 +1814,7 @@ out by testing the fix to make sure it works as intended.
 
 [1172876 ] http://bugzilla.redhat.com/1172876 (MODIFIED)  
            Component: openstack-packstack  
-           Last change: 2015-03-11 (7 days ago)
+           Last change: 2015-03-11 (8 days ago)
            Summary: packstack fails on centos6 with missing systemctl  
 
 [1175428 ] http://bugzilla.redhat.com/1175428 (MODIFIED)  
@@ -1867,13 +1867,13 @@ out by testing the fix to make sure it works as intended.
 
 [1038255 ] http://bugzilla.redhat.com/1038255 (MODIFIED)  
            Component: openstack-puppet-modules  
-           Last change: 2014-04-08 (11 months ago)
+           Last change: 2014-04-08 (a year ago)
            Summary: prescript.pp does not ensure iptables-services package
                     installation  
 
 [1049537 ] http://bugzilla.redhat.com/1049537 (MODIFIED)  
            Component: openstack-puppet-modules  
-           Last change: 2015-03-12 (7 days ago)
+           Last change: 2015-03-12 (8 days ago)
            Summary: Horizon help url in RDO points to the RHOS
                     documentation  
 

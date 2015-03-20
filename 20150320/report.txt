@@ -192,12 +192,12 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1187966 ] http://bugzilla.redhat.com/1187966 (NEW)  
            Component: instack-undercloud  
-           Last change: 2015-03-17 (2 days ago)
+           Last change: 2015-03-17 (3 days ago)
            Summary: missing dependency on which  
 
 [1203716 ] http://bugzilla.redhat.com/1203716 (NEW)  
            Component: instack-undercloud  
-           Last change: 2015-03-19 (21 hours ago)
+           Last change: 2015-03-19 (a day ago)
            Summary: diskimage-builder depends on internal URL  
 
 ### iproute (1 bug)
@@ -430,7 +430,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1093357 ] http://bugzilla.redhat.com/1093357 (NEW)  
            Component: openstack-neutron  
-           Last change: 2015-03-02 (17 days ago)
+           Last change: 2015-03-02 (18 days ago)
            Summary: neutron agent-list report different status each click  
 
 [1147152 ] http://bugzilla.redhat.com/1147152 (NEW)  
@@ -621,7 +621,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [982035  ] http://bugzilla.redhat.com/982035 (NEW)  
            Component: openstack-packstack  
-           Last change: 2015-03-19 (16 hours ago)
+           Last change: 2015-03-19 (18 hours ago)
            Summary: Include Fedora cloud images in some nice way  
 
 [996725  ] http://bugzilla.redhat.com/996725 (NEW)  
@@ -1035,7 +1035,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1203910 ] http://bugzilla.redhat.com/1203910 (NEW)  
            Component: openstack-selinux  
-           Last change: 2015-03-19 (12 hours ago)
+           Last change: 2015-03-19 (13 hours ago)
            Summary: Keystone requires keystone_t self:process signal;  
 
 ### openstack-swift (3 bugs)
@@ -1133,7 +1133,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1203859 ] http://bugzilla.redhat.com/1203859 (NEW)  
            Component: openstack-tuskar-ui  
-           Last change: 2015-03-19 (16 hours ago)
+           Last change: 2015-03-19 (18 hours ago)
            Summary: openstack-tuskar-ui: Failed to connect RDO manager
                     tuskar-ui over missing apostrophes for STATIC_ROOT=
                     <value > in local_settings.py  
@@ -1410,7 +1410,7 @@ out by testing the fix to make sure it works as intended.
 
 [1123542 ] http://bugzilla.redhat.com/1123542 (ON_QA)  
            Component: openstack-keystone  
-           Last change: 2015-03-19 (12 hours ago)
+           Last change: 2015-03-19 (13 hours ago)
            Summary: file templated catalogs do not work in protocol v3  
 
 ### openstack-neutron (13 bugs)
@@ -1892,7 +1892,7 @@ out by testing the fix to make sure it works as intended.
 
 [1185960 ] http://bugzilla.redhat.com/1185960 (MODIFIED)  
            Component: openstack-puppet-modules  
-           Last change: 2015-03-19 (13 hours ago)
+           Last change: 2015-03-19 (14 hours ago)
            Summary: problems with puppet-keystone LDAP support  
 
 ### openstack-selinux (11 bugs)

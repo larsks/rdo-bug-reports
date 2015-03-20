@@ -250,7 +250,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1200701 ] http://bugzilla.redhat.com/1200701 (NEW)  
            Component: distribution  
-           Last change: 2015-03-11 (8 days ago)
+           Last change: 2015-03-11 (9 days ago)
            Summary: openstack-nova-novncproxy.service in failed state -
                     need upgraded websockify version  
 
@@ -266,7 +266,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1188423 ] http://bugzilla.redhat.com/1188423 (NEW)  
            Component: dnsmasq  
-           Last change: 2015-02-02 (a month ago)
+           Last change: 2015-02-02 (1 months ago)
            Summary: RHEL / Centos 7-based instances lose their default IPv4
                     gateway  
 
@@ -316,7 +316,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1194230 ] http://bugzilla.redhat.com/1194230 (ASSIGNED)  
            Component: openstack-ceilometer  
-           Last change: 2015-02-26 (21 days ago)
+           Last change: 2015-02-26 (22 days ago)
            Summary: The /etc/sudoers.d/ceilometer have incorrect
                     permissions  
 
@@ -582,7 +582,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1093357 ] http://bugzilla.redhat.com/1093357 (NEW)  
            Component: openstack-neutron  
-           Last change: 2015-03-02 (17 days ago)
+           Last change: 2015-03-02 (18 days ago)
            Summary: neutron agent-list report different status each click  
 
 [1147152 ] http://bugzilla.redhat.com/1147152 (NEW)  
@@ -677,7 +677,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1123298 ] http://bugzilla.redhat.com/1123298 (NEW)  
            Component: openstack-nova  
-           Last change: 2015-02-23 (24 days ago)
+           Last change: 2015-02-23 (a month ago)
            Summary: logrotate should copytruncate to avoid oepnstack
                     logging to deleted files  
 
@@ -808,7 +808,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1023533 ] http://bugzilla.redhat.com/1023533 (ASSIGNED)  
            Component: openstack-packstack  
-           Last change: 2015-03-02 (17 days ago)
+           Last change: 2015-03-02 (18 days ago)
            Summary: API services has all admin permission instead of
                     service  
 
@@ -1309,7 +1309,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1193429 ] http://bugzilla.redhat.com/1193429 (ASSIGNED)  
            Component: openvswitch  
-           Last change: 2015-03-13 (6 days ago)
+           Last change: 2015-03-13 (7 days ago)
            Summary: failed to flow_del  
 
 ### python-cinderclient (2 bugs)
@@ -1336,7 +1336,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1200789 ] http://bugzilla.redhat.com/1200789 (NEW)  
            Component: python-glanceclient  
-           Last change: 2015-03-11 (8 days ago)
+           Last change: 2015-03-11 (9 days ago)
            Summary: DeprecationWarning in Glance commands for Juno/EL6  
 
 ### python-keystoneclient (2 bugs)
@@ -1359,7 +1359,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1195977 ] http://bugzilla.redhat.com/1195977 (NEW)  
            Component: python-keystonemiddleware  
-           Last change: 2015-03-02 (17 days ago)
+           Last change: 2015-03-02 (18 days ago)
            Summary: Rebase python-keystonemiddleware to version 1.3  
 
 ### python-neutronclient (2 bugs)
@@ -1390,7 +1390,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1187310 ] http://bugzilla.redhat.com/1187310 (NEW)  
            Component: python-openstackclient  
-           Last change: 2015-03-04 (14 days ago)
+           Last change: 2015-03-04 (15 days ago)
            Summary: Add --user to project list command to filter projects
                     by user  
 
@@ -1855,7 +1855,7 @@ out by testing the fix to make sure it works as intended.
 
 [1061689 ] http://bugzilla.redhat.com/1061689 (MODIFIED)  
            Component: openstack-packstack  
-           Last change: 2015-03-13 (6 days ago)
+           Last change: 2015-03-13 (7 days ago)
            Summary: Horizon SSL is disabled by Nagios configuration via
                     packstack  
 
@@ -1906,7 +1906,7 @@ out by testing the fix to make sure it works as intended.
 
 [1108742 ] http://bugzilla.redhat.com/1108742 (MODIFIED)  
            Component: openstack-packstack  
-           Last change: 2015-03-13 (6 days ago)
+           Last change: 2015-03-13 (7 days ago)
            Summary: Allow specifying of a global --password option in
                     packstack to set all keys/secrets/passwords to that
                     value  
@@ -1924,7 +1924,7 @@ out by testing the fix to make sure it works as intended.
 
 [1119920 ] http://bugzilla.redhat.com/1119920 (MODIFIED)  
            Component: openstack-packstack  
-           Last change: 2015-03-13 (6 days ago)
+           Last change: 2015-03-13 (7 days ago)
            Summary: http://ip/dashboard 404  from all-in-one rdo install on
                     rhel7  
 
@@ -1950,7 +1950,7 @@ out by testing the fix to make sure it works as intended.
 
 [1172876 ] http://bugzilla.redhat.com/1172876 (MODIFIED)  
            Component: openstack-packstack  
-           Last change: 2015-03-11 (7 days ago)
+           Last change: 2015-03-11 (8 days ago)
            Summary: packstack fails on centos6 with missing systemctl  
 
 [1175428 ] http://bugzilla.redhat.com/1175428 (MODIFIED)  
@@ -2003,13 +2003,13 @@ out by testing the fix to make sure it works as intended.
 
 [1038255 ] http://bugzilla.redhat.com/1038255 (MODIFIED)  
            Component: openstack-puppet-modules  
-           Last change: 2014-04-08 (11 months ago)
+           Last change: 2014-04-08 (a year ago)
            Summary: prescript.pp does not ensure iptables-services package
                     installation  
 
 [1049537 ] http://bugzilla.redhat.com/1049537 (MODIFIED)  
            Component: openstack-puppet-modules  
-           Last change: 2015-03-12 (7 days ago)
+           Last change: 2015-03-12 (8 days ago)
            Summary: Horizon help url in RDO points to the RHOS
                     documentation  
 
