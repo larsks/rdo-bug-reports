@@ -1,11 +1,11 @@
-# RDO Bugs on 2015-03-20
+# RDO Bugs on 2015-03-21
 
 This email summarizes the active RDO bugs listed in the Red Hat Bugzilla
 database at <https://bugzilla.redhat.com/>.
 
 You can find an HTML version of this report online at:
 
-  <http://people.redhat.com/~lkellogg/rdo/20150320/>.
+  <http://people.redhat.com/~lkellogg/rdo/20150321/>.
 
 To report a new bug against RDO, go to:
 
@@ -13,36 +13,37 @@ To report a new bug against RDO, go to:
 
 ## Summary
 
-- Open (NEW, ASSIGNED, ON_DEV): 197
+- Open (NEW, ASSIGNED, ON_DEV): 177
 - Fixed (MODIFIED, POST, ON_QA): 132
 
 
 ## Number of open bugs by component
 
             diskimage-builder [  1]                                         
-                 distribution [ 12] ++++++++++                              
+                 distribution [ 12] +++++++++++                             
                       dnsmasq [  2] +                                       
                       instack [  2] +                                       
-           instack-undercloud [  4] +++                                     
+           instack-undercloud [  5] ++++                                    
                       iproute [  1]                                         
          openstack-ceilometer [  1]                                         
-             openstack-cinder [ 20] ++++++++++++++++                        
-    openstack-foreman-inst... [  9] +++++++                                 
+             openstack-cinder [ 14] +++++++++++++                           
+    openstack-foreman-inst... [  6] +++++                                   
             openstack-horizon [  1]                                         
+    openstack-ironic-disco... [  1]                                         
            openstack-keystone [  1]                                         
-            openstack-neutron [ 11] +++++++++                               
-               openstack-nova [ 23] +++++++++++++++++++                     
-          openstack-packstack [ 48] ++++++++++++++++++++++++++++++++++++++++
-     openstack-puppet-modules [ 12] ++++++++++                              
+            openstack-neutron [ 11] ++++++++++                              
+               openstack-nova [ 21] +++++++++++++++++++                     
+          openstack-packstack [ 43] ++++++++++++++++++++++++++++++++++++++++
+     openstack-puppet-modules [  9] ++++++++                                
              openstack-sahara [  1]                                         
-            openstack-selinux [ 12] ++++++++++                              
+            openstack-selinux [ 11] ++++++++++                              
               openstack-swift [  3] ++                                      
-            openstack-tripleo [  8] ++++++                                  
+            openstack-tripleo [  8] +++++++                                 
     openstack-tripleo-imag... [  2] +                                       
           openstack-tuskar-ui [  2] +                                       
-              openstack-utils [  3] ++                                      
+              openstack-utils [  2] +                                       
                   openvswitch [  1]                                         
-          python-cinderclient [  2] +                                       
+          python-cinderclient [  1]                                         
           python-glanceclient [  2] +                                       
         python-keystoneclient [  2] +                                       
     python-keystonemiddleware [  1]                                         
@@ -58,7 +59,7 @@ To report a new bug against RDO, go to:
 This is a list of "open" bugs by component.  An "open" bug is in state
 NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
-(197 bugs)
+(177 bugs)
 
 
 ### diskimage-builder (1 bug)
@@ -78,11 +79,6 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
            Last change: 2015-01-07 (2 months ago)
            Summary: sos report tracker bug  
 
-[1038752 ] http://bugzilla.redhat.com/1038752 (NEW)  
-           Component: distribution  
-           Last change: 2015-03-18 (2 days ago)
-           Summary: Update manual uninstallation wiki page instructions.  
-
 [1063474 ] http://bugzilla.redhat.com/1063474 (ASSIGNED)  
            Component: distribution  
            Last change: 2015-03-17 (3 days ago)
@@ -99,27 +95,32 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
            Summary: support rdo-release and puppetlabs-release being
                     installed on the same system  
 
+[1116011 ] http://bugzilla.redhat.com/1116011 (NEW)  
+           Component: distribution  
+           Last change: 2015-03-20 (10 hours ago)
+           Summary: RDO: Packages needed to support AMQP1.0  
+
 [1116972 ] http://bugzilla.redhat.com/1116972 (NEW)  
            Component: distribution  
-           Last change: 2014-07-16 (8 months ago)
+           Last change: 2015-03-20 (10 hours ago)
            Summary: RDO website: libffi-devel is required to run Tempest
                     (at least on CentOS 6.5)  
 
 [1116974 ] http://bugzilla.redhat.com/1116974 (NEW)  
            Component: distribution  
-           Last change: 2014-07-07 (8 months ago)
+           Last change: 2015-03-20 (10 hours ago)
            Summary: Running Tempest according to the instructions @ RDO
                     website fails with missing tox.ini error  
 
 [1116975 ] http://bugzilla.redhat.com/1116975 (NEW)  
            Component: distribution  
-           Last change: 2014-07-07 (8 months ago)
+           Last change: 2015-03-20 (10 hours ago)
            Summary: RDO website: configuring TestR according to website,
                     breaks Tox completely  
 
 [1117007 ] http://bugzilla.redhat.com/1117007 (NEW)  
            Component: distribution  
-           Last change: 2015-03-17 (3 days ago)
+           Last change: 2015-03-20 (10 hours ago)
            Summary: RDO website: newer python-nose is required to run
                     Tempest (at least on CentOS 6.5) [update to http://open
                     stack.redhat.com/Testing_IceHouse_using_Tempest]  
@@ -142,7 +143,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1187309 ] http://bugzilla.redhat.com/1187309 (NEW)  
            Component: distribution  
-           Last change: 2015-03-02 (18 days ago)
+           Last change: 2015-03-20 (10 hours ago)
            Summary: New package - python-cliff-tablib  
 
 ### dnsmasq (2 bugs)
@@ -175,7 +176,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
            Summary: instack-update-overcloud fails because it tries to
                     access non-existing files  
 
-### instack-undercloud (4 bugs)
+### instack-undercloud (5 bugs)
 
 
 [1175687 ] http://bugzilla.redhat.com/1175687 (NEW)  
@@ -200,6 +201,11 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
            Last change: 2015-03-19 (2 days ago)
            Summary: diskimage-builder depends on internal URL  
 
+[1204126 ] http://bugzilla.redhat.com/1204126 (NEW)  
+           Component: instack-undercloud  
+           Last change: 2015-03-20 (13 hours ago)
+           Summary: [RFE] Enable deployment of Ceph via instack  
+
 ### iproute (1 bug)
 
 
@@ -218,34 +224,29 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
            Summary: The /etc/sudoers.d/ceilometer have incorrect
                     permissions  
 
-### openstack-cinder (20 bugs)
+### openstack-cinder (14 bugs)
 
 
 [1028688 ] http://bugzilla.redhat.com/1028688 (ASSIGNED)  
            Component: openstack-cinder  
-           Last change: 2014-01-13 (a year ago)
+           Last change: 2015-03-20 (12 hours ago)
            Summary: should use new names in cinder-dist.conf  
 
 [1049380 ] http://bugzilla.redhat.com/1049380 (NEW)  
            Component: openstack-cinder  
-           Last change: 2015-03-02 (18 days ago)
+           Last change: 2015-03-20 (12 hours ago)
            Summary: openstack-cinder: cinder fails to copy an image a
                     volume with GlusterFS backend  
 
-[1049382 ] http://bugzilla.redhat.com/1049382 (NEW)  
-           Component: openstack-cinder  
-           Last change: 2014-02-19 (a year ago)
-           Summary: EMC: fails to create volume from Glance image  
-
 [1049511 ] http://bugzilla.redhat.com/1049511 (NEW)  
            Component: openstack-cinder  
-           Last change: 2014-01-13 (a year ago)
+           Last change: 2015-03-20 (12 hours ago)
            Summary: EMC: fails to boot instances from volumes with
                     "TypeError: Unsupported parameter type"  
 
 [1049535 ] http://bugzilla.redhat.com/1049535 (NEW)  
            Component: openstack-cinder  
-           Last change: 2014-12-18 (3 months ago)
+           Last change: 2015-03-20 (12 hours ago)
            Summary: cinder: cannot create a volume when root squash is set
                     to on for gluster storage  
 
@@ -255,42 +256,11 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
            Summary: A redundant image copy is created when creating a
                     volume from a glance image. (All-in-One)  
 
-[1049877 ] http://bugzilla.redhat.com/1049877 (NEW)  
-           Component: openstack-cinder  
-           Last change: 2014-02-11 (a year ago)
-           Summary: cinder: data is not saved on a volume created from an
-                    image after instance termination  
-
-[1049995 ] http://bugzilla.redhat.com/1049995 (NEW)  
-           Component: openstack-cinder  
-           Last change: 2014-12-18 (3 months ago)
-           Summary: cinder: two volumes are created instead of one when we
-                    try to boot an instance with create new volume option  
-
-[1050158 ] http://bugzilla.redhat.com/1050158 (NEW)  
-           Component: openstack-cinder  
-           Last change: 2014-02-25 (a year ago)
-           Summary: cinder: volume is not deleted on instance destroy when
-                    we we fail to boot an instance using a create volume +
-                    delete on terminate  
-
-[1065285 ] http://bugzilla.redhat.com/1065285 (NEW)  
-           Component: openstack-cinder  
-           Last change: 2014-08-31 (7 months ago)
-           Summary: AttributeError: 'module' object has no attribute
-                    'HAVE_DECL_MPZ_POWM_SEC'  
-
 [1073480 ] http://bugzilla.redhat.com/1073480 (NEW)  
            Component: openstack-cinder  
            Last change: 2014-03-11 (a year ago)
            Summary: tempest volume metadata test failing against the XML
                     interface  
-
-[1079736 ] http://bugzilla.redhat.com/1079736 (NEW)  
-           Component: openstack-cinder  
-           Last change: 2014-03-23 (a year ago)
-           Summary: backup driver should get swift url from keystone
-                    catalog  
 
 [1080543 ] http://bugzilla.redhat.com/1080543 (ASSIGNED)  
            Component: openstack-cinder  
@@ -339,27 +309,8 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
            Summary: vmware: "Not authenticated error occurred " on delete
                     volume  
 
-### openstack-foreman-installer (9 bugs)
+### openstack-foreman-installer (6 bugs)
 
-
-[1060220 ] http://bugzilla.redhat.com/1060220 (NEW)  
-           Component: openstack-foreman-installer  
-           Last change: 2014-12-18 (3 months ago)
-           Summary: [RFE] allow for the deployment of memcached to be used
-                    for keystone tokens caching  
-
-[1061152 ] http://bugzilla.redhat.com/1061152 (ASSIGNED)  
-           Component: openstack-foreman-installer  
-           Last change: 2014-12-12 (3 months ago)
-           Summary: [RDO][openstack-foreman-installer]: When attempting to
-                    deploy foreman-client on Fedora20 - It seems  puppet
-                    fails to connect the mariadb.  
-
-[1061574 ] http://bugzilla.redhat.com/1061574 (NEW)  
-           Component: openstack-foreman-installer  
-           Last change: 2014-12-18 (3 months ago)
-           Summary: foreman server installer script should be in PATH and
-                    have options  
 
 [1061760 ] http://bugzilla.redhat.com/1061760 (NEW)  
            Component: openstack-foreman-installer  
@@ -406,6 +357,15 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
            Last change: 2014-10-24 (5 months ago)
            Summary: Permissions issue prevents CSS from rendering  
 
+### openstack-ironic-discoverd (1 bug)
+
+
+[1204218 ] http://bugzilla.redhat.com/1204218 (NEW)  
+           Component: openstack-ironic-discoverd  
+           Last change: 2015-03-20 (12 hours ago)
+           Summary: ironic-discoverd should allow dropping all ports except
+                    for one detected on discovery  
+
 ### openstack-keystone (1 bug)
 
 
@@ -425,7 +385,7 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1081011 ] http://bugzilla.redhat.com/1081011 (ASSIGNED)  
            Component: openstack-neutron  
-           Last change: 2014-06-20 (9 months ago)
+           Last change: 2015-03-20 (6 hours ago)
            Summary: L2 agent fails to start with VXLAN configuration  
 
 [1093357 ] http://bugzilla.redhat.com/1093357 (NEW)  
@@ -480,19 +440,8 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
            Summary: neutron-netns-cleanup.service needs RemainAfterExit=yes
                     and PrivateTmp=false  
 
-### openstack-nova (23 bugs)
+### openstack-nova (21 bugs)
 
-
-[1049985 ] http://bugzilla.redhat.com/1049985 (NEW)  
-           Component: openstack-nova  
-           Last change: 2015-02-18 (a month ago)
-           Summary: RDO: Instance hangs in 'Deleting' state ... multi node
-                    (using GRE tenant networks)  
-
-[1055788 ] http://bugzilla.redhat.com/1055788 (ASSIGNED)  
-           Component: openstack-nova  
-           Last change: 2014-09-02 (6 months ago)
-           Summary: Missing baremetal-deploy-helper service  
 
 [1062279 ] http://bugzilla.redhat.com/1062279 (ASSIGNED)  
            Component: openstack-nova  
@@ -606,11 +555,11 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
 
 [1200701 ] http://bugzilla.redhat.com/1200701 (NEW)  
            Component: openstack-nova  
-           Last change: 2015-03-19 (2 days ago)
+           Last change: 2015-03-20 (10 hours ago)
            Summary: openstack-nova-novncproxy.service in failed state -
                     need upgraded websockify version  
 
-### openstack-packstack (48 bugs)
+### openstack-packstack (43 bugs)
 
 
 [953586  ] http://bugzilla.redhat.com/953586 (NEW)  
@@ -630,12 +579,6 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
            Summary: Packstack should not require ALL parameters be
                     specified in an answer file  
 
-[1006544 ] http://bugzilla.redhat.com/1006544 (NEW)  
-           Component: openstack-packstack  
-           Last change: 2014-03-19 (a year ago)
-           Summary: Packstack configured neutron-openvswitch-agent on pure
-                    controller node  
-
 [1023533 ] http://bugzilla.redhat.com/1023533 (ASSIGNED)  
            Component: openstack-packstack  
            Last change: 2015-03-18 (2 days ago)
@@ -648,34 +591,11 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
            Summary: make packstack use --small files for mongodb or ask the
                     user  
 
-[1061710 ] http://bugzilla.redhat.com/1061710 (NEW)  
-           Component: openstack-packstack  
-           Last change: 2014-03-06 (a year ago)
-           Summary: openstack-cinder-backup service not enabled on boot  
-
 [1061753 ] http://bugzilla.redhat.com/1061753 (NEW)  
            Component: openstack-packstack  
-           Last change: 2014-12-18 (3 months ago)
-           Summary: Create an option in packstack to increase verbosity
-                    level of libvirt  
-
-[1066958 ] http://bugzilla.redhat.com/1066958 (NEW)  
-           Component: openstack-packstack  
-           Last change: 2014-05-17 (10 months ago)
-           Summary: RFE: Please install and start the openstack-neutron-
-                    metering-agent  
-
-[1079544 ] http://bugzilla.redhat.com/1079544 (ASSIGNED)  
-           Component: openstack-packstack  
-           Last change: 2014-03-24 (a year ago)
-           Summary: openstack-packstack-puppet-2014.1.1-0.2 error:
-                    KeyError: 'CONFIG_QPID_HOST'  
-
-[1080343 ] http://bugzilla.redhat.com/1080343 (NEW)  
-           Component: openstack-packstack  
-           Last change: 2014-04-26 (11 months ago)
-           Summary: Fedora20: Traceback while doing packstack --allinone
-                    —quantum-l3-ext-bridge=eth0  
+           Last change: 2015-03-20 (9 hours ago)
+           Summary: [RFE] Create an option in packstack to increase
+                    verbosity level of libvirt  
 
 [1090062 ] http://bugzilla.redhat.com/1090062 (NEW)  
            Component: openstack-packstack  
@@ -889,32 +809,13 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
            Summary: "private" network created by packstack is not owned by
                     any tenant  
 
-### openstack-puppet-modules (12 bugs)
+### openstack-puppet-modules (9 bugs)
 
 
 [1029579 ] http://bugzilla.redhat.com/1029579 (NEW)  
            Component: openstack-puppet-modules  
            Last change: 2014-12-18 (3 months ago)
            Summary: Update puppet modules for SSL support  
-
-[1055661 ] http://bugzilla.redhat.com/1055661 (NEW)  
-           Component: openstack-puppet-modules  
-           Last change: 2014-08-15 (7 months ago)
-           Summary: ceilometer install failes with usermod: group 'nova'
-                    does not exist  
-
-[1064400 ] http://bugzilla.redhat.com/1064400 (NEW)  
-           Component: openstack-puppet-modules  
-           Last change: 2014-12-18 (3 months ago)
-           Summary: [RFE] Please add vpnaas service support to the puppet
-                    modules for Foreman use  
-
-[1082188 ] http://bugzilla.redhat.com/1082188 (ASSIGNED)  
-           Component: openstack-puppet-modules  
-           Last change: 2014-07-26 (8 months ago)
-           Summary: The firewall module used with Nova (Neutron) `will
-                    error after instance creation because of openvswitch
-                    interface  
 
 [1086185 ] http://bugzilla.redhat.com/1086185 (NEW)  
            Component: openstack-puppet-modules  
@@ -968,14 +869,8 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
            Last change: 2015-02-26 (22 days ago)
            Summary: launch_command.py missing  
 
-### openstack-selinux (12 bugs)
+### openstack-selinux (11 bugs)
 
-
-[1025157 ] http://bugzilla.redhat.com/1025157 (NEW)  
-           Component: openstack-selinux  
-           Last change: 2014-06-16 (9 months ago)
-           Summary: neutron dhcp agent: dnsmasq cannot satisfy tap
-                    interface dhcp requests unless selinux is permissive  
 
 [1087795 ] http://bugzilla.redhat.com/1087795 (NEW)  
            Component: openstack-selinux  
@@ -1138,14 +1033,8 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
                     tuskar-ui over missing apostrophes for STATIC_ROOT=
                     <value > in local_settings.py  
 
-### openstack-utils (3 bugs)
+### openstack-utils (2 bugs)
 
-
-[1066961 ] http://bugzilla.redhat.com/1066961 (NEW)  
-           Component: openstack-utils  
-           Last change: 2014-02-19 (a year ago)
-           Summary: RFE: Add the status of neutron-metering-agent to the
-                    output of the openstack-status  
 
 [1161501 ] http://bugzilla.redhat.com/1161501 (NEW)  
            Component: openstack-utils  
@@ -1167,13 +1056,8 @@ NEW, ASSIGNED, ON_DEV and has not yet been fixed.
            Last change: 2015-03-18 (3 days ago)
            Summary: failed to flow_del  
 
-### python-cinderclient (2 bugs)
+### python-cinderclient (1 bug)
 
-
-[1084038 ] http://bugzilla.redhat.com/1084038 (ASSIGNED)  
-           Component: python-cinderclient  
-           Last change: 2014-06-30 (9 months ago)
-           Summary: cinder: please mark a volume as read-only  
 
 [1128896 ] http://bugzilla.redhat.com/1128896 (NEW)  
            Component: python-cinderclient  
