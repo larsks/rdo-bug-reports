@@ -4,7 +4,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=947535", 
       "creator": "Eric Harney", 
-      "url": "", 
       "component": "python-novaclient", 
       "target_release": [
         "---"
@@ -25,7 +24,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=953586", 
       "creator": "Nir Magnezi", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -49,7 +47,6 @@
       "status": "ON_QA", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=956939", 
       "creator": "Robert Harker", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -72,7 +69,6 @@
       "status": "ON_QA", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=957006", 
       "creator": "Robert Harker", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -93,7 +89,6 @@
       "status": "ON_QA", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=958411", 
       "creator": "Omri Hochman", 
-      "url": "", 
       "component": "openstack-nova", 
       "target_release": [
         "---"
@@ -114,7 +109,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=958587", 
       "creator": "Robert Harker", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -135,7 +129,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=964005", 
       "creator": "Steven Dake", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -156,7 +149,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=971746", 
       "creator": "Alan Pevec", 
-      "url": "", 
       "component": "python-keystoneclient", 
       "target_release": [
         "---"
@@ -180,7 +172,6 @@
       "status": "POST", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=973263", 
       "creator": "Michael Solberg", 
-      "url": "", 
       "component": "python-keystoneclient", 
       "target_release": [
         "---"
@@ -201,7 +192,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=974971", 
       "creator": "P\u00e1draig Brady", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -222,7 +212,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=976394", 
       "creator": "Perry Myers", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -248,7 +237,6 @@
       "status": "ON_QA", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=979041", 
       "creator": "ryo fujita", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -269,7 +257,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=982035", 
       "creator": "Matthew Miller", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Havana"
@@ -292,7 +279,6 @@
       "status": "ON_QA", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=985570", 
       "creator": "Jan van Eldik", 
-      "url": "", 
       "component": "python-django-openstack-auth", 
       "target_release": [
         "---"
@@ -313,7 +299,6 @@
       "status": "ASSIGNED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=986507", 
       "creator": "Brent Eagles", 
-      "url": "https://blueprints.launchpad.net/neutron/+spec/ipv6-feature-parity", 
       "component": "openstack-neutron", 
       "target_release": [
         "---"
@@ -336,7 +321,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=989789", 
       "creator": "Derek Higgins", 
-      "url": "", 
       "component": "python-quantumclient", 
       "target_release": [
         "---"
@@ -357,7 +341,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=990642", 
       "creator": "P\u00e1draig Brady", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -378,7 +361,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=991801", 
       "creator": "Perry Myers", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Havana"
@@ -399,7 +381,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=994370", 
       "creator": "Garth Mollett", 
-      "url": "", 
       "component": "openstack-cinder", 
       "target_release": [
         "---"
@@ -423,7 +404,6 @@
       "status": "POST", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=995570", 
       "creator": "P\u00e1draig Brady", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Icehouse"
@@ -447,7 +427,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=996725", 
       "creator": "Perry Myers", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Havana"
@@ -470,7 +449,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=997983", 
       "creator": "Perry Myers", 
-      "url": "", 
       "component": "openstack-swift", 
       "target_release": [
         "Havana"
@@ -491,7 +469,6 @@
       "status": "ASSIGNED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=999587", 
       "creator": "lpeer", 
-      "url": "", 
       "component": "distribution", 
       "target_release": [
         "Havana"
@@ -524,7 +501,6 @@
       "status": "POST", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=999651", 
       "creator": "lpeer", 
-      "url": "", 
       "component": "openstack-cinder", 
       "target_release": [
         "Havana"
@@ -545,7 +521,6 @@
       "status": "POST", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=999653", 
       "creator": "lpeer", 
-      "url": "", 
       "component": "openstack-glance", 
       "target_release": [
         "Havana"
@@ -566,7 +541,6 @@
       "status": "POST", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=999660", 
       "creator": "lpeer", 
-      "url": "", 
       "component": "openstack-neutron", 
       "target_release": [
         "Havana"
@@ -587,7 +561,6 @@
       "status": "POST", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=999662", 
       "creator": "lpeer", 
-      "url": "", 
       "component": "openstack-swift", 
       "target_release": [
         "Havana"
@@ -608,7 +581,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1001107", 
       "creator": "Jan van Eldik", 
-      "url": "", 
       "component": "python-novaclient", 
       "target_release": [
         "---"
@@ -629,7 +601,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1001470", 
       "creator": "Ivan Chavero", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -650,7 +621,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1001832", 
       "creator": "Perry Myers", 
-      "url": "", 
       "component": "openstack-ceilometer", 
       "target_release": [
         "Havana"
@@ -673,7 +643,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1003959", 
       "creator": "Perry Myers", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -694,7 +663,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1006353", 
       "creator": "wes hayutin", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Havana"
@@ -715,7 +683,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1006401", 
       "creator": "P\u00e1draig Brady", 
-      "url": "", 
       "component": "openstack-puppet-modules", 
       "target_release": [
         "---"
@@ -736,7 +703,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1006476", 
       "creator": "Russell Bryant", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -757,7 +723,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1006534", 
       "creator": "Bob Kukura", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -780,7 +745,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1006816", 
       "creator": "P\u00e1draig Brady", 
-      "url": "", 
       "component": "openstack-puppet-modules", 
       "target_release": [
         "---"
@@ -801,7 +765,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1007497", 
       "creator": "Nir Magnezi", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -822,7 +785,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1007515", 
       "creator": "Dafna Ron", 
-      "url": "", 
       "component": "openstack-cinder", 
       "target_release": [
         "---"
@@ -843,7 +805,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1008818", 
       "creator": "Attila Fazekas", 
-      "url": "", 
       "component": "openstack-glance", 
       "target_release": [
         "---"
@@ -864,7 +825,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1008863", 
       "creator": "Attila Fazekas", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -885,7 +845,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1010039", 
       "creator": "Dan Smith", 
-      "url": "", 
       "component": "openstack-cinder", 
       "target_release": [
         "---"
@@ -906,7 +865,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1011628", 
       "creator": "Robin Goldstone", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -927,7 +885,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1014774", 
       "creator": "Mohammed Arafa", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -948,7 +905,6 @@
       "status": "POST", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1018900", 
       "creator": "Steven Hardy", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -969,7 +925,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1018911", 
       "creator": "Steven Hardy", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -990,7 +945,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1018922", 
       "creator": "Steven Hardy", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -1011,7 +965,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1019487", 
       "creator": "Aron Parsons", 
-      "url": "", 
       "component": "openstack-neutron", 
       "target_release": [
         "---"
@@ -1034,7 +987,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1020048", 
       "creator": "Ivan Chavero", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -1055,7 +1007,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1021183", 
       "creator": "Florian La Roche", 
-      "url": "", 
       "component": "openstack-puppet-modules", 
       "target_release": [
         "---"
@@ -1076,7 +1027,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1021989", 
       "creator": "Sandro Mathys", 
-      "url": "", 
       "component": "openstack-heat", 
       "target_release": [
         "---"
@@ -1097,7 +1047,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1022312", 
       "creator": "Ivan Chavero", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -1118,7 +1067,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1022421", 
       "creator": "Boris Derzhavets", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Havana"
@@ -1139,7 +1087,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1022580", 
       "creator": "P\u00e1draig Brady", 
-      "url": "", 
       "component": "openstack-puppet-modules", 
       "target_release": [
         "---"
@@ -1160,7 +1107,6 @@
       "status": "ASSIGNED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1023533", 
       "creator": "Attila Fazekas", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -1183,7 +1129,6 @@
       "status": "POST", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1023614", 
       "creator": "Pete Zaitcev", 
-      "url": "", 
       "component": "openstack-glance", 
       "target_release": [
         "---"
@@ -1206,7 +1151,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1024330", 
       "creator": "Diogo Vieira", 
-      "url": "", 
       "component": "openstack-selinux", 
       "target_release": [
         "---"
@@ -1227,7 +1171,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1024581", 
       "creator": "Mohammed Arafa", 
-      "url": "", 
       "component": "python-keystoneclient", 
       "target_release": [
         "---"
@@ -1248,7 +1191,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1025509", 
       "creator": "Dan Smith", 
-      "url": "", 
       "component": "python-neutronclient", 
       "target_release": [
         "---"
@@ -1269,7 +1211,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1028591", 
       "creator": "Lars Kellogg-Stedman", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Grizzly"
@@ -1290,7 +1231,6 @@
       "status": "ASSIGNED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1028688", 
       "creator": "P\u00e1draig Brady", 
-      "url": "", 
       "component": "openstack-cinder", 
       "target_release": [
         "Icehouse"
@@ -1313,7 +1253,6 @@
       "status": "POST", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1028690", 
       "creator": "Mohammed Arafa", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -1338,7 +1277,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1028726", 
       "creator": "Lars Kellogg-Stedman", 
-      "url": "", 
       "component": "python-heatclient", 
       "target_release": [
         "---"
@@ -1359,7 +1297,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1029579", 
       "creator": "Mike Orazi", 
-      "url": "", 
       "component": "openstack-puppet-modules", 
       "target_release": [
         "---"
@@ -1382,7 +1319,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1034395", 
       "creator": "Mohammed Arafa", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -1405,7 +1341,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1036192", 
       "creator": "Mohammed Arafa", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -1426,7 +1361,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1037635", 
       "creator": "Miguel Angel Ajo", 
-      "url": "", 
       "component": "openstack-puppet-modules", 
       "target_release": [
         "---"
@@ -1449,7 +1383,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1038162", 
       "creator": "", 
-      "url": "", 
       "component": "openstack-ceilometer", 
       "target_release": [
         "---"
@@ -1470,7 +1403,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1038255", 
       "creator": "Gabriele Cerami", 
-      "url": "", 
       "component": "openstack-puppet-modules", 
       "target_release": [
         "Icehouse"
@@ -1493,7 +1425,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1039694", 
       "creator": "Lars Kellogg-Stedman", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -1516,7 +1447,6 @@
       "status": "ON_QA", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1045084", 
       "creator": "Lars Kellogg-Stedman", 
-      "url": "", 
       "component": "openstack-nova", 
       "target_release": [
         "---"
@@ -1537,7 +1467,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1048326", 
       "creator": "Jakub Ruzicka", 
-      "url": "", 
       "component": "python-cinderclient", 
       "target_release": [
         "Havana"
@@ -1560,7 +1489,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1049091", 
       "creator": "Tom Fifield", 
-      "url": "", 
       "component": "openstack-selinux", 
       "target_release": [
         "---"
@@ -1581,7 +1509,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1049380", 
       "creator": "Yogev Rabl", 
-      "url": "", 
       "component": "openstack-cinder", 
       "target_release": [
         "---"
@@ -1604,7 +1531,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1049503", 
       "creator": "Attila Fazekas", 
-      "url": "", 
       "component": "openstack-selinux", 
       "target_release": [
         "---"
@@ -1627,7 +1553,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1049511", 
       "creator": "Giulio Fidente", 
-      "url": "", 
       "component": "openstack-cinder", 
       "target_release": [
         "---"
@@ -1648,7 +1573,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1049535", 
       "creator": "Dafna Ron", 
-      "url": "", 
       "component": "openstack-cinder", 
       "target_release": [
         "---"
@@ -1671,7 +1595,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1049537", 
       "creator": "Nir Magnezi", 
-      "url": "", 
       "component": "openstack-puppet-modules", 
       "target_release": [
         "---"
@@ -1694,7 +1617,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1049785", 
       "creator": "Eduardo Warszawski", 
-      "url": "", 
       "component": "openstack-cinder", 
       "target_release": [
         "---"
@@ -1715,7 +1637,6 @@
       "status": "POST", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1049807", 
       "creator": "Kashyap Chamarthy", 
-      "url": "", 
       "component": "openstack-neutron", 
       "target_release": [
         "---"
@@ -1738,7 +1659,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1049861", 
       "creator": "Yogev Rabl", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -1759,7 +1679,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1050205", 
       "creator": "Pete Zaitcev", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -1780,7 +1699,6 @@
       "status": "ON_QA", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1050842", 
       "creator": "Matthias Runge", 
-      "url": "", 
       "component": "openstack-neutron", 
       "target_release": [
         "---"
@@ -1803,7 +1721,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1052311", 
       "creator": "Attila Fazekas", 
-      "url": "", 
       "component": "python-neutronclient", 
       "target_release": [
         "---"
@@ -1826,7 +1743,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1052948", 
       "creator": "Felipe Alfaro Solana", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -1847,7 +1763,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1056106", 
       "creator": "RHOS Integration", 
-      "url": "https://blueprints.launchpad.net/ironic/+spec/integration-into-tripleo", 
       "component": "openstack-tripleo", 
       "target_release": [
         "---"
@@ -1872,7 +1787,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1056109", 
       "creator": "RHOS Integration", 
-      "url": "https://blueprints.launchpad.net/tripleo/+spec/tripleo-icehouse-ha-production-configuration", 
       "component": "openstack-tripleo", 
       "target_release": [
         "---"
@@ -1897,7 +1811,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1056110", 
       "creator": "RHOS Integration", 
-      "url": "https://blueprints.launchpad.net/tripleo/+spec/tripleo-icehouse-scaling-design", 
       "component": "openstack-tripleo", 
       "target_release": [
         "---"
@@ -1922,7 +1835,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1056112", 
       "creator": "RHOS Integration", 
-      "url": "https://blueprints.launchpad.net/tripleo/+spec/tripleo-tuskar-deployment-scaling-topologies", 
       "component": "openstack-tripleo", 
       "target_release": [
         "---"
@@ -1947,7 +1859,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1056114", 
       "creator": "RHOS Integration", 
-      "url": "https://blueprints.launchpad.net/tripleo/+spec/tripleo-icehouse-ui-installer", 
       "component": "openstack-tripleo", 
       "target_release": [
         "---"
@@ -1973,7 +1884,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1057822", 
       "creator": "Chris Wright", 
-      "url": "", 
       "component": "openstack-neutron", 
       "target_release": [
         "---"
@@ -1996,7 +1906,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1057938", 
       "creator": "Lars Kellogg-Stedman", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -2017,7 +1926,6 @@
       "status": "ON_QA", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1058995", 
       "creator": "Armando Migliaccio", 
-      "url": "", 
       "component": "openstack-neutron", 
       "target_release": [
         "Icehouse"
@@ -2038,7 +1946,6 @@
       "status": "ON_QA", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1061349", 
       "creator": "Nir Magnezi", 
-      "url": "", 
       "component": "openstack-neutron", 
       "target_release": [
         "---"
@@ -2059,7 +1966,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1061689", 
       "creator": "Nir Magnezi", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -2083,7 +1989,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1061753", 
       "creator": "Yogev Rabl", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -2106,7 +2011,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1061760", 
       "creator": "Giulio Fidente", 
-      "url": "", 
       "component": "openstack-foreman-installer", 
       "target_release": [
         "---"
@@ -2127,7 +2031,6 @@
       "status": "ASSIGNED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1062279", 
       "creator": "Yogev Rabl", 
-      "url": "", 
       "component": "openstack-nova", 
       "target_release": [
         "---"
@@ -2148,7 +2051,6 @@
       "status": "ASSIGNED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1063474", 
       "creator": "wes hayutin", 
-      "url": "", 
       "component": "distribution", 
       "target_release": [
         "---"
@@ -2173,7 +2075,6 @@
       "status": "POST", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1063980", 
       "creator": "Martin Magr", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -2194,7 +2095,6 @@
       "status": "ON_QA", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1067237", 
       "creator": "Chris Hoge", 
-      "url": "", 
       "component": "python-neutronclient", 
       "target_release": [
         "---"
@@ -2215,7 +2115,6 @@
       "status": "ASSIGNED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1069200", 
       "creator": "P\u00e1draig Brady", 
-      "url": "", 
       "component": "distribution", 
       "target_release": [
         "---"
@@ -2236,7 +2135,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1073480", 
       "creator": "Giulio Fidente", 
-      "url": "", 
       "component": "openstack-cinder", 
       "target_release": [
         "---"
@@ -2257,7 +2155,6 @@
       "status": "POST", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1074724", 
       "creator": "Liping Mao", 
-      "url": "", 
       "component": "openstack-glance", 
       "target_release": [
         "---"
@@ -2280,7 +2177,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1080348", 
       "creator": "Amita Sharma", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Icehouse"
@@ -2301,7 +2197,6 @@
       "status": "POST", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1080369", 
       "creator": "Udi", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -2322,7 +2217,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1080496", 
       "creator": "Udi", 
-      "url": "", 
       "component": "python-keystoneclient", 
       "target_release": [
         "---"
@@ -2343,7 +2237,6 @@
       "status": "ASSIGNED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1080543", 
       "creator": "Yogev Rabl", 
-      "url": "", 
       "component": "openstack-cinder", 
       "target_release": [
         "Icehouse"
@@ -2364,7 +2257,6 @@
       "status": "ASSIGNED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1081011", 
       "creator": "Ofer Blaut", 
-      "url": "", 
       "component": "openstack-neutron", 
       "target_release": [
         "---"
@@ -2385,7 +2277,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1081022", 
       "creator": "James Slagle", 
-      "url": "", 
       "component": "openstack-cinder", 
       "target_release": [
         "Icehouse"
@@ -2408,7 +2299,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1081203", 
       "creator": "Ryan Brady", 
-      "url": "", 
       "component": "openstack-neutron", 
       "target_release": [
         "Icehouse"
@@ -2429,7 +2319,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1082728", 
       "creator": "Giulio Fidente", 
-      "url": "", 
       "component": "openstack-foreman-installer", 
       "target_release": [
         "Icehouse"
@@ -2452,7 +2341,6 @@
       "status": "POST", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1082729", 
       "creator": "Giulio Fidente", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Icehouse"
@@ -2473,7 +2361,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1083566", 
       "creator": "Yogev Rabl", 
-      "url": "", 
       "component": "openstack-selinux", 
       "target_release": [
         "---"
@@ -2494,7 +2381,6 @@
       "status": "POST", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1084046", 
       "creator": "Dafna Ron", 
-      "url": "", 
       "component": "openstack-cinder", 
       "target_release": [
         "Icehouse"
@@ -2517,7 +2403,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1085452", 
       "creator": "Martin Pavl\u00e1sek", 
-      "url": "", 
       "component": "openstack-puppet-modules", 
       "target_release": [
         "Icehouse"
@@ -2538,7 +2423,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1086185", 
       "creator": "Ofer Blaut", 
-      "url": "", 
       "component": "openstack-puppet-modules", 
       "target_release": [
         "---"
@@ -2561,7 +2445,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1086204", 
       "creator": "Jakub Ruzicka", 
-      "url": "", 
       "component": "rdopkg", 
       "target_release": [
         "---"
@@ -2582,7 +2465,6 @@
       "status": "ASSIGNED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1086247", 
       "creator": "Nikola Dipanov", 
-      "url": "", 
       "component": "openstack-nova", 
       "target_release": [
         "Icehouse"
@@ -2607,7 +2489,6 @@
       "status": "POST", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1087089", 
       "creator": "Steve Baker", 
-      "url": "", 
       "component": "python-heatclient", 
       "target_release": [
         "---"
@@ -2628,7 +2509,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1087529", 
       "creator": "Attila Fazekas", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -2649,7 +2529,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1087795", 
       "creator": "Dafna Ron", 
-      "url": "", 
       "component": "openstack-selinux", 
       "target_release": [
         "---"
@@ -2670,7 +2549,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1088037", 
       "creator": "Jakub Ruzicka", 
-      "url": "", 
       "component": "rdopkg", 
       "target_release": [
         "---"
@@ -2691,7 +2569,6 @@
       "status": "ON_QA", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1088537", 
       "creator": "wes hayutin", 
-      "url": "", 
       "component": "openstack-neutron", 
       "target_release": [
         "Icehouse"
@@ -2712,7 +2589,6 @@
       "status": "POST", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1088964", 
       "creator": "wes hayutin", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Havana"
@@ -2735,7 +2611,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1090062", 
       "creator": "Tzach Shefi", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -2758,7 +2633,6 @@
       "status": "ASSIGNED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1090169", 
       "creator": "wes hayutin", 
-      "url": "", 
       "component": "python-keystoneclient", 
       "target_release": [
         "Havana"
@@ -2779,7 +2653,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1090381", 
       "creator": "Tzach Shefi", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -2800,7 +2673,6 @@
       "status": "POST", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1090648", 
       "creator": "Federico Simoncelli", 
-      "url": "", 
       "component": "openstack-utils", 
       "target_release": [
         "---"
@@ -2821,7 +2693,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1091564", 
       "creator": "Ramon Acedo", 
-      "url": "", 
       "component": "openstack-foreman-installer", 
       "target_release": [
         "---"
@@ -2842,7 +2713,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1092118", 
       "creator": "Brad P. Crochet", 
-      "url": "", 
       "component": "openstack-puppet-modules", 
       "target_release": [
         "---"
@@ -2863,7 +2733,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1092443", 
       "creator": "Ramon Acedo", 
-      "url": "", 
       "component": "openstack-foreman-installer", 
       "target_release": [
         "---"
@@ -2884,7 +2753,6 @@
       "status": "POST", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1093297", 
       "creator": "Ofer Blaut", 
-      "url": "", 
       "component": "openstack-selinux", 
       "target_release": [
         "---"
@@ -2905,7 +2773,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1093357", 
       "creator": "Ofer Blaut", 
-      "url": "", 
       "component": "openstack-neutron", 
       "target_release": [
         "---"
@@ -2926,7 +2793,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1093385", 
       "creator": "Ofer Blaut", 
-      "url": "", 
       "component": "openstack-selinux", 
       "target_release": [
         "---"
@@ -2947,7 +2813,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1093828", 
       "creator": "Lars Kellogg-Stedman", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -2968,7 +2833,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1094045", 
       "creator": "Ami Jeain", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -2989,7 +2853,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1094444", 
       "creator": "Brad P. Crochet", 
-      "url": "", 
       "component": "openstack-foreman-installer", 
       "target_release": [
         "Icehouse"
@@ -3014,7 +2877,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1095319", 
       "creator": "Nir Magnezi", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -3035,7 +2897,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1095401", 
       "creator": "Moti Asayag", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Icehouse"
@@ -3056,7 +2917,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1097291", 
       "creator": "Felipe Alfaro Solana", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -3079,7 +2939,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1098601", 
       "creator": "Ihar Hrachyshka", 
-      "url": "", 
       "component": "openstack-neutron", 
       "target_release": [
         "Icehouse"
@@ -3102,7 +2961,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1098821", 
       "creator": "Bill Bruns", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Icehouse"
@@ -3123,7 +2981,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1099042", 
       "creator": "Ihar Hrachyshka", 
-      "url": "", 
       "component": "openstack-selinux", 
       "target_release": [
         "---"
@@ -3147,7 +3004,6 @@
       "status": "ON_QA", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1100136", 
       "creator": "", 
-      "url": "", 
       "component": "openstack-neutron", 
       "target_release": [
         "---"
@@ -3168,7 +3024,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1100142", 
       "creator": "", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -3189,7 +3044,6 @@
       "status": "ASSIGNED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1100405", 
       "creator": "Jakub Ruzicka", 
-      "url": "", 
       "component": "rdopkg", 
       "target_release": [
         "---"
@@ -3210,7 +3064,6 @@
       "status": "POST", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1101665", 
       "creator": "Lon Hohberger", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -3233,7 +3086,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1105357", 
       "creator": "Adam Young", 
-      "url": "", 
       "component": "openstack-selinux", 
       "target_release": [
         "---"
@@ -3254,7 +3106,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1107907", 
       "creator": "Pete Zaitcev", 
-      "url": "", 
       "component": "openstack-puppet-modules", 
       "target_release": [
         "---"
@@ -3275,7 +3126,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1107908", 
       "creator": "Pete Zaitcev", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -3296,7 +3146,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1108188", 
       "creator": "P\u00e1draig Brady", 
-      "url": "", 
       "component": "distribution", 
       "target_release": [
         "Icehouse"
@@ -3317,7 +3166,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1108742", 
       "creator": "Perry Myers", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -3338,7 +3186,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1109824", 
       "creator": "Ihar Hrachyshka", 
-      "url": "", 
       "component": "openstack-neutron", 
       "target_release": [
         "---"
@@ -3359,7 +3206,6 @@
       "status": "ON_QA", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1110164", 
       "creator": "Attila Fazekas", 
-      "url": "", 
       "component": "python-oslo-config", 
       "target_release": [
         "---"
@@ -3380,7 +3226,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1111318", 
       "creator": "wes hayutin", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -3401,7 +3246,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1115398", 
       "creator": "Attila Fazekas", 
-      "url": "", 
       "component": "openstack-puppet-modules", 
       "target_release": [
         "---"
@@ -3422,7 +3266,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1116011", 
       "creator": "Ted Ross", 
-      "url": "", 
       "component": "distribution", 
       "target_release": [
         "trunk"
@@ -3445,7 +3288,6 @@
       "status": "ON_QA", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1116403", 
       "creator": "Brent Eagles", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -3466,7 +3308,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1116972", 
       "creator": "Yaniv Kaul", 
-      "url": "", 
       "component": "distribution", 
       "target_release": [
         "---"
@@ -3487,7 +3328,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1116974", 
       "creator": "Yaniv Kaul", 
-      "url": "http://openstack.redhat.com/Testing_IceHouse_using_Tempest", 
       "component": "distribution", 
       "target_release": [
         "---"
@@ -3508,7 +3348,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1116975", 
       "creator": "Yaniv Kaul", 
-      "url": "http://openstack.redhat.com/Testing_IceHouse_using_Tempest", 
       "component": "distribution", 
       "target_release": [
         "---"
@@ -3529,7 +3368,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1117007", 
       "creator": "Yaniv Kaul", 
-      "url": "http://openstack.redhat.com/Testing_IceHouse_using_Tempest", 
       "component": "distribution", 
       "target_release": [
         "---"
@@ -3550,7 +3388,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1117012", 
       "creator": "", 
-      "url": "", 
       "component": "openstack-swift", 
       "target_release": [
         "---"
@@ -3571,7 +3408,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1119016", 
       "creator": "Yaniv Kaul", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -3592,7 +3428,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1119443", 
       "creator": "Yaniv Kaul", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -3613,7 +3448,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1119920", 
       "creator": "wes hayutin", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -3634,7 +3468,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1121256", 
       "creator": "Adam Young", 
-      "url": "", 
       "component": "openstack-cinder", 
       "target_release": [
         "---"
@@ -3655,7 +3488,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1122968", 
       "creator": "Gabriele Cerami", 
-      "url": "", 
       "component": "openstack-puppet-modules", 
       "target_release": [
         "---"
@@ -3676,7 +3508,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1123298", 
       "creator": "Ilkka Tengvall", 
-      "url": "", 
       "component": "openstack-nova", 
       "target_release": [
         "---"
@@ -3697,7 +3528,6 @@
       "status": "ASSIGNED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1123451", 
       "creator": "Robert Rati", 
-      "url": "", 
       "component": "python-novaclient", 
       "target_release": [
         "---"
@@ -3718,7 +3548,6 @@
       "status": "ON_QA", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1123542", 
       "creator": "Fabrice A. Marie", 
-      "url": "", 
       "component": "openstack-keystone", 
       "target_release": [
         "---"
@@ -3739,7 +3568,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1126942", 
       "creator": "Kodiak Firesmith", 
-      "url": "", 
       "component": "python-swiftclient", 
       "target_release": [
         "---"
@@ -3760,7 +3588,6 @@
       "status": "POST", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1127309", 
       "creator": "Ryan Brown", 
-      "url": "", 
       "component": "rdopkg", 
       "target_release": [
         "---"
@@ -3781,7 +3608,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1128233", 
       "creator": "Miroslav Such\u00fd", 
-      "url": "", 
       "component": "openstack-nova", 
       "target_release": [
         "---"
@@ -3802,7 +3628,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1128342", 
       "creator": "Miroslav Such\u00fd", 
-      "url": "", 
       "component": "openstack-nova", 
       "target_release": [
         "---"
@@ -3823,7 +3648,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1128521", 
       "creator": "Mark Yavorski", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -3844,7 +3668,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1128896", 
       "creator": "Jacob Walcik", 
-      "url": "", 
       "component": "python-cinderclient", 
       "target_release": [
         "---"
@@ -3865,7 +3688,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1128898", 
       "creator": "Jacob Walcik", 
-      "url": "", 
       "component": "python-neutronclient", 
       "target_release": [
         "---"
@@ -3886,7 +3708,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1131587", 
       "creator": "", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -3907,7 +3728,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1132059", 
       "creator": "Martin Pavl\u00e1sek", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Icehouse"
@@ -3928,7 +3748,6 @@
       "status": "ASSIGNED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1132541", 
       "creator": "Jakub Ruzicka", 
-      "url": "", 
       "component": "python-neutronclient", 
       "target_release": [
         "---"
@@ -3949,7 +3768,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1133345", 
       "creator": "KrishnaS", 
-      "url": "", 
       "component": "openstack-puppet-modules", 
       "target_release": [
         "---"
@@ -3970,7 +3788,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1134073", 
       "creator": "Dan Sneddon", 
-      "url": "", 
       "component": "openstack-nova", 
       "target_release": [
         "---"
@@ -3991,7 +3808,6 @@
       "status": "POST", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1134121", 
       "creator": "Dan Sneddon", 
-      "url": "", 
       "component": "distribution", 
       "target_release": [
         "---"
@@ -4012,7 +3828,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1134617", 
       "creator": "Alan Pevec", 
-      "url": "", 
       "component": "openstack-selinux", 
       "target_release": [
         "---"
@@ -4033,7 +3848,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1135508", 
       "creator": "wes hayutin", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Icehouse"
@@ -4054,7 +3868,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1135510", 
       "creator": "Stefan Walter", 
-      "url": "", 
       "component": "openstack-selinux", 
       "target_release": [
         "---"
@@ -4075,7 +3888,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1135529", 
       "creator": "Miroslav Such\u00fd", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -4096,7 +3908,6 @@
       "status": "POST", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1139246", 
       "creator": "Lukas Bezdicka", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -4117,7 +3928,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1140842", 
       "creator": "Steve Baker", 
-      "url": "", 
       "component": "python-heatclient", 
       "target_release": [
         "---"
@@ -4138,7 +3948,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1141608", 
       "creator": "Stephen Gordon", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -4159,7 +3968,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1143970", 
       "creator": "Miroslav Such\u00fd", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -4180,7 +3988,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1144182", 
       "creator": "Nir Magnezi", 
-      "url": "", 
       "component": "openstack-selinux", 
       "target_release": [
         "---"
@@ -4201,7 +4008,6 @@
       "status": "POST", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1144539", 
       "creator": "Yaniv Kaul", 
-      "url": "", 
       "component": "openstack-selinux", 
       "target_release": [
         "Icehouse"
@@ -4222,7 +4028,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1145519", 
       "creator": "Prabhakar Pujeri", 
-      "url": "", 
       "component": "openstack-selinux", 
       "target_release": [
         "---"
@@ -4243,7 +4048,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1146963", 
       "creator": "jmazaredo", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -4264,7 +4068,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1147152", 
       "creator": "Ihar Hrachyshka", 
-      "url": "", 
       "component": "openstack-neutron", 
       "target_release": [
         "---"
@@ -4285,7 +4088,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1148468", 
       "creator": "wes hayutin", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Juno"
@@ -4306,7 +4108,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1148526", 
       "creator": "Dafna Ron", 
-      "url": "", 
       "component": "openstack-nova", 
       "target_release": [
         "Juno"
@@ -4329,7 +4130,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1148605", 
       "creator": "Harm Weites", 
-      "url": "", 
       "component": "openstack-nova", 
       "target_release": [
         "Juno"
@@ -4350,7 +4150,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1148760", 
       "creator": "Ofer Blaut", 
-      "url": "", 
       "component": "openstack-neutron", 
       "target_release": [
         "Juno"
@@ -4371,7 +4170,6 @@
       "status": "POST", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1148949", 
       "creator": "Alexander Chuzhoy", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -4392,7 +4190,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1148988", 
       "creator": "Rob Crittenden", 
-      "url": "", 
       "component": "openstack-nova", 
       "target_release": [
         "Juno"
@@ -4413,7 +4210,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1149064", 
       "creator": "Vladu Adrian", 
-      "url": "", 
       "component": "openstack-cinder", 
       "target_release": [
         "Juno"
@@ -4434,7 +4230,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1149504", 
       "creator": "Nir Magnezi", 
-      "url": "", 
       "component": "openstack-neutron", 
       "target_release": [
         "Juno"
@@ -4457,7 +4252,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1149505", 
       "creator": "Nir Magnezi", 
-      "url": "", 
       "component": "openstack-neutron", 
       "target_release": [
         "Juno"
@@ -4480,7 +4274,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1149682", 
       "creator": "Martin Pavl\u00e1sek", 
-      "url": "", 
       "component": "openstack-nova", 
       "target_release": [
         "Juno"
@@ -4501,7 +4294,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1149897", 
       "creator": "Matthias Runge", 
-      "url": "", 
       "component": "openstack-neutron", 
       "target_release": [
         "Juno"
@@ -4522,7 +4314,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1150678", 
       "creator": "Matt Kassawara", 
-      "url": "", 
       "component": "openstack-horizon", 
       "target_release": [
         "Juno"
@@ -4543,7 +4334,6 @@
       "status": "ASSIGNED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1150902", 
       "creator": "Matthias Runge", 
-      "url": "", 
       "component": "openstack-puppet-modules", 
       "target_release": [
         "---"
@@ -4566,7 +4356,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1151589", 
       "creator": "Chris Hoge", 
-      "url": "", 
       "component": "distribution", 
       "target_release": [
         "Juno"
@@ -4587,7 +4376,6 @@
       "status": "POST", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1151892", 
       "creator": "Michael Clarkson", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Icehouse"
@@ -4608,7 +4396,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1153128", 
       "creator": "Bruno Bompastor", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Juno"
@@ -4629,7 +4416,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1154152", 
       "creator": "Joe Talerico", 
-      "url": "", 
       "component": "openstack-nova", 
       "target_release": [
         "Juno"
@@ -4650,7 +4436,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1154201", 
       "creator": "Joe Talerico", 
-      "url": "", 
       "component": "openstack-nova", 
       "target_release": [
         "Juno"
@@ -4671,7 +4456,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1154633", 
       "creator": "Yaniv Kaul", 
-      "url": "", 
       "component": "tempest", 
       "target_release": [
         "Juno"
@@ -4692,7 +4476,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1154721", 
       "creator": "wes hayutin", 
-      "url": "", 
       "component": "openstack-nova", 
       "target_release": [
         "---"
@@ -4713,7 +4496,6 @@
       "status": "ON_QA", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1154866", 
       "creator": "Zvi Dubitzky", 
-      "url": "", 
       "component": "openstack-selinux", 
       "target_release": [
         "Icehouse"
@@ -4737,7 +4519,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1155663", 
       "creator": "Attila Fazekas", 
-      "url": "", 
       "component": "openstack-puppet-modules", 
       "target_release": [
         "Juno"
@@ -4758,7 +4539,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1155722", 
       "creator": "wes hayutin", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Juno"
@@ -4779,7 +4559,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1157500", 
       "creator": "Matthias Runge", 
-      "url": "", 
       "component": "openstack-puppet-modules", 
       "target_release": [
         "Juno"
@@ -4800,7 +4579,6 @@
       "status": "ON_QA", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1157599", 
       "creator": "Matthias Runge", 
-      "url": "", 
       "component": "openstack-neutron", 
       "target_release": [
         "Juno"
@@ -4821,7 +4599,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1157690", 
       "creator": "Nathan Stratton", 
-      "url": "", 
       "component": "openstack-nova", 
       "target_release": [
         "Juno"
@@ -4842,7 +4619,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1157939", 
       "creator": "Dave", 
-      "url": "", 
       "component": "openstack-cinder", 
       "target_release": [
         "Juno"
@@ -4863,7 +4639,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1158015", 
       "creator": "Nir Magnezi", 
-      "url": "", 
       "component": "openstack-cinder", 
       "target_release": [
         "Juno"
@@ -4884,7 +4659,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1158394", 
       "creator": "Nir Magnezi", 
-      "url": "", 
       "component": "openstack-selinux", 
       "target_release": [
         "Juno"
@@ -4905,7 +4679,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1158517", 
       "creator": "Miroslav Such\u00fd", 
-      "url": "", 
       "component": "RFEs", 
       "target_release": [
         "Juno"
@@ -4926,7 +4699,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1159733", 
       "creator": "anil", 
-      "url": "", 
       "component": "openstack-neutron", 
       "target_release": [
         "Juno"
@@ -4947,7 +4719,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1160885", 
       "creator": "Mohammed Arafa", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Juno"
@@ -4968,7 +4739,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1161501", 
       "creator": "Yaniv Kaul", 
-      "url": "", 
       "component": "openstack-utils", 
       "target_release": [
         "Juno"
@@ -4989,7 +4759,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1161915", 
       "creator": "Mohammed Arafa", 
-      "url": "", 
       "component": "openstack-nova", 
       "target_release": [
         "Juno"
@@ -5010,7 +4779,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1161920", 
       "creator": "Mohammed Arafa", 
-      "url": "", 
       "component": "openstack-nova", 
       "target_release": [
         "Juno"
@@ -5031,7 +4799,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1162333", 
       "creator": "Toure Dunnon", 
-      "url": "", 
       "component": "openstack-tripleo", 
       "target_release": [
         "Juno"
@@ -5054,7 +4821,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1164230", 
       "creator": "Pedro Navarro", 
-      "url": "", 
       "component": "openstack-neutron", 
       "target_release": [
         "Juno"
@@ -5075,7 +4841,6 @@
       "status": "ASSIGNED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1164349", 
       "creator": "wes hayutin", 
-      "url": "", 
       "component": "python-glanceclient", 
       "target_release": [
         "Juno"
@@ -5096,7 +4861,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1164770", 
       "creator": "swamybabu", 
-      "url": "", 
       "component": "dnsmasq", 
       "target_release": [
         "Juno"
@@ -5117,7 +4881,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1167121", 
       "creator": "Mohammed Arafa", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Juno"
@@ -5138,7 +4901,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1167156", 
       "creator": "Viorel Tabara", 
-      "url": "", 
       "component": "openstack-cinder", 
       "target_release": [
         "Juno"
@@ -5159,7 +4921,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1167528", 
       "creator": "Adam Young", 
-      "url": "", 
       "component": "openstack-keystone", 
       "target_release": [
         "Juno"
@@ -5180,7 +4941,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1167945", 
       "creator": "Lukas Bezdicka", 
-      "url": "", 
       "component": "openstack-cinder", 
       "target_release": [
         "Juno"
@@ -5201,7 +4961,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1169215", 
       "creator": "Bill Owen", 
-      "url": "", 
       "component": "openstack-swift", 
       "target_release": [
         "Juno"
@@ -5222,7 +4981,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1169742", 
       "creator": "wang_zhongshi@pku.edu.cn", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Juno"
@@ -5245,7 +5003,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1170238", 
       "creator": "Manabu Ori", 
-      "url": "", 
       "component": "openstack-selinux", 
       "target_release": [
         "Juno"
@@ -5266,7 +5023,6 @@
       "status": "POST", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1171191", 
       "creator": "Rich Megginson", 
-      "url": "", 
       "component": "python-openstackclient", 
       "target_release": [
         "Juno"
@@ -5287,7 +5043,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1171352", 
       "creator": "Rich Megginson", 
-      "url": "", 
       "component": "openstack-puppet-modules", 
       "target_release": [
         "Juno"
@@ -5308,7 +5063,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1171811", 
       "creator": "Mohammed Arafa", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Juno"
@@ -5331,7 +5085,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1172876", 
       "creator": "Mohammed Arafa", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Juno"
@@ -5352,7 +5105,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1173435", 
       "creator": "Tsuyoshi Nagata", 
-      "url": "", 
       "component": "iproute", 
       "target_release": [
         "Juno"
@@ -5378,7 +5130,6 @@
       "status": "ASSIGNED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1174454", 
       "creator": "Rich Megginson", 
-      "url": "", 
       "component": "openstack-puppet-modules", 
       "target_release": [
         "Juno"
@@ -5399,7 +5150,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1174749", 
       "creator": "velmohit", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "---"
@@ -5420,7 +5170,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1174776", 
       "creator": "Ami Jeain", 
-      "url": "", 
       "component": "openstack-tripleo", 
       "target_release": [
         "---"
@@ -5441,7 +5190,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1174795", 
       "creator": "Richard W.M. Jones", 
-      "url": "", 
       "component": "openstack-selinux", 
       "target_release": [
         "---"
@@ -5462,7 +5210,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1175121", 
       "creator": "Udi", 
-      "url": "", 
       "component": "openstack-tuskar-ui", 
       "target_release": [
         "---"
@@ -5483,7 +5230,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1175428", 
       "creator": "Richard W.M. Jones", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Juno"
@@ -5504,7 +5250,6 @@
       "status": "POST", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1175450", 
       "creator": "Richard W.M. Jones", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Juno"
@@ -5525,7 +5270,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1175687", 
       "creator": "Ami Jeain", 
-      "url": "", 
       "component": "instack-undercloud", 
       "target_release": [
         "---"
@@ -5546,7 +5290,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1175726", 
       "creator": "Antoni Segura Puimedon", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Juno"
@@ -5567,7 +5310,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1176269", 
       "creator": "Ethan Gafford", 
-      "url": "", 
       "component": "diskimage-builder", 
       "target_release": [
         "---"
@@ -5588,7 +5330,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1176433", 
       "creator": "Mohammed Arafa", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Juno"
@@ -5609,7 +5350,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1176506", 
       "creator": "Ami Jeain", 
-      "url": "", 
       "component": "distribution", 
       "target_release": [
         "Juno"
@@ -5630,7 +5370,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1176509", 
       "creator": "Ami Jeain", 
-      "url": "", 
       "component": "distribution", 
       "target_release": [
         "Juno"
@@ -5651,7 +5390,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1176569", 
       "creator": "Udi", 
-      "url": "", 
       "component": "instack-undercloud", 
       "target_release": [
         "Juno"
@@ -5674,7 +5412,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1176596", 
       "creator": "Udi", 
-      "url": "", 
       "component": "openstack-tuskar-ui", 
       "target_release": [
         "Juno"
@@ -5695,7 +5432,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1176797", 
       "creator": "fbachmann", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Juno"
@@ -5716,7 +5452,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1176833", 
       "creator": "josep blanch", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Juno"
@@ -5739,7 +5474,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1178131", 
       "creator": "Lukas Bezdicka", 
-      "url": "", 
       "component": "distribution", 
       "target_release": [
         "Juno"
@@ -5762,7 +5496,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1178648", 
       "creator": "Kevin Tibi", 
-      "url": "", 
       "component": "openstack-cinder", 
       "target_release": [
         "Juno"
@@ -5783,7 +5516,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1179931", 
       "creator": "Luca 'remix_tj' Lorenzetto", 
-      "url": "", 
       "component": "openstack-swift", 
       "target_release": [
         "Juno"
@@ -5804,7 +5536,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1180129", 
       "creator": "Vangelis angelou", 
-      "url": "", 
       "component": "openstack-nova", 
       "target_release": [
         "Juno"
@@ -5825,7 +5556,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1180201", 
       "creator": "Miguel Angel Ajo", 
-      "url": "", 
       "component": "openstack-neutron", 
       "target_release": [
         "Juno"
@@ -5851,7 +5581,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1182837", 
       "creator": "Mohammed Arafa", 
-      "url": "", 
       "component": "openstack-puppet-modules", 
       "target_release": [
         "Juno"
@@ -5872,7 +5601,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1184522", 
       "creator": "Bastian Ballmann", 
-      "url": "", 
       "component": "openstack-sahara", 
       "target_release": [
         "Juno"
@@ -5895,7 +5623,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1185627", 
       "creator": "Attila Fazekas", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Juno"
@@ -5916,7 +5643,6 @@
       "status": "ASSIGNED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1185921", 
       "creator": "Miroslav Such\u00fd", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Juno"
@@ -5937,7 +5663,6 @@
       "status": "MODIFIED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1185960", 
       "creator": "Rich Megginson", 
-      "url": "", 
       "component": "openstack-puppet-modules", 
       "target_release": [
         "Juno"
@@ -5958,7 +5683,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1187309", 
       "creator": "Rich Megginson", 
-      "url": "", 
       "component": "distribution", 
       "target_release": [
         "Juno"
@@ -5981,7 +5705,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1187310", 
       "creator": "Rich Megginson", 
-      "url": "", 
       "component": "python-openstackclient", 
       "target_release": [
         "Juno"
@@ -6005,7 +5728,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1187352", 
       "creator": "Harm Weites", 
-      "url": "", 
       "component": "openstack-tripleo", 
       "target_release": [
         "Juno"
@@ -6026,7 +5748,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1187354", 
       "creator": "Harm Weites", 
-      "url": "", 
       "component": "openstack-tripleo-image-elements", 
       "target_release": [
         "Juno"
@@ -6047,7 +5768,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1187572", 
       "creator": "Miroslav Such\u00fd", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Juno"
@@ -6068,7 +5788,6 @@
       "status": "ASSIGNED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1187609", 
       "creator": "Miroslav Such\u00fd", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Juno"
@@ -6089,7 +5808,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1187965", 
       "creator": "Harm Weites", 
-      "url": "", 
       "component": "openstack-tripleo-image-elements", 
       "target_release": [
         "Juno"
@@ -6110,7 +5828,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1187966", 
       "creator": "Harm Weites", 
-      "url": "", 
       "component": "instack-undercloud", 
       "target_release": [
         "Juno"
@@ -6131,7 +5848,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1188423", 
       "creator": "Joe", 
-      "url": "", 
       "component": "dnsmasq", 
       "target_release": [
         "Juno"
@@ -6152,7 +5868,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1189347", 
       "creator": "Lars Kellogg-Stedman", 
-      "url": "", 
       "component": "openstack-nova", 
       "target_release": [
         "Juno"
@@ -6173,7 +5888,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1189929", 
       "creator": "Lars Kellogg-Stedman", 
-      "url": "", 
       "component": "openstack-selinux", 
       "target_release": [
         "Juno"
@@ -6194,7 +5908,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1189931", 
       "creator": "Lars Kellogg-Stedman", 
-      "url": "", 
       "component": "openstack-nova", 
       "target_release": [
         "Juno"
@@ -6215,7 +5928,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1190815", 
       "creator": "", 
-      "url": "", 
       "component": "openstack-nova", 
       "target_release": [
         "Juno"
@@ -6236,7 +5948,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1192539", 
       "creator": "Ga\u00ebl Chamoulaud", 
-      "url": "", 
       "component": "openstack-puppet-modules", 
       "target_release": [
         "Juno"
@@ -6257,7 +5968,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1192622", 
       "creator": "Dan Sneddon", 
-      "url": "", 
       "component": "instack", 
       "target_release": [
         "Juno"
@@ -6278,7 +5988,6 @@
       "status": "ASSIGNED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1193429", 
       "creator": "Edouard Bourguignon", 
-      "url": "", 
       "component": "openvswitch", 
       "target_release": [
         "Kilo"
@@ -6299,7 +6008,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1193886", 
       "creator": "Miroslav Such\u00fd", 
-      "url": "", 
       "component": "RFEs", 
       "target_release": [
         "Juno"
@@ -6320,7 +6028,6 @@
       "status": "ASSIGNED", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1194230", 
       "creator": "Yanis Guenane", 
-      "url": "", 
       "component": "openstack-ceilometer", 
       "target_release": [
         "Juno"
@@ -6341,7 +6048,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1195977", 
       "creator": "Rich Megginson", 
-      "url": "", 
       "component": "python-keystonemiddleware", 
       "target_release": [
         "Juno"
@@ -6362,7 +6068,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1200701", 
       "creator": "Ronelle Landy", 
-      "url": "", 
       "component": "openstack-nova", 
       "target_release": [
         "Kilo"
@@ -6385,7 +6090,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1200789", 
       "creator": "Jan van Eldik", 
-      "url": "", 
       "component": "python-glanceclient", 
       "target_release": [
         "Kilo"
@@ -6406,7 +6110,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1201340", 
       "creator": "Miroslav Such\u00fd", 
-      "url": "", 
       "component": "openstack-utils", 
       "target_release": [
         "Kilo"
@@ -6427,7 +6130,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1201372", 
       "creator": "Udi", 
-      "url": "", 
       "component": "instack", 
       "target_release": [
         "Kilo"
@@ -6448,7 +6150,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1202941", 
       "creator": "Lars Kellogg-Stedman", 
-      "url": "", 
       "component": "openstack-selinux", 
       "target_release": [
         "Kilo"
@@ -6469,7 +6170,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1202944", 
       "creator": "Lars Kellogg-Stedman", 
-      "url": "", 
       "component": "openstack-selinux", 
       "target_release": [
         "Kilo"
@@ -6490,7 +6190,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1202958", 
       "creator": "Lars Kellogg-Stedman", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Kilo"
@@ -6511,7 +6210,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1203131", 
       "creator": "", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Kilo"
@@ -6532,7 +6230,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1203292", 
       "creator": "Lars Kellogg-Stedman", 
-      "url": "", 
       "component": "openstack-foreman-installer", 
       "target_release": [
         "---"
@@ -6556,7 +6253,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1203444", 
       "creator": "Lars Kellogg-Stedman", 
-      "url": "", 
       "component": "openstack-packstack", 
       "target_release": [
         "Kilo"
@@ -6577,7 +6273,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1203716", 
       "creator": "Jaromir Coufal", 
-      "url": "", 
       "component": "instack-undercloud", 
       "target_release": [
         "Kilo"
@@ -6598,7 +6293,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1203859", 
       "creator": "Omri Hochman", 
-      "url": "", 
       "component": "openstack-tuskar-ui", 
       "target_release": [
         "Kilo"
@@ -6619,7 +6313,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1203910", 
       "creator": "", 
-      "url": "", 
       "component": "openstack-selinux", 
       "target_release": [
         "Kilo"
@@ -6640,7 +6333,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1204126", 
       "creator": "Giulio Fidente", 
-      "url": "", 
       "component": "instack-undercloud", 
       "target_release": [
         "Kilo"
@@ -6661,7 +6353,6 @@
       "status": "NEW", 
       "weburl": "https://bugzilla.redhat.com/show_bug.cgi?id=1204218", 
       "creator": "Dmitry Tantsur", 
-      "url": "", 
       "component": "openstack-ironic-discoverd", 
       "target_release": [
         "Kilo"
@@ -6690,6 +6381,6 @@
       "ON_QA"
     ], 
     "product": "RDO", 
-    "date": "2015-03-21T00:09:31.816932-04:00"
+    "date": "2015-03-21T07:45:09.655159-04:00"
   }
 }
