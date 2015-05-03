@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>
+RDO Bugs on 2015-05-03
+</title>
+<link rel="stylesheet" href="../assets/github.css"></link>
+<link rel="stylesheet" href="../assets/local.css"></link>
+
+<!-- <head> elements go here -->
+
+</head>
+
+<body>
+<h1>
+RDO Bugs on 2015-05-03
+</h1>
+
+
+<h2>Summary</h2>
+<ul>
+<li><a href="#open">Open</a> (NEW, ASSIGNED, ON_DEV): 12</li>
+<li><a href="#fixed">Fixed</a> (MODIFIED, POST, ON_QA): 5</li>
+</ul>
+
+
+<h2 id="open">Open bugs</h2>
+
+<p>This is a list of "open" bugs in the "openstack-cinder"
+component.
+An "open" bug is in state
+NEW, ASSIGNED, ON_DEV and has not yet been fixed.</p>
+
+
+(12 bugs)
+
+<table>
+  <tr>
+    <th>ID</th><th>Status</th><th>Component</th><th>Last activitity</th>
+  </tr>
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1028688">1028688</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2015-03-20</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">should use new names in cinder-dist.conf</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1049380">1049380</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2015-03-23</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">openstack-cinder: cinder fails to copy an image a volume with GlusterFS backend</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1049511">1049511</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2015-03-30</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">EMC: fails to boot instances from volumes with "TypeError: Unsupported parameter type"</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1049535">1049535</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2015-04-14</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[RFE] permit cinder to create a volume when root_squash is set to on for gluster storage</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1121256">1121256</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2015-03-27</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Configuration file in share forces ignore of auth_uri</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1157939">1157939</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2015-04-27</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Default binary for iscsi_helper (lioadm) does not exist in the repos</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1167156">1167156</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2014-11-24</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">cinder-api[14407]: segfault at 7fc84636f7e0 ip 00007fc84636f7e0 sp 00007fff3110a468 error 15 in multiarray.so[7fc846369000+d000]</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1167945">1167945</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2014-11-25</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Random characters in instacne name break volume attaching</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1178648">1178648</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2015-01-05</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">vmware: "Not authenticated error occurred " on delete volume</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1206864">1206864</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2015-03-31</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">cannot attach local cinder volume</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1212899">1212899</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2015-04-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[packaging] missing dependencies for openstack-cinder</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1212900">1212900</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2015-05-01</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[packaging] /etc/cinder/cinder.conf missing in openstack-cinder</td>
+</tr>
+
+
+</table>
+
+
+<h2 id="fixed">Fixed bugs</h2>
+
+<p>This is a list of "fixed" bugs in the "openstack-cinder"
+component.
+A "fixed" bug is fixed state
+MODIFIED, POST, ON_QA and has been fixed.  You can help
+out by testing the fix to make sure it works as intended.</p>
+
+
+(5 bugs)
+
+<table>
+  <tr>
+    <th>ID</th><th>Status</th><th>Component</th><th>Last activitity</th>
+  </tr>
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=994370">994370</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2014-06-24</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">CVE-2013-4183 openstack-cinder: OpenStack: Cinder LVM volume driver does not support secure deletion [openstack-rdo]</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1007515">1007515</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2013-11-27</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">cinder [Havana]: we try to create a backup although cinder-backup service is down</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1010039">1010039</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2013-11-27</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Grizzly -> Havana upgrade fails during db_sync</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1081022">1081022</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2014-05-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Non-admin user can not attach cinder volume to their instance (LIO)</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1084046">1084046</a></td>
+<td>POST</td>
+<td><a href="report-openstack-cinder.html">openstack-cinder</a></td>
+<td>2014-09-26</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">cinder: can't delete a volume (raise exception.ISCSITargetNotFoundForVolume)</td>
+</tr>
+
+
+</table>
+
+
+</body>
+</html>
