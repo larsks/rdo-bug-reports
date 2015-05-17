@@ -1,0 +1,340 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>
+RDO Bugs on 2015-05-17
+</title>
+<link rel="stylesheet" href="../assets/github.css"></link>
+<link rel="stylesheet" href="../assets/local.css"></link>
+
+<!-- <head> elements go here -->
+
+</head>
+
+<body>
+<h1>
+RDO Bugs on 2015-05-17
+</h1>
+
+
+<h2>Summary</h2>
+<ul>
+<li><a href="#open">Open</a> (NEW, ASSIGNED, ON_DEV): 7</li>
+<li><a href="#fixed">Fixed</a> (MODIFIED, POST, ON_QA): 14</li>
+</ul>
+
+
+<h2 id="open">Open bugs</h2>
+
+<p>This is a list of "open" bugs in the "openstack-neutron"
+component.
+An "open" bug is in state
+NEW, ASSIGNED, ON_DEV and has not yet been fixed.</p>
+
+
+(7 bugs)
+
+<table>
+  <tr>
+    <th>ID</th><th>Status</th><th>Component</th><th>Last activitity</th>
+  </tr>
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=986507">986507</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2015-03-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">RFE: IPv6 Feature Parity</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1147152">1147152</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-09-27</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Use neutron-sanity-check in CI checks</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1149504">1149504</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-10-12</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Instances won't obtain IPv6 address and gateway when using SLAAC provided by OpenStack</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1149505">1149505</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-10-12</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Instances won't obtain IPv6 address and gateway when using Stateful DHCPv6 provided by OpenStack</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1159733">1159733</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2015-03-22</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">no ports available when associating floating ips to new instance</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1164230">1164230</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-12-16</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">In openstack-neutron-sriov-nic-agent package is missing the /etc/neutron/plugins/ml2/ml2_conf_sriov.ini config files</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1180201">1180201</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2015-01-08</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron-netns-cleanup.service needs RemainAfterExit=yes and PrivateTmp=false</td>
+</tr>
+
+
+</table>
+
+
+<h2 id="fixed">Fixed bugs</h2>
+
+<p>This is a list of "fixed" bugs in the "openstack-neutron"
+component.
+A "fixed" bug is fixed state
+MODIFIED, POST, ON_QA and has been fixed.  You can help
+out by testing the fix to make sure it works as intended.</p>
+
+
+(14 bugs)
+
+<table>
+  <tr>
+    <th>ID</th><th>Status</th><th>Component</th><th>Last activitity</th>
+  </tr>
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1019487">1019487</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-07-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron-dhcp-agent fails to start without openstack-neutron-openvswitch installed</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1049807">1049807</a></td>
+<td>POST</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-01-13</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron-dhcp-agent fails to start with plenty of SELinux AVC denials</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1050842">1050842</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-06-11</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron should not specify signing_dir in neutron-dist.conf</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1057822">1057822</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-04-16</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron-ml2 package requires python-pyudev</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1058995">1058995</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-04-08</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron-plugin-nicira should be renamed to neutron-plugin-vmware</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1061349">1061349</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-02-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron-dhcp-agent won't start due to a missing import of module named stevedore</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1081203">1081203</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-04-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">No DHCP agents are associated with network</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1088537">1088537</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-06-11</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">rhel 6.5 icehouse stage.. neutron-db-manage trying to import systemd</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1098601">1098601</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-05-16</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron-vpn-agent does not use the /etc/neutron/fwaas_driver.ini</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1100136">1100136</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-07-17</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Missing configuration file for ML2 Mellanox Mechanism Driver ml2_conf_mlnx.ini</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1109824">1109824</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-09-27</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Embrane plugin should be split from python-neutron</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1157599">1157599</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2014-11-25</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">fresh neutron install fails due unknown database column 'id'</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1209932">1209932</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2015-04-10</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Packstack installation failed with Neutron-server Could not start Service</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1218543">1218543</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-neutron.html">openstack-neutron</a></td>
+<td>2015-05-06</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">RDO-kilo- L3 agent failed when FWAAS enabled in answer file</td>
+</tr>
+
+
+</table>
+
+
+</body>
+</html>
