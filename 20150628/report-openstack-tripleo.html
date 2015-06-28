@@ -1,0 +1,392 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>
+RDO Bugs on 2015-06-28
+</title>
+<link rel="stylesheet" href="../assets/github.css"></link>
+<link rel="stylesheet" href="../assets/local.css"></link>
+
+<!-- <head> elements go here -->
+
+</head>
+
+<body>
+<h1>
+RDO Bugs on 2015-06-28
+</h1>
+
+
+<h2>Summary</h2>
+<ul>
+<li><a href="#open">Open</a> (NEW, ASSIGNED, ON_DEV): 24</li>
+<li><a href="#fixed">Fixed</a> (MODIFIED, POST, ON_QA): 1</li>
+</ul>
+
+
+<h2 id="open">Open bugs</h2>
+
+<p>This is a list of "open" bugs in the "openstack-tripleo"
+component.
+An "open" bug is in state
+NEW, ASSIGNED, ON_DEV and has not yet been fixed.</p>
+
+
+(24 bugs)
+
+<table>
+  <tr>
+    <th>ID</th><th>Status</th><th>Component</th><th>Last activitity</th>
+  </tr>
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1056106">1056106</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-06-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[RFE][ironic]: Integration of Ironic in to TripleO</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1056109">1056109</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-06-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[RFE][tripleo]: Making the overcloud deployment fully HA</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1056110">1056110</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-06-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[RFE][tripleo]: Scaling work to do during icehouse</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1056112">1056112</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-06-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[RFE][tripleo]: Deploying different architecture topologies with Tuskar</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1056114">1056114</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-06-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[RFE][tripleo]: Implement a complete overcloud installation story in the UI</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1174776">1174776</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-06-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">User can not login into the overcloud horizon using the proper credentials</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1187352">1187352</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-06-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">/usr/bin/instack-prepare-for-overcloud glance using incorrect parameter</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1205645">1205645</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-06-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Dependency issue: python-oslo-versionedobjects is required by heat and not in the delorean repos</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1211560">1211560</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-06-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">instack-deploy-overcloud times out after ~3 minutes, no plan or stack is created</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1218168">1218168</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-06-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">ceph.service should only be running on the ceph nodes, not on the controller and compute nodes</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1218340">1218340</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-06-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">RFE: add "scheduler_default_weighers = CapacityWeigher" explicitly to cinder.conf</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1221610">1221610</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-06-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">RDO-manager beta fails to install: Deployment exited with non-zero status code: 6</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1221731">1221731</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-06-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Overcloud missing ceilometer keystone user and endpoints</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1223424">1223424</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-06-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">instack-deploy-overcloud should not rely on instackenv.json, but should use ironic instead</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1223443">1223443</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-06-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">You can still check introspection status for ironic nodes that have been deleted</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1223471">1223471</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-06-22</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Discovery errors out even when it is successful</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1223667">1223667</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-06-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">When using 'tripleo wait_for' with the command 'nova hypervisor-stats' it hangs forever</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1223672">1223672</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-06-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Node registration fails silently if instackenv.json is badly formatted</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1224604">1224604</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-06-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Lots of dracut-related error messages during instack-build-images</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1225022">1225022</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-06-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">When adding nodes to the cloud the update hangs and takes forever</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1225390">1225390</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-06-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">The role names from "openstack management role list" don't match those for "openstack overcloud scale stack"</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1226653">1226653</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-06-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">The usage message for "heat resource-show" is confusing and incorrect</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1226867">1226867</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-06-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Timeout in API</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1229174">1229174</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-06-08</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Nova computes can't resolve each other because the hostnames in /etc/hosts don't include the ".novalocal" suffix</td>
+</tr>
+
+
+</table>
+
+
+<h2 id="fixed">Fixed bugs</h2>
+
+<p>This is a list of "fixed" bugs in the "openstack-tripleo"
+component.
+A "fixed" bug is fixed state
+MODIFIED, POST, ON_QA and has been fixed.  You can help
+out by testing the fix to make sure it works as intended.</p>
+
+
+(1 bug)
+
+<table>
+  <tr>
+    <th>ID</th><th>Status</th><th>Component</th><th>Last activitity</th>
+  </tr>
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1162333">1162333</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-tripleo.html">openstack-tripleo</a></td>
+<td>2015-06-02</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Instack fails to complete instack-virt-setup with syntax error near unexpected token `newline'</td>
+</tr>
+
+
+</table>
+
+
+</body>
+</html>
