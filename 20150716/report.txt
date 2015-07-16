@@ -1,0 +1,2828 @@
+# RDO Bugs on 2015-07-16
+
+This email summarizes the active RDO bugs listed in the Red Hat Bugzilla
+database at <https://bugzilla.redhat.com/>.
+
+You can find an HTML version of this report online at:
+
+  <http://people.redhat.com/~lkellogg/rdo/20150716/>.
+
+To report a new bug against RDO, go to:
+
+  <https://bugzilla.redhat.com/enter_bug.cgi?product=RDO>
+
+## Summary
+
+- Open (NEW, ASSIGNED, ON_DEV): 265
+- Fixed (MODIFIED, POST, ON_QA): 178
+
+
+## Number of open bugs by component
+
+            diskimage-builder [  4] +++                                     
+                 distribution [ 17] +++++++++++++++                         
+                      dnsmasq [  2] +                                       
+                      instack [  4] +++                                     
+           instack-undercloud [ 23] ++++++++++++++++++++                    
+                      iproute [  1]                                         
+         openstack-ceilometer [  5] ++++                                    
+             openstack-cinder [ 13] +++++++++++                             
+    openstack-foreman-inst... [  3] ++                                      
+             openstack-glance [  2] +                                       
+               openstack-heat [  3] ++                                      
+            openstack-horizon [  4] +++                                     
+             openstack-ironic [  1]                                         
+    openstack-ironic-disco... [  2] +                                       
+           openstack-keystone [  7] ++++++                                  
+            openstack-neutron [  7] ++++++                                  
+               openstack-nova [ 17] +++++++++++++++                         
+          openstack-packstack [ 45] ++++++++++++++++++++++++++++++++++++++++
+     openstack-puppet-modules [ 10] ++++++++                                
+            openstack-selinux [ 11] +++++++++                               
+              openstack-swift [  2] +                                       
+            openstack-tripleo [ 24] +++++++++++++++++++++                   
+    openstack-tripleo-heat... [  5] ++++                                    
+    openstack-tripleo-imag... [  2] +                                       
+             openstack-tuskar [  3] ++                                      
+              openstack-utils [  3] ++                                      
+                  openvswitch [  1]                                         
+          python-glanceclient [  1]                                         
+    python-keystonemiddleware [  1]                                         
+         python-neutronclient [  2] +                                       
+            python-novaclient [  1]                                         
+       python-openstackclient [  5] ++++                                    
+                  rdo-manager [ 21] ++++++++++++++++++                      
+              rdo-manager-cli [  7] ++++++                                  
+                       rdopkg [  1]                                         
+                         RFEs [  3] ++                                      
+                      tempest [  2] +                                       
+
+## Open bugs
+
+This is a list of "open" bugs by component.  An "open" bug is in state
+NEW, ASSIGNED, ON_DEV and has not yet been fixed.
+
+(265 bugs)
+
+
+### diskimage-builder (4 bugs)
+
+
+[1210465 ] http://bugzilla.redhat.com/1210465 (NEW)  
+           Component: diskimage-builder  
+           Last change: 2015-04-09
+           Summary: instack-build-images fails when building CentOS7 due to
+                    EPEL version change  
+
+[1228761 ] http://bugzilla.redhat.com/1228761 (NEW)  
+           Component: diskimage-builder  
+           Last change: 2015-06-10
+           Summary: DIB_YUM_REPO_CONF points to two files and that breaks
+                    imagebuilding  
+
+[1233210 ] http://bugzilla.redhat.com/1233210 (NEW)  
+           Component: diskimage-builder  
+           Last change: 2015-06-18
+           Summary: Image building fails silently  
+
+[1235685 ] http://bugzilla.redhat.com/1235685 (NEW)  
+           Component: diskimage-builder  
+           Last change: 2015-07-01
+           Summary: DIB fails on not finding sos  
+
+### distribution (17 bugs)
+
+
+[1063474 ] http://bugzilla.redhat.com/1063474 (ASSIGNED)  
+           Component: distribution  
+           Last change: 2015-06-04
+           Summary: python-backports:  /usr/lib/python2.6/site-
+                    packages/babel/__init__.py:33: UserWarning: Module
+                    backports was already imported from
+                    /usr/lib64/python2.6/site-
+                    packages/backports/__init__.pyc, but /usr/lib/python2.6
+                    /site-packages is being added to sys.path  
+
+[1116011 ] http://bugzilla.redhat.com/1116011 (NEW)  
+           Component: distribution  
+           Last change: 2015-06-04
+           Summary: RDO: Packages needed to support AMQP1.0  
+
+[1116972 ] http://bugzilla.redhat.com/1116972 (NEW)  
+           Component: distribution  
+           Last change: 2015-06-04
+           Summary: RDO website: libffi-devel is required to run Tempest
+                    (at least on CentOS 6.5)  
+
+[1116974 ] http://bugzilla.redhat.com/1116974 (NEW)  
+           Component: distribution  
+           Last change: 2015-06-04
+           Summary: Running Tempest according to the instructions @ RDO
+                    website fails with missing tox.ini error  
+
+[1116975 ] http://bugzilla.redhat.com/1116975 (NEW)  
+           Component: distribution  
+           Last change: 2015-06-04
+           Summary: RDO website: configuring TestR according to website,
+                    breaks Tox completely  
+
+[1117007 ] http://bugzilla.redhat.com/1117007 (NEW)  
+           Component: distribution  
+           Last change: 2015-06-04
+           Summary: RDO website: newer python-nose is required to run
+                    Tempest (at least on CentOS 6.5) [update to http://open
+                    stack.redhat.com/Testing_IceHouse_using_Tempest]  
+
+[1176506 ] http://bugzilla.redhat.com/1176506 (NEW)  
+           Component: distribution  
+           Last change: 2015-06-04
+           Summary: [TripleO] Provisioning Images filter doesn't work  
+
+[1176509 ] http://bugzilla.redhat.com/1176509 (NEW)  
+           Component: distribution  
+           Last change: 2015-06-04
+           Summary: [TripleO] text of uninitialized deployment needs
+                    rewording  
+
+[1178131 ] http://bugzilla.redhat.com/1178131 (NEW)  
+           Component: distribution  
+           Last change: 2015-06-04
+           Summary: SSL supports only broken crypto  
+
+[1187309 ] http://bugzilla.redhat.com/1187309 (NEW)  
+           Component: distribution  
+           Last change: 2015-05-08
+           Summary: New package - python-cliff-tablib  
+
+[1206867 ] http://bugzilla.redhat.com/1206867 (NEW)  
+           Component: distribution  
+           Last change: 2015-06-04
+           Summary: Tracking bug for bugs that Lars is interested in  
+
+[1212223 ] http://bugzilla.redhat.com/1212223 (NEW)  
+           Component: distribution  
+           Last change: 2015-06-04
+           Summary: mariadb requires Requires: mariadb-libs(x86-64) =
+                    1:5.5.35-3.el7  
+
+[1218555 ] http://bugzilla.redhat.com/1218555 (ASSIGNED)  
+           Component: distribution  
+           Last change: 2015-06-04
+           Summary: rdo-release needs to enable  RHEL optional extras and
+                    rh-common repositories  
+
+[1219069 ] http://bugzilla.redhat.com/1219069 (ASSIGNED)  
+           Component: distribution  
+           Last change: 2015-06-04
+           Summary: trove-guestagent systemd unit file uses incorrect path
+                    for guest_info  
+
+[1219890 ] http://bugzilla.redhat.com/1219890 (ASSIGNED)  
+           Component: distribution  
+           Last change: 2015-06-09
+           Summary: Unable to launch an instance  
+
+[1226795 ] http://bugzilla.redhat.com/1226795 (NEW)  
+           Component: distribution  
+           Last change: 2015-06-11
+           Summary: RFE: Manila-UI Plugin support in Horizon  
+
+[1243533 ] http://bugzilla.redhat.com/1243533 (NEW)  
+           Component: distribution  
+           Last change: 2015-07-16
+           Summary: (RDO) Tracker: Review requests for new RDO Liberty
+                    packages  
+
+### dnsmasq (2 bugs)
+
+
+[1164770 ] http://bugzilla.redhat.com/1164770 (NEW)  
+           Component: dnsmasq  
+           Last change: 2015-06-22
+           Summary: On a 3 node setup (controller, network and compute),
+                    instance is not getting dhcp ip (while using flat
+                    network)  
+
+[1214898 ] http://bugzilla.redhat.com/1214898 (NEW)  
+           Component: dnsmasq  
+           Last change: 2015-04-24
+           Summary: RDO-dnsmasq: During attempt to deploy the overcloud,
+                    the hosts doing the PXE boot don't get IP.  
+
+### instack (4 bugs)
+
+
+[1192622 ] http://bugzilla.redhat.com/1192622 (NEW)  
+           Component: instack  
+           Last change: 2015-06-04
+           Summary: RDO Instack FAQ has serious doc bug  
+
+[1201372 ] http://bugzilla.redhat.com/1201372 (NEW)  
+           Component: instack  
+           Last change: 2015-06-04
+           Summary: instack-update-overcloud fails because it tries to
+                    access non-existing files  
+
+[1224459 ] http://bugzilla.redhat.com/1224459 (NEW)  
+           Component: instack  
+           Last change: 2015-06-18
+           Summary: AttributeError: 'User' object has no attribute '_meta'  
+
+[1225590 ] http://bugzilla.redhat.com/1225590 (NEW)  
+           Component: instack  
+           Last change: 2015-06-04
+           Summary: When supplying Satellite registration fails do to Curl
+                    SSL error but i see now curl code  
+
+### instack-undercloud (23 bugs)
+
+
+[1134073 ] http://bugzilla.redhat.com/1134073 (NEW)  
+           Component: instack-undercloud  
+           Last change: 2015-06-04
+           Summary: Nova default quotas insufficient to deploy baremetal
+                    overcloud  
+
+[1175687 ] http://bugzilla.redhat.com/1175687 (NEW)  
+           Component: instack-undercloud  
+           Last change: 2015-06-04
+           Summary: instack is not configued properly to log all
+                    Horizon/Tuskar messages in the undercloud deployment  
+
+[1176569 ] http://bugzilla.redhat.com/1176569 (NEW)  
+           Component: instack-undercloud  
+           Last change: 2015-06-04
+           Summary: 404 not found when instack-virt-setup tries to download
+                    the rhel-6.5 guest image  
+
+[1187966 ] http://bugzilla.redhat.com/1187966 (NEW)  
+           Component: instack-undercloud  
+           Last change: 2015-06-04
+           Summary: missing dependency on which  
+
+[1199637 ] http://bugzilla.redhat.com/1199637 (ASSIGNED)  
+           Component: instack-undercloud  
+           Last change: 2015-06-12
+           Summary: [RDO][Instack-undercloud]: harmless ERROR: installing
+                    'template' displays when building the images .  
+
+[1200081 ] http://bugzilla.redhat.com/1200081 (NEW)  
+           Component: instack-undercloud  
+           Last change: 2015-07-14
+           Summary: Installing instack undercloud on Fedora20 VM fails  
+
+[1210685 ] http://bugzilla.redhat.com/1210685 (NEW)  
+           Component: instack-undercloud  
+           Last change: 2015-06-04
+           Summary: Could not retrieve facts for localhost.localhost: no
+                    address for localhost.localhost (corrupted
+                    /etc/resolv.conf)  
+
+[1211800 ] http://bugzilla.redhat.com/1211800 (ASSIGNED)  
+           Component: instack-undercloud  
+           Last change: 2015-06-19
+           Summary: Sphinx docs for instack-undercloud have an incorrect
+                    network topology  
+
+[1214545 ] http://bugzilla.redhat.com/1214545 (NEW)  
+           Component: instack-undercloud  
+           Last change: 2015-06-04
+           Summary: undercloud nova.conf needs reserved_host_memory_mb=0  
+
+[1215178 ] http://bugzilla.redhat.com/1215178 (NEW)  
+           Component: instack-undercloud  
+           Last change: 2015-06-04
+           Summary: RDO-instack-undercloud: instack-install-undercloud
+                    exists with error "ImportError: No module named six."  
+
+[1216243 ] http://bugzilla.redhat.com/1216243 (ASSIGNED)  
+           Component: instack-undercloud  
+           Last change: 2015-06-18
+           Summary: Undercloud install leaves services enabled but not
+                    started  
+
+[1216982 ] http://bugzilla.redhat.com/1216982 (ASSIGNED)  
+           Component: instack-undercloud  
+           Last change: 2015-06-15
+           Summary: instack-build-images does not stop on certain errors  
+
+[1220509 ] http://bugzilla.redhat.com/1220509 (ASSIGNED)  
+           Component: instack-undercloud  
+           Last change: 2015-06-15
+           Summary: wget is missing from qcow2 image fails instack-build-
+                    images script  
+
+[1221812 ] http://bugzilla.redhat.com/1221812 (NEW)  
+           Component: instack-undercloud  
+           Last change: 2015-06-04
+           Summary: instack-undercloud install fails w/ rdo-kilo on
+                    rhel-7.1 due to rpm gpg key import  
+
+[1221818 ] http://bugzilla.redhat.com/1221818 (NEW)  
+           Component: instack-undercloud  
+           Last change: 2015-06-04
+           Summary: rdo-manager documentation required for RHEL7 + rdo kilo
+                    (only) setup and install  
+
+[1223977 ] http://bugzilla.redhat.com/1223977 (ASSIGNED)  
+           Component: instack-undercloud  
+           Last change: 2015-06-04
+           Summary: instack-undercloud: Running "openstack undercloud
+                    install" exits with error due to a missing python-
+                    flask-babel package: "Error: Package: openstack-
+                    tuskar-2013.2-dev1.el7.centos.noarch (delorean-rdo-
+                    management)            Requires: python-flask-babel"  
+
+[1225688 ] http://bugzilla.redhat.com/1225688 (ASSIGNED)  
+           Component: instack-undercloud  
+           Last change: 2015-06-04
+           Summary: instack-undercloud: running instack-build-imsages
+                    exists with "Not enough RAM to use tmpfs for build.
+                    (4048492 < 4G)"  
+
+[1229720 ] http://bugzilla.redhat.com/1229720 (NEW)  
+           Component: instack-undercloud  
+           Last change: 2015-06-09
+           Summary: overcloud deploy fails due to timeout  
+
+[1230870 ] http://bugzilla.redhat.com/1230870 (NEW)  
+           Component: instack-undercloud  
+           Last change: 2015-06-29
+           Summary: instack-undercloud: The documention is missing the
+                    instructions for installing the epel repos prior to
+                    running "sudo yum install -y python-rdomanager-
+                    oscplugin'.  
+
+[1230937 ] http://bugzilla.redhat.com/1230937 (NEW)  
+           Component: instack-undercloud  
+           Last change: 2015-06-11
+           Summary: instack-undercloud: multiple "openstack No user with a
+                    name or ID of" errors during  overcloud deployment.  
+
+[1232029 ] http://bugzilla.redhat.com/1232029 (NEW)  
+           Component: instack-undercloud  
+           Last change: 2015-06-22
+           Summary: instack-undercloud: "openstack undercloud install"
+                    fails with "RuntimeError: ('%s failed. See log for
+                    details.', 'os-refresh-config')"  
+
+[1232083 ] http://bugzilla.redhat.com/1232083 (NEW)  
+           Component: instack-undercloud  
+           Last change: 2015-06-16
+           Summary: instack-ironic-deployment --register-nodes swallows
+                    error output  
+
+[1234652 ] http://bugzilla.redhat.com/1234652 (NEW)  
+           Component: instack-undercloud  
+           Last change: 2015-06-25
+           Summary: Instack has hard coded values for specific config files  
+
+### iproute (1 bug)
+
+
+[1173435 ] http://bugzilla.redhat.com/1173435 (NEW)  
+           Component: iproute  
+           Last change: 2015-06-05
+           Summary: deleting netns ends in  Device or resource busy and
+                    blocks further namespace usage  
+
+### openstack-ceilometer (5 bugs)
+
+
+[1194230 ] http://bugzilla.redhat.com/1194230 (ASSIGNED)  
+           Component: openstack-ceilometer  
+           Last change: 2015-02-26
+           Summary: The /etc/sudoers.d/ceilometer have incorrect
+                    permissions  
+
+[1214928 ] http://bugzilla.redhat.com/1214928 (NEW)  
+           Component: openstack-ceilometer  
+           Last change: 2015-04-23
+           Summary: package ceilometermiddleware missing  
+
+[1219372 ] http://bugzilla.redhat.com/1219372 (NEW)  
+           Component: openstack-ceilometer  
+           Last change: 2015-05-07
+           Summary: Info about 'severity' field changes is not displayed
+                    via alarm-history call  
+
+[1219376 ] http://bugzilla.redhat.com/1219376 (NEW)  
+           Component: openstack-ceilometer  
+           Last change: 2015-05-07
+           Summary: Wrong alarms order on 'severity' field  
+
+[1231326 ] http://bugzilla.redhat.com/1231326 (NEW)  
+           Component: openstack-ceilometer  
+           Last change: 2015-06-12
+           Summary: kafka publisher requires kafka-python library  
+
+### openstack-cinder (13 bugs)
+
+
+[1028688 ] http://bugzilla.redhat.com/1028688 (ASSIGNED)  
+           Component: openstack-cinder  
+           Last change: 2015-03-20
+           Summary: should use new names in cinder-dist.conf  
+
+[1049380 ] http://bugzilla.redhat.com/1049380 (NEW)  
+           Component: openstack-cinder  
+           Last change: 2015-03-23
+           Summary: openstack-cinder: cinder fails to copy an image a
+                    volume with GlusterFS backend  
+
+[1049511 ] http://bugzilla.redhat.com/1049511 (NEW)  
+           Component: openstack-cinder  
+           Last change: 2015-03-30
+           Summary: EMC: fails to boot instances from volumes with
+                    "TypeError: Unsupported parameter type"  
+
+[1049535 ] http://bugzilla.redhat.com/1049535 (NEW)  
+           Component: openstack-cinder  
+           Last change: 2015-04-14
+           Summary: [RFE] permit cinder to create a volume when root_squash
+                    is set to on for gluster storage  
+
+[1121256 ] http://bugzilla.redhat.com/1121256 (NEW)  
+           Component: openstack-cinder  
+           Last change: 2015-03-27
+           Summary: Configuration file in share forces ignore of auth_uri  
+
+[1157939 ] http://bugzilla.redhat.com/1157939 (ASSIGNED)  
+           Component: openstack-cinder  
+           Last change: 2015-04-27
+           Summary: Default binary for iscsi_helper (lioadm) does not exist
+                    in the repos  
+
+[1167156 ] http://bugzilla.redhat.com/1167156 (NEW)  
+           Component: openstack-cinder  
+           Last change: 2014-11-24
+           Summary: cinder-api[14407]: segfault at 7fc84636f7e0 ip
+                    00007fc84636f7e0 sp 00007fff3110a468 error 15 in
+                    multiarray.so[7fc846369000+d000]  
+
+[1167945 ] http://bugzilla.redhat.com/1167945 (NEW)  
+           Component: openstack-cinder  
+           Last change: 2014-11-25
+           Summary: Random characters in instacne name break volume
+                    attaching  
+
+[1178648 ] http://bugzilla.redhat.com/1178648 (NEW)  
+           Component: openstack-cinder  
+           Last change: 2015-01-05
+           Summary: vmware: "Not authenticated error occurred " on delete
+                    volume  
+
+[1206864 ] http://bugzilla.redhat.com/1206864 (NEW)  
+           Component: openstack-cinder  
+           Last change: 2015-03-31
+           Summary: cannot attach local cinder volume  
+
+[1212899 ] http://bugzilla.redhat.com/1212899 (ASSIGNED)  
+           Component: openstack-cinder  
+           Last change: 2015-04-17
+           Summary: [packaging] missing dependencies for openstack-cinder  
+
+[1229551 ] http://bugzilla.redhat.com/1229551 (ASSIGNED)  
+           Component: openstack-cinder  
+           Last change: 2015-06-14
+           Summary: Nova resize fails with iSCSI logon failure when booting
+                    from volume  
+
+[1231311 ] http://bugzilla.redhat.com/1231311 (NEW)  
+           Component: openstack-cinder  
+           Last change: 2015-06-12
+           Summary: Cinder missing dep: fasteners against liberty packstack
+                    install  
+
+### openstack-foreman-installer (3 bugs)
+
+
+[1082728 ] http://bugzilla.redhat.com/1082728 (NEW)  
+           Component: openstack-foreman-installer  
+           Last change: 2015-06-04
+           Summary: [RFE] allow for Keystone/LDAP configuration at
+                    deployment time  
+
+[1203292 ] http://bugzilla.redhat.com/1203292 (NEW)  
+           Component: openstack-foreman-installer  
+           Last change: 2015-06-04
+           Summary: [RFE] Openstack Installer should install and configure
+                    SPICE to work with Nova and Horizon  
+
+[1205782 ] http://bugzilla.redhat.com/1205782 (NEW)  
+           Component: openstack-foreman-installer  
+           Last change: 2015-06-04
+           Summary: support the ldap user_enabled_invert parameter  
+
+### openstack-glance (2 bugs)
+
+
+[1208798 ] http://bugzilla.redhat.com/1208798 (NEW)  
+           Component: openstack-glance  
+           Last change: 2015-04-20
+           Summary: Split glance-api and glance-registry  
+
+[1213545 ] http://bugzilla.redhat.com/1213545 (NEW)  
+           Component: openstack-glance  
+           Last change: 2015-04-21
+           Summary: [packaging] missing dependencies for openstack-glance-
+                    common: python-glance  
+
+### openstack-heat (3 bugs)
+
+
+[1216917 ] http://bugzilla.redhat.com/1216917 (NEW)  
+           Component: openstack-heat  
+           Last change: 2015-07-08
+           Summary: Clearing non-existing hooks yields no error message  
+
+[1228324 ] http://bugzilla.redhat.com/1228324 (NEW)  
+           Component: openstack-heat  
+           Last change: 2015-06-30
+           Summary: When deleting the stack, a bare metal node goes to
+                    ERROR state and is not deleted  
+
+[1235472 ] http://bugzilla.redhat.com/1235472 (NEW)  
+           Component: openstack-heat  
+           Last change: 2015-07-02
+           Summary: SoftwareDeployment resource attributes are null  
+
+### openstack-horizon (4 bugs)
+
+
+[1210821 ] http://bugzilla.redhat.com/1210821 (NEW)  
+           Component: openstack-horizon  
+           Last change: 2015-04-10
+           Summary: horizon should be using rdo logo instead of openstack's  
+
+[1218896 ] http://bugzilla.redhat.com/1218896 (NEW)  
+           Component: openstack-horizon  
+           Last change: 2015-05-13
+           Summary: Remaining Horizon issues for kilo release  
+
+[1218897 ] http://bugzilla.redhat.com/1218897 (NEW)  
+           Component: openstack-horizon  
+           Last change: 2015-05-11
+           Summary: new launch instance does not work with webroot other
+                    than '/'  
+
+[1220070 ] http://bugzilla.redhat.com/1220070 (NEW)  
+           Component: openstack-horizon  
+           Last change: 2015-05-13
+           Summary: horizon requires manage.py compress to be run  
+
+### openstack-ironic (1 bug)
+
+
+[1221472 ] http://bugzilla.redhat.com/1221472 (NEW)  
+           Component: openstack-ironic  
+           Last change: 2015-05-14
+           Summary: Error message is not clear: Node can not be updated
+                    while a state transition is in progress. (HTTP 409)  
+
+### openstack-ironic-discoverd (2 bugs)
+
+
+[1209110 ] http://bugzilla.redhat.com/1209110 (NEW)  
+           Component: openstack-ironic-discoverd  
+           Last change: 2015-04-09
+           Summary: Introspection times out after more than an hour  
+
+[1211069 ] http://bugzilla.redhat.com/1211069 (ASSIGNED)  
+           Component: openstack-ironic-discoverd  
+           Last change: 2015-04-16
+           Summary: [RFE] [RDO-Manager] [discoverd] Add possibility to kill
+                    node discovery  
+
+### openstack-keystone (7 bugs)
+
+
+[1167528 ] http://bugzilla.redhat.com/1167528 (NEW)  
+           Component: openstack-keystone  
+           Last change: 2015-06-04
+           Summary: assignment table migration fails for keystone-manage
+                    db_sync if duplicate entry exists  
+
+[1208934 ] http://bugzilla.redhat.com/1208934 (NEW)  
+           Component: openstack-keystone  
+           Last change: 2015-04-05
+           Summary: Need to include SSO callback form in the openstack-
+                    keystone RPM  
+
+[1212126 ] http://bugzilla.redhat.com/1212126 (NEW)  
+           Component: openstack-keystone  
+           Last change: 2015-06-01
+           Summary: keystone: add token flush cronjob script to keystone
+                    package  
+
+[1217663 ] http://bugzilla.redhat.com/1217663 (NEW)  
+           Component: openstack-keystone  
+           Last change: 2015-06-04
+           Summary: Overridden default for Token Provider points to non-
+                    existent class  
+
+[1218644 ] http://bugzilla.redhat.com/1218644 (ASSIGNED)  
+           Component: openstack-keystone  
+           Last change: 2015-06-04
+           Summary: CVE-2015-3646 openstack-keystone: cache backend
+                    password leak in log (OSSA 2015-008) [openstack-rdo]  
+
+[1220489 ] http://bugzilla.redhat.com/1220489 (NEW)  
+           Component: openstack-keystone  
+           Last change: 2015-06-04
+           Summary: wrong log directories in /usr/share/keystone/wsgi-
+                    keystone.conf  
+
+[1223094 ] http://bugzilla.redhat.com/1223094 (ASSIGNED)  
+           Component: openstack-keystone  
+           Last change: 2015-06-04
+           Summary: Remove distro default database.connection  
+
+### openstack-neutron (7 bugs)
+
+
+[1147152 ] http://bugzilla.redhat.com/1147152 (NEW)  
+           Component: openstack-neutron  
+           Last change: 2014-09-27
+           Summary: Use neutron-sanity-check in CI checks  
+
+[1149504 ] http://bugzilla.redhat.com/1149504 (NEW)  
+           Component: openstack-neutron  
+           Last change: 2014-10-12
+           Summary: Instances won't obtain IPv6 address and gateway when
+                    using SLAAC provided by OpenStack  
+
+[1149505 ] http://bugzilla.redhat.com/1149505 (NEW)  
+           Component: openstack-neutron  
+           Last change: 2014-10-12
+           Summary: Instances won't obtain IPv6 address and gateway when
+                    using Stateful DHCPv6 provided by OpenStack  
+
+[1159733 ] http://bugzilla.redhat.com/1159733 (NEW)  
+           Component: openstack-neutron  
+           Last change: 2015-03-22
+           Summary: no ports available when associating floating ips to new
+                    instance  
+
+[1164230 ] http://bugzilla.redhat.com/1164230 (NEW)  
+           Component: openstack-neutron  
+           Last change: 2014-12-16
+           Summary: In openstack-neutron-sriov-nic-agent package is missing
+                    the /etc/neutron/plugins/ml2/ml2_conf_sriov.ini config
+                    files  
+
+[1180201 ] http://bugzilla.redhat.com/1180201 (NEW)  
+           Component: openstack-neutron  
+           Last change: 2015-01-08
+           Summary: neutron-netns-cleanup.service needs RemainAfterExit=yes
+                    and PrivateTmp=false  
+
+[1226006 ] http://bugzilla.redhat.com/1226006 (NEW)  
+           Component: openstack-neutron  
+           Last change: 2015-05-28
+           Summary: Option "username" from group "keystone_authtoken" is
+                    deprecated. Use option "username" from group
+                    "keystone_authtoken".  
+
+### openstack-nova (17 bugs)
+
+
+[1086247 ] http://bugzilla.redhat.com/1086247 (ASSIGNED)  
+           Component: openstack-nova  
+           Last change: 2015-06-04
+           Summary: Ensure translations are installed correctly and picked
+                    up at runtime  
+
+[1123298 ] http://bugzilla.redhat.com/1123298 (NEW)  
+           Component: openstack-nova  
+           Last change: 2015-04-26
+           Summary: logrotate should copytruncate to avoid oepnstack
+                    logging to deleted files  
+
+[1148526 ] http://bugzilla.redhat.com/1148526 (NEW)  
+           Component: openstack-nova  
+           Last change: 2015-06-04
+           Summary: nova: fail to edit project quota with DataError from
+                    nova  
+
+[1149682 ] http://bugzilla.redhat.com/1149682 (NEW)  
+           Component: openstack-nova  
+           Last change: 2015-06-04
+           Summary: nova object store allow get object after date exires  
+
+[1154152 ] http://bugzilla.redhat.com/1154152 (NEW)  
+           Component: openstack-nova  
+           Last change: 2015-06-04
+           Summary: [nova] hw:numa_nodes=0 causes divide by zero  
+
+[1154201 ] http://bugzilla.redhat.com/1154201 (NEW)  
+           Component: openstack-nova  
+           Last change: 2015-06-04
+           Summary: [nova][PCI-Passthrough] TypeError: pop() takes at most
+                    1 argument (2 given)  
+
+[1157690 ] http://bugzilla.redhat.com/1157690 (NEW)  
+           Component: openstack-nova  
+           Last change: 2015-06-04
+           Summary: v4-fixed-ip= not working with juno nova networking  
+
+[1161915 ] http://bugzilla.redhat.com/1161915 (NEW)  
+           Component: openstack-nova  
+           Last change: 2015-04-10
+           Summary: horizon console uses http when horizon is set to use
+                    ssl  
+
+[1161920 ] http://bugzilla.redhat.com/1161920 (NEW)  
+           Component: openstack-nova  
+           Last change: 2015-06-04
+           Summary: novnc init script doesnt write to log  
+
+[1180129 ] http://bugzilla.redhat.com/1180129 (NEW)  
+           Component: openstack-nova  
+           Last change: 2015-01-08
+           Summary: Installation of openstack-nova-compute fails on
+                    PowerKVM  
+
+[1189931 ] http://bugzilla.redhat.com/1189931 (NEW)  
+           Component: openstack-nova  
+           Last change: 2015-02-05
+           Summary: Nova AVC messages  
+
+[1190815 ] http://bugzilla.redhat.com/1190815 (NEW)  
+           Component: openstack-nova  
+           Last change: 2015-02-09
+           Summary: Nova - db connection string present on compute nodes  
+
+[1200701 ] http://bugzilla.redhat.com/1200701 (NEW)  
+           Component: openstack-nova  
+           Last change: 2015-05-06
+           Summary: openstack-nova-novncproxy.service in failed state -
+                    need upgraded websockify version  
+
+[1213547 ] http://bugzilla.redhat.com/1213547 (NEW)  
+           Component: openstack-nova  
+           Last change: 2015-05-22
+           Summary: launching 20 VMs at once via a heat resource group
+                    causes nova to not record some IPs correctly  
+
+[1228836 ] http://bugzilla.redhat.com/1228836 (NEW)  
+           Component: openstack-nova  
+           Last change: 2015-06-14
+           Summary: Is there a way to configure IO throttling for RBD
+                    devices via configuration file  
+
+[1229301 ] http://bugzilla.redhat.com/1229301 (NEW)  
+           Component: openstack-nova  
+           Last change: 2015-06-08
+           Summary: used_now is really used_max, and used_max is really
+                    used_now in "nova host-describe"  
+
+[1234837 ] http://bugzilla.redhat.com/1234837 (NEW)  
+           Component: openstack-nova  
+           Last change: 2015-06-23
+           Summary: Kilo assigning ipv6 address, even though its disabled.  
+
+### openstack-packstack (45 bugs)
+
+
+[953586  ] http://bugzilla.redhat.com/953586 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: [RFE] Openstack Installer: packstack should install and
+                    configure SPICE to work with Nova and Horizon  
+
+[982035  ] http://bugzilla.redhat.com/982035 (ASSIGNED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-24
+           Summary: [RFE] Include Fedora cloud images in some nice way  
+
+[1023533 ] http://bugzilla.redhat.com/1023533 (ASSIGNED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: API services has all admin permission instead of
+                    service  
+
+[1061753 ] http://bugzilla.redhat.com/1061753 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: [RFE] Create an option in packstack to increase
+                    verbosity level of libvirt  
+
+[1097291 ] http://bugzilla.redhat.com/1097291 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: [RFE] SPICE support in packstack  
+
+[1100142 ] http://bugzilla.redhat.com/1100142 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: Packstack missing ML2 Mellanox Mechanism Driver  
+
+[1107908 ] http://bugzilla.redhat.com/1107908 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: Offset Swift ports to 6200  
+
+[1141608 ] http://bugzilla.redhat.com/1141608 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: PackStack sets unrecognized "net.bridge.bridge-nf-
+                    call*" keys on up to date CentOS 6  
+
+[1148468 ] http://bugzilla.redhat.com/1148468 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: proposal to use the Red Hat tempest rpm to configure a
+                    demo environment and configure tempest  
+
+[1153128 ] http://bugzilla.redhat.com/1153128 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2014-11-21
+           Summary: Cannot start nova-network on juno - Centos7  
+
+[1155722 ] http://bugzilla.redhat.com/1155722 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: [delorean]  ArgumentError: Invalid resource type
+                    database_user at /var/tmp/packstack/<snip>/manifests/17
+                    2.16.32.71_mariadb.pp:28 on node  
+
+[1158015 ] http://bugzilla.redhat.com/1158015 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-04-14
+           Summary: Post installation, Cinder fails with an error: Volume
+                    group "cinder-volumes" not found  
+
+[1160885 ] http://bugzilla.redhat.com/1160885 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: rabbitmq wont start if ssl is required  
+
+[1167121 ] http://bugzilla.redhat.com/1167121 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: centos7 fails to install glance  
+
+[1169742 ] http://bugzilla.redhat.com/1169742 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-25
+           Summary: Error: service-update is not currently supported by the
+                    keystone sql driver  
+
+[1171811 ] http://bugzilla.redhat.com/1171811 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: misleading exit message on fail  
+
+[1174749 ] http://bugzilla.redhat.com/1174749 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: Failed to start httpd service on Fedora 20 (with
+                    packstack utility)  
+
+[1176433 ] http://bugzilla.redhat.com/1176433 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: packstack fails to configure horizon - juno/rhel7 (vm)  
+
+[1176797 ] http://bugzilla.redhat.com/1176797 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: packstack --allinone on CentOS 7 VM fails at cinder
+                    puppet manifest  
+
+[1176833 ] http://bugzilla.redhat.com/1176833 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: packstack --allinone fails when starting neutron server  
+
+[1185627 ] http://bugzilla.redhat.com/1185627 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: glance provision disregards keystone region setting  
+
+[1187572 ] http://bugzilla.redhat.com/1187572 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: RFE: allow to set certfile for
+                    /etc/rabbitmq/rabbitmq.config  
+
+[1187609 ] http://bugzilla.redhat.com/1187609 (ASSIGNED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: CONFIG_AMQP_ENABLE_SSL=y does not really set ssl on  
+
+[1202958 ] http://bugzilla.redhat.com/1202958 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-07-14
+           Summary: Packstack generates invalid /etc/sysconfig/network-
+                    scripts/ifcfg-br-ex  
+
+[1203131 ] http://bugzilla.redhat.com/1203131 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: Using packstack deploy openstack,when
+                    CONFIG_NEUTRON_OVS_BRIDGE_IFACES=br-
+                    eno50:eno50,encounters an error“ERROR : Error appeared
+                    during Puppet run: 10.43.241.186_neutron.pp ”.  
+
+[1203444 ] http://bugzilla.redhat.com/1203444 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: "private" network created by packstack is not owned by
+                    any tenant  
+
+[1205772 ] http://bugzilla.redhat.com/1205772 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: support the ldap user_enabled_invert parameter  
+
+[1206358 ] http://bugzilla.redhat.com/1206358 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: provision_glance does not honour proxy setting when
+                    getting image  
+
+[1206742 ] http://bugzilla.redhat.com/1206742 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: Installed epel-release prior to running packstack,
+                    packstack disables it on invocation  
+
+[1207098 ] http://bugzilla.redhat.com/1207098 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-07-05
+           Summary: [RDO] packstack installation failed with "Error:
+                    /Stage[main]/Apache::Service/Service[httpd]: Failed to
+                    call refresh: Could not start Service[httpd]: Execution
+                    of '/sbin/service httpd start' returned 1: Redirecting
+                    to /bin/systemctl start  httpd.service"  
+
+[1207248 ] http://bugzilla.redhat.com/1207248 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: auto enablement of the extras channel  
+
+[1207371 ] http://bugzilla.redhat.com/1207371 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: packstack --allinone fails during _keystone.pp  
+
+[1208812 ] http://bugzilla.redhat.com/1208812 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: add DiskFilter to scheduler_default_filters  
+
+[1209206 ] http://bugzilla.redhat.com/1209206 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: packstack --allinone fails - CentOS7 ; fresh install :
+                    Error: /Stage[main]/Apache::Service/Service[httpd]  
+
+[1213149 ] http://bugzilla.redhat.com/1213149 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-07-08
+           Summary: openstack-keystone service is in " failed " status when
+                    CONFIG_KEYSTONE_SERVICE_NAME=httpd  
+
+[1214922 ] http://bugzilla.redhat.com/1214922 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: Cannot use ipv6 address for cinder nfs backend.  
+
+[1220377 ] http://bugzilla.redhat.com/1220377 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: Packstack fails installation during puppet run: amqp.pp
+                    in RabbitMQ when hostname length is 64 bytes  
+
+[1225312 ] http://bugzilla.redhat.com/1225312 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: Packstack Installation error - Invalid parameter
+                    create_mysql_resource on Class[Galera::Server]  
+
+[1226393 ] http://bugzilla.redhat.com/1226393 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: CONFIG_PROVISION_DEMO=n causes packstack to fail  
+
+[1232496 ] http://bugzilla.redhat.com/1232496 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-06-16
+           Summary: Error during puppet run causes install to fail, says
+                    rabbitmq.com cannot be reached when it can  
+
+[1234042 ] http://bugzilla.redhat.com/1234042 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-07-14
+           Summary: ERROR : Error appeared during Puppet run:
+                    192.168.122.82_api_nova.pp Error: Use of reserved word:
+                    type, must be quoted if intended to be a String value
+                    at /var/tmp/packstack/811663aa10824d21b860729732c16c3a/
+                    manifests/192.168.122.82_api_nova.pp:41:3  
+
+[1235139 ] http://bugzilla.redhat.com/1235139 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-07-01
+           Summary: [F22-Packstack-Kilo] Error: Could not find dependency
+                    Package[openstack-swift] for File[/srv/node] at /var/tm
+                    p/packstack/b77f37620d9f4794b6f38730442962b6/manifests/
+                    xxx.xxx.xxx.xxx_swift.pp:90  
+
+[1235948 ] http://bugzilla.redhat.com/1235948 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-07-13
+           Summary: Error occurred at during setup Ironic via packstack.
+                    Invalid parameter rabbit_user  
+
+[1239286 ] http://bugzilla.redhat.com/1239286 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-07-05
+           Summary: ERROR: cliff.app 'super' object has no attribute
+                    'load_commands'  
+
+[1243047 ] http://bugzilla.redhat.com/1243047 (NEW)  
+           Component: openstack-packstack  
+           Last change: 2015-07-14
+           Summary: Unable to install openstack Kilo on Fedora 22: python
+                    stack trace  
+
+### openstack-puppet-modules (10 bugs)
+
+
+[1107907 ] http://bugzilla.redhat.com/1107907 (NEW)  
+           Component: openstack-puppet-modules  
+           Last change: 2015-06-04
+           Summary: Offset Swift ports to 6200  
+
+[1150678 ] http://bugzilla.redhat.com/1150678 (NEW)  
+           Component: openstack-puppet-modules  
+           Last change: 2015-06-04
+           Summary: Permissions issue prevents CSS from rendering  
+
+[1150902 ] http://bugzilla.redhat.com/1150902 (ASSIGNED)  
+           Component: openstack-puppet-modules  
+           Last change: 2015-06-04
+           Summary: selinux prevents httpd to write to
+                    /var/log/horizon/horizon.log  
+
+[1155663 ] http://bugzilla.redhat.com/1155663 (NEW)  
+           Component: openstack-puppet-modules  
+           Last change: 2015-06-04
+           Summary: Increase the rpc_thread_pool_size  
+
+[1157500 ] http://bugzilla.redhat.com/1157500 (NEW)  
+           Component: openstack-puppet-modules  
+           Last change: 2015-06-04
+           Summary: ERROR: Network commands are not supported when using
+                    the Neutron API.  
+
+[1174454 ] http://bugzilla.redhat.com/1174454 (ASSIGNED)  
+           Component: openstack-puppet-modules  
+           Last change: 2015-06-04
+           Summary: Add puppet-openstack_extras to opm  
+
+[1192539 ] http://bugzilla.redhat.com/1192539 (NEW)  
+           Component: openstack-puppet-modules  
+           Last change: 2015-06-04
+           Summary: Add puppet-tripleo and puppet-gnocchi to opm  
+
+[1222326 ] http://bugzilla.redhat.com/1222326 (NEW)  
+           Component: openstack-puppet-modules  
+           Last change: 2015-06-04
+           Summary: trove conf files require update when neutron disabled  
+
+[1236775 ] http://bugzilla.redhat.com/1236775 (NEW)  
+           Component: openstack-puppet-modules  
+           Last change: 2015-06-30
+           Summary: rdo kilo mongo fails to start  
+
+[1240736 ] http://bugzilla.redhat.com/1240736 (NEW)  
+           Component: openstack-puppet-modules  
+           Last change: 2015-07-07
+           Summary: trove guestagent config mods for integration testing  
+
+### openstack-selinux (11 bugs)
+
+
+[1158394 ] http://bugzilla.redhat.com/1158394 (NEW)  
+           Component: openstack-selinux  
+           Last change: 2014-11-23
+           Summary: keystone-all proccess raised avc denied  
+
+[1170238 ] http://bugzilla.redhat.com/1170238 (NEW)  
+           Component: openstack-selinux  
+           Last change: 2014-12-18
+           Summary: Keepalived fail to start for HA router because of
+                    SELinux issues  
+
+[1174795 ] http://bugzilla.redhat.com/1174795 (NEW)  
+           Component: openstack-selinux  
+           Last change: 2015-02-24
+           Summary: keystone fails to start: raise exception.ConfigFileNotF
+                    ound(config_file=paste_config_value)  
+
+[1189929 ] http://bugzilla.redhat.com/1189929 (NEW)  
+           Component: openstack-selinux  
+           Last change: 2015-02-06
+           Summary: Glance AVC messages  
+
+[1202941 ] http://bugzilla.redhat.com/1202941 (NEW)  
+           Component: openstack-selinux  
+           Last change: 2015-03-18
+           Summary: Glance fails to start on CentOS 7 because of selinux
+                    AVC  
+
+[1202944 ] http://bugzilla.redhat.com/1202944 (NEW)  
+           Component: openstack-selinux  
+           Last change: 2015-03-18
+           Summary: "glance image-list" fails on F21, causing packstack
+                    install to fail  
+
+[1203910 ] http://bugzilla.redhat.com/1203910 (NEW)  
+           Component: openstack-selinux  
+           Last change: 2015-03-19
+           Summary: Keystone requires keystone_t self:process signal;  
+
+[1206740 ] http://bugzilla.redhat.com/1206740 (NEW)  
+           Component: openstack-selinux  
+           Last change: 2015-04-09
+           Summary: On CentOS7.1 packstack --allinone fails to start Apache
+                    because of binding error on port 5000  
+
+[1211719 ] http://bugzilla.redhat.com/1211719 (NEW)  
+           Component: openstack-selinux  
+           Last change: 2015-04-14
+           Summary: selinux audit failures on openvswitch in rdo kilo  
+
+[1219143 ] http://bugzilla.redhat.com/1219143 (NEW)  
+           Component: openstack-selinux  
+           Last change: 2015-05-13
+           Summary: Selinux prevents keystone to connect to memcached port  
+
+[1219406 ] http://bugzilla.redhat.com/1219406 (NEW)  
+           Component: openstack-selinux  
+           Last change: 2015-06-19
+           Summary: Glance over nfs fails due to selinux  
+
+### openstack-swift (2 bugs)
+
+
+[1169215 ] http://bugzilla.redhat.com/1169215 (NEW)  
+           Component: openstack-swift  
+           Last change: 2014-12-12
+           Summary: swift-init does not interoperate with systemd swift
+                    service files  
+
+[1179931 ] http://bugzilla.redhat.com/1179931 (NEW)  
+           Component: openstack-swift  
+           Last change: 2015-01-07
+           Summary: Variable of init script gets overwritten preventing the
+                    startup of swift services when using multiple server
+                    configurations  
+
+### openstack-tripleo (24 bugs)
+
+
+[1056106 ] http://bugzilla.redhat.com/1056106 (NEW)  
+           Component: openstack-tripleo  
+           Last change: 2015-06-04
+           Summary: [RFE][ironic]: Integration of Ironic in to TripleO  
+
+[1056109 ] http://bugzilla.redhat.com/1056109 (NEW)  
+           Component: openstack-tripleo  
+           Last change: 2015-06-04
+           Summary: [RFE][tripleo]: Making the overcloud deployment fully
+                    HA  
+
+[1056110 ] http://bugzilla.redhat.com/1056110 (NEW)  
+           Component: openstack-tripleo  
+           Last change: 2015-06-04
+           Summary: [RFE][tripleo]: Scaling work to do during icehouse  
+
+[1056112 ] http://bugzilla.redhat.com/1056112 (NEW)  
+           Component: openstack-tripleo  
+           Last change: 2015-06-04
+           Summary: [RFE][tripleo]: Deploying different architecture
+                    topologies with Tuskar  
+
+[1056114 ] http://bugzilla.redhat.com/1056114 (NEW)  
+           Component: openstack-tripleo  
+           Last change: 2015-06-04
+           Summary: [RFE][tripleo]: Implement a complete overcloud
+                    installation story in the UI  
+
+[1174776 ] http://bugzilla.redhat.com/1174776 (NEW)  
+           Component: openstack-tripleo  
+           Last change: 2015-06-04
+           Summary: User can not login into the overcloud horizon using the
+                    proper credentials  
+
+[1187352 ] http://bugzilla.redhat.com/1187352 (NEW)  
+           Component: openstack-tripleo  
+           Last change: 2015-06-04
+           Summary: /usr/bin/instack-prepare-for-overcloud glance using
+                    incorrect parameter  
+
+[1205645 ] http://bugzilla.redhat.com/1205645 (NEW)  
+           Component: openstack-tripleo  
+           Last change: 2015-06-04
+           Summary: Dependency issue: python-oslo-versionedobjects is
+                    required by heat and not in the delorean repos  
+
+[1211560 ] http://bugzilla.redhat.com/1211560 (NEW)  
+           Component: openstack-tripleo  
+           Last change: 2015-06-04
+           Summary: instack-deploy-overcloud times out after ~3 minutes, no
+                    plan or stack is created  
+
+[1218168 ] http://bugzilla.redhat.com/1218168 (NEW)  
+           Component: openstack-tripleo  
+           Last change: 2015-06-04
+           Summary: ceph.service should only be running on the ceph nodes,
+                    not on the controller and compute nodes  
+
+[1218340 ] http://bugzilla.redhat.com/1218340 (NEW)  
+           Component: openstack-tripleo  
+           Last change: 2015-06-04
+           Summary: RFE: add "scheduler_default_weighers = CapacityWeigher"
+                    explicitly to cinder.conf  
+
+[1221610 ] http://bugzilla.redhat.com/1221610 (NEW)  
+           Component: openstack-tripleo  
+           Last change: 2015-06-04
+           Summary: RDO-manager beta fails to install: Deployment exited
+                    with non-zero status code: 6  
+
+[1221731 ] http://bugzilla.redhat.com/1221731 (NEW)  
+           Component: openstack-tripleo  
+           Last change: 2015-06-04
+           Summary: Overcloud missing ceilometer keystone user and
+                    endpoints  
+
+[1223424 ] http://bugzilla.redhat.com/1223424 (NEW)  
+           Component: openstack-tripleo  
+           Last change: 2015-06-04
+           Summary: instack-deploy-overcloud should not rely on
+                    instackenv.json, but should use ironic instead  
+
+[1223443 ] http://bugzilla.redhat.com/1223443 (NEW)  
+           Component: openstack-tripleo  
+           Last change: 2015-06-04
+           Summary: You can still check introspection status for ironic
+                    nodes that have been deleted  
+
+[1223471 ] http://bugzilla.redhat.com/1223471 (NEW)  
+           Component: openstack-tripleo  
+           Last change: 2015-06-22
+           Summary: Discovery errors out even when it is successful  
+
+[1223667 ] http://bugzilla.redhat.com/1223667 (NEW)  
+           Component: openstack-tripleo  
+           Last change: 2015-06-04
+           Summary: When using 'tripleo wait_for' with the command 'nova
+                    hypervisor-stats' it hangs forever  
+
+[1223672 ] http://bugzilla.redhat.com/1223672 (NEW)  
+           Component: openstack-tripleo  
+           Last change: 2015-06-04
+           Summary: Node registration fails silently if instackenv.json is
+                    badly formatted  
+
+[1224604 ] http://bugzilla.redhat.com/1224604 (NEW)  
+           Component: openstack-tripleo  
+           Last change: 2015-06-04
+           Summary: Lots of dracut-related error messages during instack-
+                    build-images  
+
+[1225022 ] http://bugzilla.redhat.com/1225022 (NEW)  
+           Component: openstack-tripleo  
+           Last change: 2015-06-04
+           Summary: When adding nodes to the cloud the update hangs and
+                    takes forever  
+
+[1225390 ] http://bugzilla.redhat.com/1225390 (NEW)  
+           Component: openstack-tripleo  
+           Last change: 2015-06-29
+           Summary: The role names from "openstack management role list"
+                    don't match those for "openstack overcloud scale stack"  
+
+[1226653 ] http://bugzilla.redhat.com/1226653 (NEW)  
+           Component: openstack-tripleo  
+           Last change: 2015-06-04
+           Summary: The usage message for "heat resource-show" is confusing
+                    and incorrect  
+
+[1226867 ] http://bugzilla.redhat.com/1226867 (NEW)  
+           Component: openstack-tripleo  
+           Last change: 2015-06-04
+           Summary: Timeout in API  
+
+[1229174 ] http://bugzilla.redhat.com/1229174 (NEW)  
+           Component: openstack-tripleo  
+           Last change: 2015-06-08
+           Summary: Nova computes can't resolve each other because the
+                    hostnames in /etc/hosts don't include the ".novalocal"
+                    suffix  
+
+### openstack-tripleo-heat-templates (5 bugs)
+
+
+[1204479 ] http://bugzilla.redhat.com/1204479 (NEW)  
+           Component: openstack-tripleo-heat-templates  
+           Last change: 2015-06-04
+           Summary: The ExtraConfig and controllerExtraConfig parameters
+                    are ignored in the controller-puppet template  
+
+[1230250 ] http://bugzilla.redhat.com/1230250 (ASSIGNED)  
+           Component: openstack-tripleo-heat-templates  
+           Last change: 2015-06-16
+           Summary: [Unified CLI] Deployment using Tuskar has failed -
+                    Deployment exited with non-zero status code: 1  
+
+[1232015 ] http://bugzilla.redhat.com/1232015 (ASSIGNED)  
+           Component: openstack-tripleo-heat-templates  
+           Last change: 2015-06-16
+           Summary: instack-undercloud:  one controller deployment: running
+                    "pcs status" -  Error: cluster is not currently running
+                    on this node  
+
+[1235508 ] http://bugzilla.redhat.com/1235508 (NEW)  
+           Component: openstack-tripleo-heat-templates  
+           Last change: 2015-06-25
+           Summary: Package update does not take puppet managed packages
+                    into account  
+
+[1236760 ] http://bugzilla.redhat.com/1236760 (NEW)  
+           Component: openstack-tripleo-heat-templates  
+           Last change: 2015-06-29
+           Summary: Drop 'without-mergepy' from main overcloud template  
+
+### openstack-tripleo-image-elements (2 bugs)
+
+
+[1187354 ] http://bugzilla.redhat.com/1187354 (NEW)  
+           Component: openstack-tripleo-image-elements  
+           Last change: 2015-06-04
+           Summary: possible incorrect selinux check in 97-mysql-selinux  
+
+[1187965 ] http://bugzilla.redhat.com/1187965 (NEW)  
+           Component: openstack-tripleo-image-elements  
+           Last change: 2015-06-04
+           Summary: mariadb my.cnf socket path does not exist  
+
+### openstack-tuskar (3 bugs)
+
+
+[1210223 ] http://bugzilla.redhat.com/1210223 (ASSIGNED)  
+           Component: openstack-tuskar  
+           Last change: 2015-06-23
+           Summary: Updating the controller count to 3 fails  
+
+[1229401 ] http://bugzilla.redhat.com/1229401 (NEW)  
+           Component: openstack-tuskar  
+           Last change: 2015-06-26
+           Summary: stack is stuck in DELETE_FAILED state  
+
+[1229493 ] http://bugzilla.redhat.com/1229493 (ASSIGNED)  
+           Component: openstack-tuskar  
+           Last change: 2015-06-25
+           Summary: Difficult to synchronise tuskar stored files with
+                    /usr/share/openstack-tripleo-heat-templates  
+
+### openstack-utils (3 bugs)
+
+
+[1161501 ] http://bugzilla.redhat.com/1161501 (NEW)  
+           Component: openstack-utils  
+           Last change: 2015-06-04
+           Summary: Can't enable OpenStack service after openstack-service
+                    disable  
+
+[1201340 ] http://bugzilla.redhat.com/1201340 (NEW)  
+           Component: openstack-utils  
+           Last change: 2015-06-04
+           Summary: openstack-service tries to restart neutron-ovs-
+                    cleanup.service  
+
+[1211989 ] http://bugzilla.redhat.com/1211989 (NEW)  
+           Component: openstack-utils  
+           Last change: 2015-06-04
+           Summary: openstack-status shows 'disabled on boot' for the
+                    mysqld service  
+
+### openvswitch (1 bug)
+
+
+[1209003 ] http://bugzilla.redhat.com/1209003 (ASSIGNED)  
+           Component: openvswitch  
+           Last change: 2015-05-19
+           Summary: ovs-vswitchd segfault on boot leaving server with no
+                    network connectivity  
+
+### python-glanceclient (1 bug)
+
+
+[1164349 ] http://bugzilla.redhat.com/1164349 (ASSIGNED)  
+           Component: python-glanceclient  
+           Last change: 2014-11-17
+           Summary: rdo juno glance client needs python-requests >= 2.2.0  
+
+### python-keystonemiddleware (1 bug)
+
+
+[1195977 ] http://bugzilla.redhat.com/1195977 (NEW)  
+           Component: python-keystonemiddleware  
+           Last change: 2015-06-04
+           Summary: Rebase python-keystonemiddleware to version 1.3  
+
+### python-neutronclient (2 bugs)
+
+
+[1132541 ] http://bugzilla.redhat.com/1132541 (ASSIGNED)  
+           Component: python-neutronclient  
+           Last change: 2015-03-30
+           Summary: neutron security-group-rule-list fails with URI too
+                    long  
+
+[1221063 ] http://bugzilla.redhat.com/1221063 (ASSIGNED)  
+           Component: python-neutronclient  
+           Last change: 2015-05-13
+           Summary: --router:external=True syntax is invalid - not backward
+                    compatibility  
+
+### python-novaclient (1 bug)
+
+
+[1123451 ] http://bugzilla.redhat.com/1123451 (ASSIGNED)  
+           Component: python-novaclient  
+           Last change: 2015-06-04
+           Summary: Missing versioned dependency on python-six  
+
+### python-openstackclient (5 bugs)
+
+
+[1187310 ] http://bugzilla.redhat.com/1187310 (NEW)  
+           Component: python-openstackclient  
+           Last change: 2015-06-04
+           Summary: Add --user to project list command to filter projects
+                    by user  
+
+[1212091 ] http://bugzilla.redhat.com/1212091 (NEW)  
+           Component: python-openstackclient  
+           Last change: 2015-04-28
+           Summary: `openstack ip floating delete` fails if we specify IP
+                    address as input  
+
+[1212439 ] http://bugzilla.redhat.com/1212439 (NEW)  
+           Component: python-openstackclient  
+           Last change: 2015-04-16
+           Summary: Usage is not described accurately for 99% of openstack
+                    baremetal  
+
+[1227543 ] http://bugzilla.redhat.com/1227543 (NEW)  
+           Component: python-openstackclient  
+           Last change: 2015-06-13
+           Summary: openstack undercloud install fails due to a missing
+                    make target for tripleo-selinux-keepalived.pp  
+
+[1239144 ] http://bugzilla.redhat.com/1239144 (NEW)  
+           Component: python-openstackclient  
+           Last change: 2015-07-10
+           Summary: appdirs requirement  
+
+### rdo-manager (21 bugs)
+
+
+[1212520 ] http://bugzilla.redhat.com/1212520 (NEW)  
+           Component: rdo-manager  
+           Last change: 2015-04-16
+           Summary: [RFE] [CI] Add ability to generate and store overcloud
+                    images provided by latest-passed-ci  
+
+[1213647 ] http://bugzilla.redhat.com/1213647 (NEW)  
+           Component: rdo-manager  
+           Last change: 2015-04-21
+           Summary: RFE: add deltarpm to all images built  
+
+[1214343 ] http://bugzilla.redhat.com/1214343 (NEW)  
+           Component: rdo-manager  
+           Last change: 2015-04-24
+           Summary: [RFE] Command to create flavors based on real hardware
+                    and profiles  
+
+[1214349 ] http://bugzilla.redhat.com/1214349 (NEW)  
+           Component: rdo-manager  
+           Last change: 2015-04-22
+           Summary: [RFE] Use Ironic API instead of discoverd one for
+                    discovery/introspection  
+
+[1218281 ] http://bugzilla.redhat.com/1218281 (NEW)  
+           Component: rdo-manager  
+           Last change: 2015-07-07
+           Summary: RFE: rdo-manager - update heat deployment-show to make
+                    puppet output readable  
+
+[1221663 ] http://bugzilla.redhat.com/1221663 (NEW)  
+           Component: rdo-manager  
+           Last change: 2015-05-14
+           Summary: [RFE][RDO-manager]:  Alert when deploying a physical
+                    compute if the virtualization flag is disabled in BIOS.  
+
+[1221718 ] http://bugzilla.redhat.com/1221718 (NEW)  
+           Component: rdo-manager  
+           Last change: 2015-05-14
+           Summary: rdo-manager: unable to delete the failed overcloud
+                    deployment.  
+
+[1221986 ] http://bugzilla.redhat.com/1221986 (ASSIGNED)  
+           Component: rdo-manager  
+           Last change: 2015-06-03
+           Summary: openstack-nova-novncproxy fails to start  
+
+[1223328 ] http://bugzilla.redhat.com/1223328 (NEW)  
+           Component: rdo-manager  
+           Last change: 2015-05-20
+           Summary: Read bit set for others for Openstack services
+                    directories in /etc  
+
+[1223993 ] http://bugzilla.redhat.com/1223993 (ASSIGNED)  
+           Component: rdo-manager  
+           Last change: 2015-06-04
+           Summary: overcloud failure with "openstack Authorization Failed:
+                    Cannot authenticate without an auth_url"  
+
+[1226389 ] http://bugzilla.redhat.com/1226389 (NEW)  
+           Component: rdo-manager  
+           Last change: 2015-05-29
+           Summary: RDO-Manager Undercloud install failure  
+
+[1226969 ] http://bugzilla.redhat.com/1226969 (NEW)  
+           Component: rdo-manager  
+           Last change: 2015-06-01
+           Summary: Tempest failed when running after overcloud deployment  
+
+[1227035 ] http://bugzilla.redhat.com/1227035 (ASSIGNED)  
+           Component: rdo-manager  
+           Last change: 2015-06-02
+           Summary: RDO-Manager Undercloud install fails while trying to
+                    insert data into keystone  
+
+[1227042 ] http://bugzilla.redhat.com/1227042 (NEW)  
+           Component: rdo-manager  
+           Last change: 2015-06-01
+           Summary: rfe: support Keystone HTTPD  
+
+[1229343 ] http://bugzilla.redhat.com/1229343 (NEW)  
+           Component: rdo-manager  
+           Last change: 2015-06-08
+           Summary: instack-virt-setup missing package dependency device-
+                    mapper*  
+
+[1230582 ] http://bugzilla.redhat.com/1230582 (NEW)  
+           Component: rdo-manager  
+           Last change: 2015-06-11
+           Summary: there is a newer image that can be used to deploy
+                    openstack  
+
+[1232813 ] http://bugzilla.redhat.com/1232813 (NEW)  
+           Component: rdo-manager  
+           Last change: 2015-06-17
+           Summary: PXE boot fails: Unrecognized option "--autofree"  
+
+[1233410 ] http://bugzilla.redhat.com/1233410 (NEW)  
+           Component: rdo-manager  
+           Last change: 2015-06-19
+           Summary: overcloud deployment fails w/ "Message: No valid host
+                    was found. There are not enough hosts available., Code:
+                    500"  
+
+[1234467 ] http://bugzilla.redhat.com/1234467 (NEW)  
+           Component: rdo-manager  
+           Last change: 2015-06-22
+           Summary: cannot access instance vnc console on horizon after
+                    overcloud deployment  
+
+[1234475 ] http://bugzilla.redhat.com/1234475 (NEW)  
+           Component: rdo-manager  
+           Last change: 2015-06-22
+           Summary: Cannot login to Overcloud Horizon through Virtual IP
+                    (VIP)  
+
+[1234484 ] http://bugzilla.redhat.com/1234484 (NEW)  
+           Component: rdo-manager  
+           Last change: 2015-06-22
+           Summary: cannot view cinder volumes in overcloud controller
+                    horizon  
+
+### rdo-manager-cli (7 bugs)
+
+
+[1212371 ] http://bugzilla.redhat.com/1212371 (ASSIGNED)  
+           Component: rdo-manager-cli  
+           Last change: 2015-06-18
+           Summary: Validate node power credentials after enrolling  
+
+[1212390 ] http://bugzilla.redhat.com/1212390 (NEW)  
+           Component: rdo-manager-cli  
+           Last change: 2015-06-18
+           Summary: [RFE] [RDO-Manager] [CLI] Add ability to show matched
+                    profiles via CLI command  
+
+[1212467 ] http://bugzilla.redhat.com/1212467 (ASSIGNED)  
+           Component: rdo-manager-cli  
+           Last change: 2015-07-03
+           Summary: [RFE] [RDO-Manager] [CLI] Add an ability to create an
+                    overcloud image associated with kernel/ramdisk images
+                    in one CLI step  
+
+[1226855 ] http://bugzilla.redhat.com/1226855 (ASSIGNED)  
+           Component: rdo-manager-cli  
+           Last change: 2015-06-16
+           Summary: Role was added to a template with empty flavor value  
+
+[1228769 ] http://bugzilla.redhat.com/1228769 (ASSIGNED)  
+           Component: rdo-manager-cli  
+           Last change: 2015-07-13
+           Summary: Missing dependencies on sysbench and fio (RHEL)  
+
+[1230170 ] http://bugzilla.redhat.com/1230170 (ASSIGNED)  
+           Component: rdo-manager-cli  
+           Last change: 2015-06-11
+           Summary: the ouptut of openstack management plan show --long
+                    command is not readable  
+
+[1233259 ] http://bugzilla.redhat.com/1233259 (ASSIGNED)  
+           Component: rdo-manager-cli  
+           Last change: 2015-06-23
+           Summary: Node show of unified CLI has bad formatting  
+
+### rdopkg (1 bug)
+
+
+[1100405 ] http://bugzilla.redhat.com/1100405 (ASSIGNED)  
+           Component: rdopkg  
+           Last change: 2014-05-22
+           Summary: [RFE] Add option to force overwrite build files on
+                    update download  
+
+### RFEs (3 bugs)
+
+
+[1158517 ] http://bugzilla.redhat.com/1158517 (NEW)  
+           Component: RFEs  
+           Last change: 2015-03-30
+           Summary: [RFE] Provide easy to use upgrade tool  
+
+[1193886 ] http://bugzilla.redhat.com/1193886 (NEW)  
+           Component: RFEs  
+           Last change: 2015-02-18
+           Summary: RFE: wait for DB after boot  
+
+[1217505 ] http://bugzilla.redhat.com/1217505 (NEW)  
+           Component: RFEs  
+           Last change: 2015-04-30
+           Summary: IPMI driver for Ironic should support RAID for
+                    operating system/root parition  
+
+### tempest (2 bugs)
+
+
+[1227356 ] http://bugzilla.redhat.com/1227356 (NEW)  
+           Component: tempest  
+           Last change: 2015-06-02
+           Summary: Some tests are failing on gate with post-install
+                    validation on overcloud  
+
+[1228038 ] http://bugzilla.redhat.com/1228038 (NEW)  
+           Component: tempest  
+           Last change: 2015-06-04
+           Summary: Several tests failed with tempest Overcloud on API
+                    tests  
+
+
+## Fixed bugs
+
+This is a list of "fixed" bugs by component.  A "fixed" bug is fixed state
+MODIFIED, POST, ON_QA and has been fixed.  You can help
+out by testing the fix to make sure it works as intended.
+
+(178 bugs)
+
+
+### distribution (7 bugs)
+
+
+[1108188 ] http://bugzilla.redhat.com/1108188 (MODIFIED)  
+           Component: distribution  
+           Last change: 2015-06-04
+           Summary: update el6 icehouse kombu packages for improved
+                    performance  
+
+[1134121 ] http://bugzilla.redhat.com/1134121 (POST)  
+           Component: distribution  
+           Last change: 2015-06-04
+           Summary: Tuskar Fails After Remove/Reinstall Of RDO  
+
+[1151589 ] http://bugzilla.redhat.com/1151589 (MODIFIED)  
+           Component: distribution  
+           Last change: 2015-03-18
+           Summary: trove does not install dependency python-pbr  
+
+[1218398 ] http://bugzilla.redhat.com/1218398 (ON_QA)  
+           Component: distribution  
+           Last change: 2015-06-04
+           Summary: rdo kilo testing repository missing openstack-
+                    neutron-*aas  
+
+[1218723 ] http://bugzilla.redhat.com/1218723 (MODIFIED)  
+           Component: distribution  
+           Last change: 2015-06-04
+           Summary: Trove configuration files set different
+                    control_exchange for taskmanager/conductor and api  
+
+[1219064 ] http://bugzilla.redhat.com/1219064 (ON_QA)  
+           Component: distribution  
+           Last change: 2015-06-04
+           Summary: Trove has missing dependencies  
+
+[1230899 ] http://bugzilla.redhat.com/1230899 (ON_QA)  
+           Component: distribution  
+           Last change: 2015-06-15
+           Summary: Add openstack-designate packages in RDO Kilo  
+
+### instack-undercloud (2 bugs)
+
+
+[1212862 ] http://bugzilla.redhat.com/1212862 (MODIFIED)  
+           Component: instack-undercloud  
+           Last change: 2015-06-04
+           Summary: instack-install-undercloud fails with "ImportError: No
+                    module named six"  
+
+[1232162 ] http://bugzilla.redhat.com/1232162 (MODIFIED)  
+           Component: instack-undercloud  
+           Last change: 2015-06-16
+           Summary: the overcloud dns server should not be enforced to
+                    192.168.122.1 when undefined  
+
+### openstack-ceilometer (1 bug)
+
+
+[1038162 ] http://bugzilla.redhat.com/1038162 (MODIFIED)  
+           Component: openstack-ceilometer  
+           Last change: 2014-02-04
+           Summary: openstack-ceilometer-common missing python-babel
+                    dependency  
+
+### openstack-cinder (5 bugs)
+
+
+[994370  ] http://bugzilla.redhat.com/994370 (MODIFIED)  
+           Component: openstack-cinder  
+           Last change: 2014-06-24
+           Summary: CVE-2013-4183 openstack-cinder: OpenStack: Cinder LVM
+                    volume driver does not support secure deletion
+                    [openstack-rdo]  
+
+[1081022 ] http://bugzilla.redhat.com/1081022 (MODIFIED)  
+           Component: openstack-cinder  
+           Last change: 2014-05-07
+           Summary: Non-admin user can not attach cinder volume to their
+                    instance (LIO)  
+
+[1084046 ] http://bugzilla.redhat.com/1084046 (POST)  
+           Component: openstack-cinder  
+           Last change: 2014-09-26
+           Summary: cinder: can't delete a volume (raise
+                    exception.ISCSITargetNotFoundForVolume)  
+
+[1212900 ] http://bugzilla.redhat.com/1212900 (ON_QA)  
+           Component: openstack-cinder  
+           Last change: 2015-05-05
+           Summary: [packaging] /etc/cinder/cinder.conf missing in
+                    openstack-cinder  
+
+[1234038 ] http://bugzilla.redhat.com/1234038 (POST)  
+           Component: openstack-cinder  
+           Last change: 2015-06-22
+           Summary: Packstack Error: cinder type-create iscsi returned 1
+                    instead of one of [0]  
+
+### openstack-glance (3 bugs)
+
+
+[1008818 ] http://bugzilla.redhat.com/1008818 (MODIFIED)  
+           Component: openstack-glance  
+           Last change: 2015-01-07
+           Summary: glance api hangs with low (1) workers on multiple
+                    parallel image creation requests  
+
+[1023614 ] http://bugzilla.redhat.com/1023614 (POST)  
+           Component: openstack-glance  
+           Last change: 2014-04-25
+           Summary: No logging to files  
+
+[1074724 ] http://bugzilla.redhat.com/1074724 (POST)  
+           Component: openstack-glance  
+           Last change: 2014-06-24
+           Summary: Glance api ssl issue  
+
+### openstack-heat (4 bugs)
+
+
+[1021989 ] http://bugzilla.redhat.com/1021989 (MODIFIED)  
+           Component: openstack-heat  
+           Last change: 2015-02-01
+           Summary: heat sometimes keeps listenings stacks with status
+                    DELETE_COMPLETE  
+
+[1213476 ] http://bugzilla.redhat.com/1213476 (MODIFIED)  
+           Component: openstack-heat  
+           Last change: 2015-06-10
+           Summary: [packaging] /etc/heat/heat.conf missing in openstack-
+                    heat  
+
+[1214433 ] http://bugzilla.redhat.com/1214433 (MODIFIED)  
+           Component: openstack-heat  
+           Last change: 2015-05-01
+           Summary: [packaging] /etc/heat/heat.conf missing in openstack-
+                    heat-common  
+
+[1229477 ] http://bugzilla.redhat.com/1229477 (MODIFIED)  
+           Component: openstack-heat  
+           Last change: 2015-06-17
+           Summary: missing dependency in Heat delorean build  
+
+### openstack-horizon (1 bug)
+
+
+[1219221 ] http://bugzilla.redhat.com/1219221 (ON_QA)  
+           Component: openstack-horizon  
+           Last change: 2015-05-08
+           Summary: region selector missing  
+
+### openstack-ironic-discoverd (1 bug)
+
+
+[1204218 ] http://bugzilla.redhat.com/1204218 (ON_QA)  
+           Component: openstack-ironic-discoverd  
+           Last change: 2015-03-31
+           Summary: ironic-discoverd should allow dropping all ports except
+                    for one detected on discovery  
+
+### openstack-keystone (1 bug)
+
+
+[1123542 ] http://bugzilla.redhat.com/1123542 (ON_QA)  
+           Component: openstack-keystone  
+           Last change: 2015-03-19
+           Summary: file templated catalogs do not work in protocol v3  
+
+### openstack-neutron (14 bugs)
+
+
+[1019487 ] http://bugzilla.redhat.com/1019487 (MODIFIED)  
+           Component: openstack-neutron  
+           Last change: 2014-07-17
+           Summary: neutron-dhcp-agent fails to start without openstack-
+                    neutron-openvswitch installed  
+
+[1049807 ] http://bugzilla.redhat.com/1049807 (POST)  
+           Component: openstack-neutron  
+           Last change: 2014-01-13
+           Summary: neutron-dhcp-agent fails to start with plenty of
+                    SELinux AVC denials  
+
+[1050842 ] http://bugzilla.redhat.com/1050842 (ON_QA)  
+           Component: openstack-neutron  
+           Last change: 2014-06-11
+           Summary: neutron should not specify signing_dir in neutron-
+                    dist.conf  
+
+[1057822 ] http://bugzilla.redhat.com/1057822 (MODIFIED)  
+           Component: openstack-neutron  
+           Last change: 2014-04-16
+           Summary: neutron-ml2 package requires python-pyudev  
+
+[1058995 ] http://bugzilla.redhat.com/1058995 (ON_QA)  
+           Component: openstack-neutron  
+           Last change: 2014-04-08
+           Summary: neutron-plugin-nicira should be renamed to neutron-
+                    plugin-vmware  
+
+[1061349 ] http://bugzilla.redhat.com/1061349 (ON_QA)  
+           Component: openstack-neutron  
+           Last change: 2014-02-04
+           Summary: neutron-dhcp-agent won't start due to a missing import
+                    of module named stevedore  
+
+[1081203 ] http://bugzilla.redhat.com/1081203 (MODIFIED)  
+           Component: openstack-neutron  
+           Last change: 2014-04-17
+           Summary: No DHCP agents are associated with network  
+
+[1088537 ] http://bugzilla.redhat.com/1088537 (ON_QA)  
+           Component: openstack-neutron  
+           Last change: 2014-06-11
+           Summary: rhel 6.5 icehouse stage.. neutron-db-manage trying to
+                    import systemd  
+
+[1098601 ] http://bugzilla.redhat.com/1098601 (MODIFIED)  
+           Component: openstack-neutron  
+           Last change: 2014-05-16
+           Summary: neutron-vpn-agent does not use the
+                    /etc/neutron/fwaas_driver.ini  
+
+[1100136 ] http://bugzilla.redhat.com/1100136 (ON_QA)  
+           Component: openstack-neutron  
+           Last change: 2014-07-17
+           Summary: Missing configuration file for ML2 Mellanox Mechanism
+                    Driver ml2_conf_mlnx.ini  
+
+[1109824 ] http://bugzilla.redhat.com/1109824 (MODIFIED)  
+           Component: openstack-neutron  
+           Last change: 2014-09-27
+           Summary: Embrane plugin should be split from python-neutron  
+
+[1157599 ] http://bugzilla.redhat.com/1157599 (ON_QA)  
+           Component: openstack-neutron  
+           Last change: 2014-11-25
+           Summary: fresh neutron install fails due unknown database column
+                    'id'  
+
+[1209932 ] http://bugzilla.redhat.com/1209932 (MODIFIED)  
+           Component: openstack-neutron  
+           Last change: 2015-04-10
+           Summary: Packstack installation failed with Neutron-server Could
+                    not start Service  
+
+[1218543 ] http://bugzilla.redhat.com/1218543 (ON_QA)  
+           Component: openstack-neutron  
+           Last change: 2015-05-06
+           Summary: RDO-kilo- L3 agent failed when FWAAS enabled in answer
+                    file  
+
+### openstack-nova (6 bugs)
+
+
+[958411  ] http://bugzilla.redhat.com/958411 (ON_QA)  
+           Component: openstack-nova  
+           Last change: 2015-01-07
+           Summary: Nova: 'nova instance-action-list' table is not sorted
+                    by the order of action occurrence.  
+
+[1045084 ] http://bugzilla.redhat.com/1045084 (ON_QA)  
+           Component: openstack-nova  
+           Last change: 2014-06-03
+           Summary: Trying to boot an instance with a flavor that has
+                    nonzero ephemeral disk will fail  
+
+[1189347 ] http://bugzilla.redhat.com/1189347 (POST)  
+           Component: openstack-nova  
+           Last change: 2015-05-04
+           Summary: openstack-nova-* systemd unit files need
+                    NotifyAccess=all  
+
+[1211587 ] http://bugzilla.redhat.com/1211587 (MODIFIED)  
+           Component: openstack-nova  
+           Last change: 2015-04-14
+           Summary: openstack-nova-compute fails to start because python-
+                    psutil is missing after installing with packstack  
+
+[1217721 ] http://bugzilla.redhat.com/1217721 (ON_QA)  
+           Component: openstack-nova  
+           Last change: 2015-05-05
+           Summary: [packaging] /etc/nova/nova.conf changes due to
+                    deprecated options  
+
+[1220081 ] http://bugzilla.redhat.com/1220081 (MODIFIED)  
+           Component: openstack-nova  
+           Last change: 2015-05-22
+           Summary: websockify 0.6 is incompatible with icehosue novncproxy
+                    and installed by default in the repos  
+
+### openstack-packstack (56 bugs)
+
+
+[956939  ] http://bugzilla.redhat.com/956939 (ON_QA)  
+           Component: openstack-packstack  
+           Last change: 2015-01-07
+           Summary: packstack install fails if ntp server does not respond  
+
+[957006  ] http://bugzilla.redhat.com/957006 (ON_QA)  
+           Component: openstack-packstack  
+           Last change: 2015-01-07
+           Summary: packstack reinstall fails trying to start nagios  
+
+[958587  ] http://bugzilla.redhat.com/958587 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: packstack install succeeds even when puppet completely
+                    fails  
+
+[964005  ] http://bugzilla.redhat.com/964005 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: keystonerc_admin stored in /root requiring running
+                    OpenStack software as root user  
+
+[974971  ] http://bugzilla.redhat.com/974971 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: please give greater control over use of EPEL  
+
+[976394  ] http://bugzilla.redhat.com/976394 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: [RFE] Put the keystonerc_admin file in the current
+                    working directory for --all-in-one installs (or where
+                    client machine is same as local)  
+
+[979041  ] http://bugzilla.redhat.com/979041 (ON_QA)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: Fedora19 no longer has
+                    /etc/sysconfig/modules/kvm.modules  
+
+[990642  ] http://bugzilla.redhat.com/990642 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: rdo release RPM not installed on all fedora hosts  
+
+[991801  ] http://bugzilla.redhat.com/991801 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: Warning message for installing RDO kernel needs to be
+                    adjusted  
+
+[995570  ] http://bugzilla.redhat.com/995570 (POST)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: RFE: support setting up apache to serve keystone
+                    requests  
+
+[1001470 ] http://bugzilla.redhat.com/1001470 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: openstack-dashboard django dependency conflict stops
+                    packstack execution  
+
+[1003959 ] http://bugzilla.redhat.com/1003959 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: Make "Nothing to do" error from yum in Puppet installs
+                    a little easier to decipher  
+
+[1006353 ] http://bugzilla.redhat.com/1006353 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: Packstack w/ CONFIG_CEILOMETER_INSTALL=y has an error  
+
+[1006476 ] http://bugzilla.redhat.com/1006476 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: ERROR : Error during puppet run : Error: /Stage[main]/N
+                    ova::Network/Sysctl::Value[net.ipv4.ip_forward]/Sysctl[
+                    net.ipv4.ip_forward]: Could not evaluate: Field 'val'
+                    is required  
+
+[1006534 ] http://bugzilla.redhat.com/1006534 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2014-04-08
+           Summary: Packstack ignores neutron physical network
+                    configuration if
+                    CONFIG_NEUTRON_OVS_TENANT_NETWORK_TYPE=gre  
+
+[1007497 ] http://bugzilla.redhat.com/1007497 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: Openstack Installer: packstack does not create tables
+                    in Heat db.  
+
+[1008863 ] http://bugzilla.redhat.com/1008863 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2013-10-23
+           Summary: Allow overlapping ips by default  
+
+[1011628 ] http://bugzilla.redhat.com/1011628 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: packstack reports installation completed successfully
+                    but nothing installed  
+
+[1014774 ] http://bugzilla.redhat.com/1014774 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2014-04-23
+           Summary: packstack configures br-ex to use gateway ip  
+
+[1018900 ] http://bugzilla.redhat.com/1018900 (POST)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: Packstack fails with "The iptables provider can not
+                    handle attribute outiface"  
+
+[1018911 ] http://bugzilla.redhat.com/1018911 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: Packstack creates duplicate cirros images in glance  
+
+[1018922 ] http://bugzilla.redhat.com/1018922 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: Packstack configures nova/neutron for qpid
+                    username/password when none is required  
+
+[1020048 ] http://bugzilla.redhat.com/1020048 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: Packstack neutron plugin does not check if Nova is
+                    disabled  
+
+[1022312 ] http://bugzilla.redhat.com/1022312 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: qpid should enable SSL  
+
+[1022421 ] http://bugzilla.redhat.com/1022421 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: Error appeared during Puppet run: IPADDRESS_keystone.pp  
+
+[1028591 ] http://bugzilla.redhat.com/1028591 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2014-02-05
+           Summary: packstack generates invalid configuration when using
+                    GRE tunnels  
+
+[1028690 ] http://bugzilla.redhat.com/1028690 (POST)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: packstack requires 2 runs to install ceilometer  
+
+[1036192 ] http://bugzilla.redhat.com/1036192 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: rerunning packstack with the generated allione
+                    answerfile will fail with qpidd user  logged in  
+
+[1039694 ] http://bugzilla.redhat.com/1039694 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: packstack fails if iptables.service is not available  
+
+[1049861 ] http://bugzilla.redhat.com/1049861 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: fail to create snapshot on an "in-use" GlusterFS volume
+                    using --force true (el7)  
+
+[1050205 ] http://bugzilla.redhat.com/1050205 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: Dashboard port firewall rule is not permanent  
+
+[1052948 ] http://bugzilla.redhat.com/1052948 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: Could not start Service[libvirt]: Execution of
+                    '/etc/init.d/libvirtd start' returned 1  
+
+[1057938 ] http://bugzilla.redhat.com/1057938 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2014-06-17
+           Summary: Errors when setting CONFIG_NEUTRON_OVS_TUNNEL_IF to a
+                    VLAN interface  
+
+[1061689 ] http://bugzilla.redhat.com/1061689 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: Horizon SSL is disabled by Nagios configuration via
+                    packstack  
+
+[1063980 ] http://bugzilla.redhat.com/1063980 (POST)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: Change packstack to use openstack-puppet-modules  
+
+[1080348 ] http://bugzilla.redhat.com/1080348 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: Fedora20: packstack gives traceback when SElinux
+                    permissive  
+
+[1080369 ] http://bugzilla.redhat.com/1080369 (POST)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: packstack fails with KeyError
+                    :CONFIG_PROVISION_DEMO_FLOATRANGE if more compute-hosts
+                    are added  
+
+[1082729 ] http://bugzilla.redhat.com/1082729 (POST)  
+           Component: openstack-packstack  
+           Last change: 2015-02-27
+           Summary: [RFE] allow for Keystone/LDAP configuration at
+                    deployment time  
+
+[1087529 ] http://bugzilla.redhat.com/1087529 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: Configure neutron correctly to be able to notify nova
+                    about port changes  
+
+[1088964 ] http://bugzilla.redhat.com/1088964 (POST)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: Havana Fedora 19, packstack fails w/ mysql error  
+
+[1093828 ] http://bugzilla.redhat.com/1093828 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: packstack package should depend on yum-utils  
+
+[1098821 ] http://bugzilla.redhat.com/1098821 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: Packstack allinone installation fails due to failure to
+                    start rabbitmq-server during amqp.pp on CentOS 6.5  
+
+[1101665 ] http://bugzilla.redhat.com/1101665 (POST)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: el7 Icehouse: Nagios installation fails  
+
+[1108742 ] http://bugzilla.redhat.com/1108742 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: Allow specifying of a global --password option in
+                    packstack to set all keys/secrets/passwords to that
+                    value  
+
+[1111318 ] http://bugzilla.redhat.com/1111318 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2014-08-18
+           Summary: pakcstack: mysql fails to restart on CentOS6.5  
+
+[1116403 ] http://bugzilla.redhat.com/1116403 (ON_QA)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: packstack prescript fails if NetworkManager is
+                    disabled, but still installed  
+
+[1119920 ] http://bugzilla.redhat.com/1119920 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-03-13
+           Summary: http://ip/dashboard 404  from all-in-one rdo install on
+                    rhel7  
+
+[1148949 ] http://bugzilla.redhat.com/1148949 (POST)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: openstack-packstack: installed  "packstack --allinone"
+                    on Centos7.0 and configured private networking. The
+                    booted VMs are not able to communicate with each other,
+                    nor ping the gateway.  
+
+[1151892 ] http://bugzilla.redhat.com/1151892 (POST)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: packstack icehouse doesn't install anything because of
+                    repo  
+
+[1172876 ] http://bugzilla.redhat.com/1172876 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: packstack fails on centos6 with missing systemctl  
+
+[1175428 ] http://bugzilla.redhat.com/1175428 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: packstack doesn't configure rabbitmq to allow non-
+                    localhost connections to 'guest' user  
+
+[1175450 ] http://bugzilla.redhat.com/1175450 (POST)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: packstack fails to start Nova on Rawhide: Error:
+                    comparison of String with 18 failed at
+                    [...]ceilometer/manifests/params.pp:32  
+
+[1175726 ] http://bugzilla.redhat.com/1175726 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: Disabling glance deployment does not work if you don't
+                    disable demo provisioning  
+
+[1185921 ] http://bugzilla.redhat.com/1185921 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-04
+           Summary: RabbitMQ fails to start if configured with ssl  
+
+[1205912 ] http://bugzilla.redhat.com/1205912 (POST)  
+           Component: openstack-packstack  
+           Last change: 2015-07-06
+           Summary: allow to specify admin name and email  
+
+[1218750 ] http://bugzilla.redhat.com/1218750 (MODIFIED)  
+           Component: openstack-packstack  
+           Last change: 2015-06-03
+           Summary: packstack needs to handle rdo-testing repos for RDO >=
+                    Kilo  
+
+### openstack-puppet-modules (18 bugs)
+
+
+[1006401 ] http://bugzilla.redhat.com/1006401 (MODIFIED)  
+           Component: openstack-puppet-modules  
+           Last change: 2015-06-04
+           Summary: explicit check for pymongo is incorrect  
+
+[1006816 ] http://bugzilla.redhat.com/1006816 (MODIFIED)  
+           Component: openstack-puppet-modules  
+           Last change: 2015-06-04
+           Summary: cinder modules require glance installed  
+
+[1021183 ] http://bugzilla.redhat.com/1021183 (MODIFIED)  
+           Component: openstack-puppet-modules  
+           Last change: 2015-06-04
+           Summary: horizon log errors  
+
+[1022580 ] http://bugzilla.redhat.com/1022580 (MODIFIED)  
+           Component: openstack-puppet-modules  
+           Last change: 2015-06-04
+           Summary: netns.py syntax error  
+
+[1037635 ] http://bugzilla.redhat.com/1037635 (MODIFIED)  
+           Component: openstack-puppet-modules  
+           Last change: 2015-06-04
+           Summary: prescript.pp fails with '/sbin/service iptables start'
+                    returning 6  
+
+[1038255 ] http://bugzilla.redhat.com/1038255 (MODIFIED)  
+           Component: openstack-puppet-modules  
+           Last change: 2015-06-04
+           Summary: prescript.pp does not ensure iptables-services package
+                    installation  
+
+[1049537 ] http://bugzilla.redhat.com/1049537 (MODIFIED)  
+           Component: openstack-puppet-modules  
+           Last change: 2015-06-04
+           Summary: Horizon help url in RDO points to the RHOS
+                    documentation  
+
+[1085452 ] http://bugzilla.redhat.com/1085452 (MODIFIED)  
+           Component: openstack-puppet-modules  
+           Last change: 2015-06-02
+           Summary: prescript puppet - missing dependency package iptables-
+                    services  
+
+[1115398 ] http://bugzilla.redhat.com/1115398 (MODIFIED)  
+           Component: openstack-puppet-modules  
+           Last change: 2015-06-04
+           Summary: swift.pp:  Could not find command 'restorecon'  
+
+[1122968 ] http://bugzilla.redhat.com/1122968 (MODIFIED)  
+           Component: openstack-puppet-modules  
+           Last change: 2014-08-01
+           Summary: neutron/manifests/agents/ovs.pp creates /etc/sysconfig
+                    /network-scripts/ifcfg-br-{int,tun}  
+
+[1133345 ] http://bugzilla.redhat.com/1133345 (MODIFIED)  
+           Component: openstack-puppet-modules  
+           Last change: 2014-09-05
+           Summary: Packstack execution fails with "Could not set 'present'
+                    on ensure"  
+
+[1171352 ] http://bugzilla.redhat.com/1171352 (MODIFIED)  
+           Component: openstack-puppet-modules  
+           Last change: 2015-06-04
+           Summary: add aviator  
+
+[1182837 ] http://bugzilla.redhat.com/1182837 (MODIFIED)  
+           Component: openstack-puppet-modules  
+           Last change: 2015-06-04
+           Summary: packstack chokes on ironic - centos7 + juno  
+
+[1185960 ] http://bugzilla.redhat.com/1185960 (MODIFIED)  
+           Component: openstack-puppet-modules  
+           Last change: 2015-03-19
+           Summary: problems with puppet-keystone LDAP support  
+
+[1205757 ] http://bugzilla.redhat.com/1205757 (POST)  
+           Component: openstack-puppet-modules  
+           Last change: 2015-04-13
+           Summary: puppet-keystone support the ldap user_enabled_invert
+                    parameter  
+
+[1207701 ] http://bugzilla.redhat.com/1207701 (ON_QA)  
+           Component: openstack-puppet-modules  
+           Last change: 2015-06-04
+           Summary: Unable to attach cinder volume to instance  
+
+[1214358 ] http://bugzilla.redhat.com/1214358 (MODIFIED)  
+           Component: openstack-puppet-modules  
+           Last change: 2015-07-02
+           Summary: SSHD configuration breaks GSSAPI  
+
+[1219447 ] http://bugzilla.redhat.com/1219447 (MODIFIED)  
+           Component: openstack-puppet-modules  
+           Last change: 2015-06-04
+           Summary: The private network created by packstack for demo
+                    tenant is wrongly marked as external  
+
+### openstack-sahara (1 bug)
+
+
+[1184522 ] http://bugzilla.redhat.com/1184522 (MODIFIED)  
+           Component: openstack-sahara  
+           Last change: 2015-03-27
+           Summary: launch_command.py missing  
+
+### openstack-selinux (13 bugs)
+
+
+[1024330 ] http://bugzilla.redhat.com/1024330 (MODIFIED)  
+           Component: openstack-selinux  
+           Last change: 2014-04-18
+           Summary: Wrong SELinux policies set for neutron-dhcp-agent  
+
+[1049091 ] http://bugzilla.redhat.com/1049091 (MODIFIED)  
+           Component: openstack-selinux  
+           Last change: 2014-06-24
+           Summary: openstack-selinux blocks communication from dashboard
+                    to identity service  
+
+[1049503 ] http://bugzilla.redhat.com/1049503 (MODIFIED)  
+           Component: openstack-selinux  
+           Last change: 2015-03-10
+           Summary: rdo-icehouse selinux issues with rootwrap "sudo:
+                    unknown uid 162: who are you?"  
+
+[1083566 ] http://bugzilla.redhat.com/1083566 (MODIFIED)  
+           Component: openstack-selinux  
+           Last change: 2014-06-24
+           Summary: Selinux blocks Nova services on RHEL7, can't boot or
+                    delete instances,  
+
+[1093297 ] http://bugzilla.redhat.com/1093297 (POST)  
+           Component: openstack-selinux  
+           Last change: 2014-05-15
+           Summary: selinux AVC RHEL7 and RDO - Neutron  
+
+[1093385 ] http://bugzilla.redhat.com/1093385 (MODIFIED)  
+           Component: openstack-selinux  
+           Last change: 2014-05-15
+           Summary: neutron  L3 agent RPC errors  
+
+[1099042 ] http://bugzilla.redhat.com/1099042 (MODIFIED)  
+           Component: openstack-selinux  
+           Last change: 2014-06-27
+           Summary: Neutron is unable to create directory in /tmp  
+
+[1105357 ] http://bugzilla.redhat.com/1105357 (MODIFIED)  
+           Component: openstack-selinux  
+           Last change: 2015-01-22
+           Summary: Keystone cannot send notifications  
+
+[1134617 ] http://bugzilla.redhat.com/1134617 (MODIFIED)  
+           Component: openstack-selinux  
+           Last change: 2014-10-08
+           Summary: nova-api service denied tmpfs access  
+
+[1135510 ] http://bugzilla.redhat.com/1135510 (MODIFIED)  
+           Component: openstack-selinux  
+           Last change: 2015-04-06
+           Summary: RHEL7 icehouse cluster with ceph/ssl SELinux errors  
+
+[1144539 ] http://bugzilla.redhat.com/1144539 (POST)  
+           Component: openstack-selinux  
+           Last change: 2014-10-29
+           Summary: selinux preventing Horizon access (IceHouse, CentOS 7)  
+
+[1154866 ] http://bugzilla.redhat.com/1154866 (ON_QA)  
+           Component: openstack-selinux  
+           Last change: 2015-01-11
+           Summary: latest yum update for RHEL6.5   installs selinux-policy
+                    package which conflicts openstack-selinux installed
+                    later  
+
+[1234665 ] http://bugzilla.redhat.com/1234665 (ON_QA)  
+           Component: openstack-selinux  
+           Last change: 2015-06-23
+           Summary: tempest.scenario.test_server_basic_ops.TestServerBasicO
+                    ps fails to launch instance w/ selinux enforcing  
+
+### openstack-swift (1 bug)
+
+
+[997983  ] http://bugzilla.redhat.com/997983 (MODIFIED)  
+           Component: openstack-swift  
+           Last change: 2015-01-07
+           Summary: swift in RDO logs container, object and account to
+                    LOCAL2 log facility which floods /var/log/messages  
+
+### openstack-tripleo (1 bug)
+
+
+[1162333 ] http://bugzilla.redhat.com/1162333 (ON_QA)  
+           Component: openstack-tripleo  
+           Last change: 2015-06-02
+           Summary: Instack fails to complete instack-virt-setup with
+                    syntax error near unexpected token `newline'  
+
+### openstack-tuskar (1 bug)
+
+
+[1222718 ] http://bugzilla.redhat.com/1222718 (ON_QA)  
+           Component: openstack-tuskar  
+           Last change: 2015-07-06
+           Summary: MySQL Column is Too Small for Heat Template  
+
+### openstack-tuskar-ui (3 bugs)
+
+
+[1175121 ] http://bugzilla.redhat.com/1175121 (MODIFIED)  
+           Component: openstack-tuskar-ui  
+           Last change: 2015-06-04
+           Summary: Registering nodes with the IPMI driver always fails  
+
+[1176596 ] http://bugzilla.redhat.com/1176596 (MODIFIED)  
+           Component: openstack-tuskar-ui  
+           Last change: 2015-06-04
+           Summary: The displayed horizon url after deployment has a
+                    redundant colon in it and a wrong path  
+
+[1203859 ] http://bugzilla.redhat.com/1203859 (POST)  
+           Component: openstack-tuskar-ui  
+           Last change: 2015-06-04
+           Summary: openstack-tuskar-ui: Failed to connect RDO manager
+                    tuskar-ui over missing apostrophes for STATIC_ROOT=
+                    <value > in local_settings.py  
+
+### openstack-utils (2 bugs)
+
+
+[1213150 ] http://bugzilla.redhat.com/1213150 (POST)  
+           Component: openstack-utils  
+           Last change: 2015-06-04
+           Summary: openstack-status as admin falsely shows zero instances  
+
+[1214044 ] http://bugzilla.redhat.com/1214044 (POST)  
+           Component: openstack-utils  
+           Last change: 2015-06-04
+           Summary: update openstack-status for rdo-manager  
+
+### python-cinderclient (1 bug)
+
+
+[1048326 ] http://bugzilla.redhat.com/1048326 (MODIFIED)  
+           Component: python-cinderclient  
+           Last change: 2014-01-13
+           Summary: the command cinder type-key lvm set
+                    volume_backend_name=LVM_iSCSI fails to run  
+
+### python-django-horizon (3 bugs)
+
+
+[1211552 ] http://bugzilla.redhat.com/1211552 (MODIFIED)  
+           Component: python-django-horizon  
+           Last change: 2015-04-14
+           Summary: Need to add alias in openstack-dashboard.conf to show
+                    CSS content  
+
+[1218627 ] http://bugzilla.redhat.com/1218627 (ON_QA)  
+           Component: python-django-horizon  
+           Last change: 2015-06-24
+           Summary: Tree icon looks wrong - a square instead of a regular
+                    expand/collpase one  
+
+[1219006 ] http://bugzilla.redhat.com/1219006 (ON_QA)  
+           Component: python-django-horizon  
+           Last change: 2015-05-08
+           Summary: Wrong permissions for directory /usr/share/openstack-
+                    dashboard/static/dashboard/  
+
+### python-django-openstack-auth (3 bugs)
+
+
+[1218894 ] http://bugzilla.redhat.com/1218894 (ON_QA)  
+           Component: python-django-openstack-auth  
+           Last change: 2015-06-24
+           Summary: Horizon: Re login failed after timeout  
+
+[1218899 ] http://bugzilla.redhat.com/1218899 (ON_QA)  
+           Component: python-django-openstack-auth  
+           Last change: 2015-06-24
+           Summary: permission checks issue / not properly checking enabled
+                    services  
+
+[1232683 ] http://bugzilla.redhat.com/1232683 (MODIFIED)  
+           Component: python-django-openstack-auth  
+           Last change: 2015-07-02
+           Summary: horizon manage.py syncdb errors on "App
+                    'openstack_auth' doesn't have a 'user' model."  
+
+### python-glanceclient (2 bugs)
+
+
+[1206544 ] http://bugzilla.redhat.com/1206544 (ON_QA)  
+           Component: python-glanceclient  
+           Last change: 2015-04-03
+           Summary: Missing requires of python-jsonpatch  
+
+[1206551 ] http://bugzilla.redhat.com/1206551 (ON_QA)  
+           Component: python-glanceclient  
+           Last change: 2015-04-03
+           Summary: Missing requires of python-warlock  
+
+### python-heatclient (3 bugs)
+
+
+[1028726 ] http://bugzilla.redhat.com/1028726 (MODIFIED)  
+           Component: python-heatclient  
+           Last change: 2015-02-01
+           Summary: python-heatclient needs a dependency on python-pbr  
+
+[1087089 ] http://bugzilla.redhat.com/1087089 (POST)  
+           Component: python-heatclient  
+           Last change: 2015-02-01
+           Summary: python-heatclient 0.2.9 requires packaging in RDO  
+
+[1140842 ] http://bugzilla.redhat.com/1140842 (MODIFIED)  
+           Component: python-heatclient  
+           Last change: 2015-02-01
+           Summary: heat.bash_completion not installed  
+
+### python-keystoneclient (3 bugs)
+
+
+[971746  ] http://bugzilla.redhat.com/971746 (MODIFIED)  
+           Component: python-keystoneclient  
+           Last change: 2015-06-04
+           Summary: CVE-2013-2013 OpenStack keystone: password disclosure
+                    on command line [RDO]  
+
+[973263  ] http://bugzilla.redhat.com/973263 (POST)  
+           Component: python-keystoneclient  
+           Last change: 2015-06-04
+           Summary: user-get fails when using IDs which are not UUIDs  
+
+[1024581 ] http://bugzilla.redhat.com/1024581 (MODIFIED)  
+           Component: python-keystoneclient  
+           Last change: 2015-06-04
+           Summary: keystone missing tab completion  
+
+### python-neutronclient (3 bugs)
+
+
+[1025509 ] http://bugzilla.redhat.com/1025509 (MODIFIED)  
+           Component: python-neutronclient  
+           Last change: 2014-06-24
+           Summary: Neutronclient should not obsolete quantumclient  
+
+[1052311 ] http://bugzilla.redhat.com/1052311 (MODIFIED)  
+           Component: python-neutronclient  
+           Last change: 2014-02-12
+           Summary: [RFE] python-neutronclient new version request  
+
+[1067237 ] http://bugzilla.redhat.com/1067237 (ON_QA)  
+           Component: python-neutronclient  
+           Last change: 2014-03-26
+           Summary: neutronclient with pre-determined auth token fails when
+                    doing Client.get_auth_info()  
+
+### python-novaclient (1 bug)
+
+
+[947535  ] http://bugzilla.redhat.com/947535 (MODIFIED)  
+           Component: python-novaclient  
+           Last change: 2015-06-04
+           Summary: nova commands fail with gnomekeyring IOError  
+
+### python-openstackclient (1 bug)
+
+
+[1171191 ] http://bugzilla.redhat.com/1171191 (POST)  
+           Component: python-openstackclient  
+           Last change: 2015-03-02
+           Summary: Rebase python-openstackclient to version 1.0.0  
+
+### python-oslo-config (1 bug)
+
+
+[1110164 ] http://bugzilla.redhat.com/1110164 (ON_QA)  
+           Component: python-oslo-config  
+           Last change: 2015-06-04
+           Summary: oslo.config >=1.2.1 is required for trove-manage  
+
+### python-swiftclient (1 bug)
+
+
+[1126942 ] http://bugzilla.redhat.com/1126942 (MODIFIED)  
+           Component: python-swiftclient  
+           Last change: 2014-09-16
+           Summary: Swift pseudo-folder cannot be interacted with after
+                    creation  
+
+### python-tuskarclient (2 bugs)
+
+
+[1209395 ] http://bugzilla.redhat.com/1209395 (POST)  
+           Component: python-tuskarclient  
+           Last change: 2015-06-04
+           Summary: `tuskar help` is missing a description next to plan-
+                    templates  
+
+[1209431 ] http://bugzilla.redhat.com/1209431 (POST)  
+           Component: python-tuskarclient  
+           Last change: 2015-06-18
+           Summary: creating a tuskar plan with the exact name gives the
+                    user a traceback  
+
+### rdo-manager (5 bugs)
+
+
+[1210023 ] http://bugzilla.redhat.com/1210023 (MODIFIED)  
+           Component: rdo-manager  
+           Last change: 2015-04-15
+           Summary: instack-ironic-deployment --nodes-json instackenv.json
+                    --register-nodes fails  
+
+[1211352 ] http://bugzilla.redhat.com/1211352 (MODIFIED)  
+           Component: rdo-manager  
+           Last change: 2015-05-04
+           Summary: discovery hangs  
+
+[1212351 ] http://bugzilla.redhat.com/1212351 (POST)  
+           Component: rdo-manager  
+           Last change: 2015-06-18
+           Summary: [RFE] [RDO-Manager] [CLI] Add ability to poll for
+                    discovery state via CLI command  
+
+[1222124 ] http://bugzilla.redhat.com/1222124 (MODIFIED)  
+           Component: rdo-manager  
+           Last change: 2015-05-29
+           Summary: rdo-manager: fail to discover nodes with "instack-
+                    ironic-deployment --discover-nodes": ERROR: Data pre-
+                    processing failed  
+
+[1224584 ] http://bugzilla.redhat.com/1224584 (MODIFIED)  
+           Component: rdo-manager  
+           Last change: 2015-05-25
+           Summary: CentOS-7 undercloud install fails w/ "RHOS" undefined
+                    variable  
+
+### rdo-manager-cli (7 bugs)
+
+
+[1211190 ] http://bugzilla.redhat.com/1211190 (POST)  
+           Component: rdo-manager-cli  
+           Last change: 2015-06-04
+           Summary: Unable to replace nodes registration instack script due
+                    to missing post config action in unified CLI  
+
+[1212367 ] http://bugzilla.redhat.com/1212367 (POST)  
+           Component: rdo-manager-cli  
+           Last change: 2015-06-16
+           Summary: Ensure proper nodes states after enroll and before
+                    deployment  
+
+[1219053 ] http://bugzilla.redhat.com/1219053 (POST)  
+           Component: rdo-manager-cli  
+           Last change: 2015-06-18
+           Summary: "list" command doesn't display nodes in some cases  
+
+[1229912 ] http://bugzilla.redhat.com/1229912 (POST)  
+           Component: rdo-manager-cli  
+           Last change: 2015-06-10
+           Summary: [rdo-manager-cli][unified-cli]: The command 'openstack
+                    baremetal configure boot' fails over - AttributeError
+                    (when glance images were uploaded more than once)  .  
+
+[1230265 ] http://bugzilla.redhat.com/1230265 (POST)  
+           Component: rdo-manager-cli  
+           Last change: 2015-06-26
+           Summary: [rdo-manager-cli][unified-cli]:  openstack unified-cli
+                    commands display - Warning Module novaclient.v1_1 is
+                    deprecated.  
+
+[1232838 ] http://bugzilla.redhat.com/1232838 (POST)  
+           Component: rdo-manager-cli  
+           Last change: 2015-07-03
+           Summary: OSC plugin isn't saving plan configuration values  
+
+[1233429 ] http://bugzilla.redhat.com/1233429 (POST)  
+           Component: rdo-manager-cli  
+           Last change: 2015-06-20
+           Summary: Lack of consistency in specifying plan argument for
+                    openstack overcloud commands  
+
+### rdopkg (1 bug)
+
+
+[1220832 ] http://bugzilla.redhat.com/1220832 (ON_QA)  
+           Component: rdopkg  
+           Last change: 2015-05-13
+           Summary: python-manilaclient is missing from kilo RDO repository  
+
