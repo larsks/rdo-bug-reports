@@ -1,0 +1,392 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>
+RDO Bugs on 2015-08-05
+</title>
+<link rel="stylesheet" href="../assets/github.css"></link>
+<link rel="stylesheet" href="../assets/local.css"></link>
+
+<!-- <head> elements go here -->
+
+</head>
+
+<body>
+<h1>
+RDO Bugs on 2015-08-05
+</h1>
+
+
+<h2>Summary</h2>
+<ul>
+<li><a href="#open">Open</a> (NEW, ASSIGNED, ON_DEV): 12</li>
+<li><a href="#fixed">Fixed</a> (MODIFIED, POST, ON_QA): 13</li>
+</ul>
+
+
+<h2 id="open">Open bugs</h2>
+
+<p>This is a list of "open" bugs in the "openstack-selinux"
+component.
+An "open" bug is in state
+NEW, ASSIGNED, ON_DEV and has not yet been fixed.</p>
+
+
+(12 bugs)
+
+<table>
+  <tr>
+    <th>ID</th><th>Status</th><th>Component</th><th>Last activitity</th>
+  </tr>
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1158394">1158394</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2014-11-23</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">keystone-all proccess raised avc denied</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1170238">1170238</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2014-12-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Keepalived fail to start for HA router because of SELinux issues</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1174795">1174795</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2015-02-24</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">keystone fails to start: raise exception.ConfigFileNotFound(config_file=paste_config_value)</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1189929">1189929</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2015-02-06</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Glance AVC messages</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1202941">1202941</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2015-03-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Glance fails to start on CentOS 7 because of selinux AVC</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1202944">1202944</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2015-03-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">"glance image-list" fails on F21, causing packstack install to fail</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1203910">1203910</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2015-03-19</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Keystone requires keystone_t self:process signal;</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1206740">1206740</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2015-04-09</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">On CentOS7.1 packstack --allinone fails to start Apache because of binding error on port 5000</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1211719">1211719</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2015-04-14</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">selinux audit failures on openvswitch in rdo kilo</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1219143">1219143</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2015-05-13</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Selinux prevents keystone to connect to memcached port</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1219406">1219406</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2015-07-23</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Glance over nfs fails due to selinux</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1249685">1249685</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2015-08-03</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">selinux denials on rdo liberty packstack installs</td>
+</tr>
+
+
+</table>
+
+
+<h2 id="fixed">Fixed bugs</h2>
+
+<p>This is a list of "fixed" bugs in the "openstack-selinux"
+component.
+A "fixed" bug is fixed state
+MODIFIED, POST, ON_QA and has been fixed.  You can help
+out by testing the fix to make sure it works as intended.</p>
+
+
+(13 bugs)
+
+<table>
+  <tr>
+    <th>ID</th><th>Status</th><th>Component</th><th>Last activitity</th>
+  </tr>
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1024330">1024330</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2014-04-18</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Wrong SELinux policies set for neutron-dhcp-agent</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1049091">1049091</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2014-06-24</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">openstack-selinux blocks communication from dashboard to identity service</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1049503">1049503</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2015-03-10</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">rdo-icehouse selinux issues with rootwrap "sudo: unknown uid 162: who are you?"</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1083566">1083566</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2014-06-24</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Selinux blocks Nova services on RHEL7, can't boot or delete instances,</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1093297">1093297</a></td>
+<td>POST</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2014-05-15</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">selinux AVC RHEL7 and RDO - Neutron</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1093385">1093385</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2014-05-15</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">neutron  L3 agent RPC errors</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1099042">1099042</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2014-06-27</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Neutron is unable to create directory in /tmp</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1105357">1105357</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2015-01-22</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Keystone cannot send notifications</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1134617">1134617</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2014-10-08</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">nova-api service denied tmpfs access</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1135510">1135510</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2015-04-06</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">RHEL7 icehouse cluster with ceph/ssl SELinux errors</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1144539">1144539</a></td>
+<td>POST</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2014-10-29</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">selinux preventing Horizon access (IceHouse, CentOS 7)</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1154866">1154866</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2015-01-11</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">latest yum update for RHEL6.5   installs selinux-policy package which conflicts openstack-selinux installed later</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1234665">1234665</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-selinux.html">openstack-selinux</a></td>
+<td>2015-06-23</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">tempest.scenario.test_server_basic_ops.TestServerBasicOps fails to launch instance w/ selinux enforcing</td>
+</tr>
+
+
+</table>
+
+
+</body>
+</html>
