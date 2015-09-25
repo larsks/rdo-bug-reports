@@ -1,0 +1,353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>
+RDO Bugs on 2015-09-25
+</title>
+<link rel="stylesheet" href="../assets/github.css"></link>
+<link rel="stylesheet" href="../assets/local.css"></link>
+
+<!-- <head> elements go here -->
+
+</head>
+
+<body>
+<h1>
+RDO Bugs on 2015-09-25
+</h1>
+
+
+<h2>Summary</h2>
+<ul>
+<li><a href="#open">Open</a> (NEW, ASSIGNED, ON_DEV): 17</li>
+<li><a href="#fixed">Fixed</a> (MODIFIED, POST, ON_QA): 5</li>
+</ul>
+
+
+<h2 id="open">Open bugs</h2>
+
+<p>This is a list of "open" bugs in the "openstack-nova"
+component.
+An "open" bug is in state
+NEW, ASSIGNED, ON_DEV and has not yet been fixed.</p>
+
+
+(17 bugs)
+
+<table>
+  <tr>
+    <th>ID</th><th>Status</th><th>Component</th><th>Last activitity</th>
+  </tr>
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1228836">1228836</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-06-14</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Is there a way to configure IO throttling for RBD devices via configuration file</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1180129">1180129</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-01-08</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Installation of openstack-nova-compute fails on PowerKVM</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1157690">1157690</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-06-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">v4-fixed-ip= not working with juno nova networking</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1200701">1200701</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-05-06</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">openstack-nova-novncproxy.service in failed state -  need upgraded websockify version</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1229301">1229301</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-06-08</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">used_now is really used_max, and used_max is really used_now in "nova host-describe"</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1234837">1234837</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-06-23</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Kilo assigning ipv6 address, even though its disabled.</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1161915">1161915</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-04-10</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">horizon console uses http when horizon is set to use ssl</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1213547">1213547</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-05-22</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">launching 20 VMs at once via a heat resource group causes nova to not record some IPs correctly</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1154152">1154152</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-06-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[nova] hw:numa_nodes=0 causes divide by zero</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1161920">1161920</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-06-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">novnc init script doesnt write to log</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1123298">1123298</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-09-11</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">logrotate should copytruncate to avoid oepnstack logging to deleted files</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1154201">1154201</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-06-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[nova][PCI-Passthrough] TypeError: pop() takes at most 1 argument (2 given)</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1190815">1190815</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-02-09</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Nova - db connection string present on compute nodes</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1149682">1149682</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-06-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">nova object store allow get object after date exires</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1148526">1148526</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-06-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">nova: fail to edit project quota with DataError from nova</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1086247">1086247</a></td>
+<td>ASSIGNED</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-06-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Ensure translations are installed correctly and picked up at runtime</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1189931">1189931</a></td>
+<td>NEW</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-02-05</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Nova AVC messages</td>
+</tr>
+
+
+</table>
+
+
+<h2 id="fixed">Fixed bugs</h2>
+
+<p>This is a list of "fixed" bugs in the "openstack-nova"
+component.
+A "fixed" bug is fixed state
+MODIFIED, POST, ON_QA and has been fixed.  You can help
+out by testing the fix to make sure it works as intended.</p>
+
+
+(5 bugs)
+
+<table>
+  <tr>
+    <th>ID</th><th>Status</th><th>Component</th><th>Last activitity</th>
+  </tr>
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1045084">1045084</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2014-06-03</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Trying to boot an instance with a flavor that has nonzero ephemeral disk will fail</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1189347">1189347</a></td>
+<td>POST</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-05-04</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">openstack-nova-* systemd unit files need NotifyAccess=all</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1217721">1217721</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-05-05</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">[packaging] /etc/nova/nova.conf changes due to deprecated options</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1211587">1211587</a></td>
+<td>MODIFIED</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-04-14</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">openstack-nova-compute fails to start because python-psutil is missing after installing with packstack</td>
+</tr>
+
+
+
+<tr>
+  <td><a href="https://bugzilla.redhat.com/show_bug.cgi?id=958411">958411</a></td>
+<td>ON_QA</td>
+<td><a href="report-openstack-nova.html">openstack-nova</a></td>
+<td>2015-01-07</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="3">Nova: 'nova instance-action-list' table is not sorted by the order of action occurrence.</td>
+</tr>
+
+
+</table>
+
+
+</body>
+</html>
